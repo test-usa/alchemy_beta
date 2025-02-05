@@ -2,18 +2,18 @@ import { HiCheck } from "react-icons/hi";
 
 const BodyStamina = () => {
   return (
-    <div className="mt-12 flex flex-col md:flex-row w-full max-w-[1320px] h-auto md:h-[610px] gap-6 md:gap-[132px] mx-auto px-4 md:px-0">
+    <div className="  mt-12 relative flex flex-col md:flex-row w-full max-w-[1320px] h-auto md:h-[610px] gap-6 md:gap-[132px] mx-auto px-4 md:px-0">
       <div className="md:w-1/3 w-full flex justify-center items-center">
-        <div className="h-[300px] md:h-[610px] w-full md:w-[700px] overflow-hidden shadow-md">
+        <div className="h-[610px] w-[650] md:h-[610px]  md:w-[700px] overflow-hidden shadow-md">
           <img
-            src="https://img.freepik.com/free-photo/incognito-shirtless-sportsman-posing-gym_7502-5122.jpg?t=st=1738732350~exp=1738735950~hmac=b5b393923209c7229ceadd75e995bace1fb67dd7ceed9906ddc9bc29272a5fbf&w=996"
+            src="https://img.freepik.com/free-photo/front-view-sporty-woman-with-copy-space_23-2148499108.jpg?t=st=1738747270~exp=1738750870~hmac=67625eb21d8cf6cd2993ec4ba52abf187644dff48dcf9ad66b61b0e7d0672778&w=826"
             alt="Body Stamina"
             className="w-full h-full object-cover"
           />
         </div>
       </div>
 
-      <div className="md:w-2/3 w-full h-auto md:h-[610px] flex flex-col justify-between">
+      <div className="md:w-2/3 w-full  h-auto md:h-[610px] flex flex-col justify-between">
         <div>
           <h1 className="text-3xl md:text-[48px] font-[700] text-primary leading-tight md:leading-[63.36px] tracking-[-1%] mb-4">
             Body of Stamina <br /> Strength

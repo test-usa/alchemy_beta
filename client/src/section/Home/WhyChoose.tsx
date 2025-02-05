@@ -41,7 +41,7 @@ const WhyChoose = () => {
             />
             <CardContent
               className={`absolute bottom-0 left-0 w-full p-6 text-white flex items-center justify-between ${
-                index === 2 ? "bg-[#6636EE]" : "bg-black bg-opacity-50"
+                index === 2 ? "bg-primary" : "bg-black bg-opacity-50"
               }`}
             >
               <h2 className="font-bold text-xl">{service.title}</h2>
@@ -49,7 +49,7 @@ const WhyChoose = () => {
               <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
                 <span
                   className={`text-2xl ${
-                    index === 2 ? "text-[#6636EE]" : "text-black"
+                    index === 2 ? "text-primary" : "text-black"
                   }`}
                 >
                   <MdOutlineArrowOutward />
