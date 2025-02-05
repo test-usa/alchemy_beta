@@ -1,3 +1,4 @@
+import React from "react";
 import video from "../../assets/video.webm";
 const VideoSection = () => {
   return (

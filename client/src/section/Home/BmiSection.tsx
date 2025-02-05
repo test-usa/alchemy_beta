@@ -1,3 +1,4 @@
+import React from "react";
 import { SlSymbleFemale } from "react-icons/sl";
 import { SlSymbolMale } from "react-icons/sl";
 

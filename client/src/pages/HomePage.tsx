@@ -1,19 +1,27 @@
-import BestServices from "../section/Home/BestServices";
-import BmiSection from "../section/Home/BmiSection";
+import React from "react";
+import CustomerSay from "../section/Home/CustomerSay";
 import Hero from "../section/Home/Hero";
 import LatestArticle from "../section/Home/LatestArticle";
-import PricingPlan from "../section/Home/PricingPlan";
-import VideoSection from "../section/Home/VideoSection";
+import BodyStimina from "../section/Home/BodyStimina";
+import BestServices from "../section/Home/BestServices";
+import MidNavCom from "../section/Home/MidNavCom";
+import WhyChoose from "../section/Home/WhyChoose";
+import OurGallery from "../section/Home/OurGallery";
+import FindRoute from "../section/Home/FindRoute";
 
 const HomePage = () => {
   return (
     <div>
       <Hero />
       <BestServices />
-      <VideoSection />
-      <BmiSection />
+      <BodyStimina />
+      <MidNavCom />
+      <WhyChoose />
+      <OurGallery />
+      <MidNavCom />
+      <FindRoute />
       <LatestArticle />
-      <PricingPlan />
+      <CustomerSay />
     </div>
   );
 };
