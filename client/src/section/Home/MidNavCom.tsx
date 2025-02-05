@@ -2,7 +2,6 @@ import React from "react";
 
 import { MdStarRate } from "react-icons/md";
 
-
 const MidNavCom = () => {
   return (
     <div className="w-[1920px] h-[80px] max-auto text-white bg-[#6636EE] flex justify-around items-center px-6 shadow-md border-b mt-20">

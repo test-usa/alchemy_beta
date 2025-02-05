@@ -1,26 +1,15 @@
-
-import { createBrowserRouter } from "react-router-dom";
-import HomePage from "../pages/HomePage";
-import MainLayout from "../layouts/MainLayout";
-import ArticlesAndTipsPage from "../pages/ArticlesAndTipsPage";
-import ErrorPage from "../pages/ErrorPage";
-import HomePage from "../pages/HomePage";
-import LoginPage from "../pages/LoginPage";
-import MeditationPage from "../pages/MeditationPage";
-import NutritionPage from "../pages/NutritionPage";
-import ShopPage from "../pages/ShopPage";
-import SignupPage from "../pages/SignupPage";
-import LoginPage from "../pages/LoginPage";
-import NutritionPage from "../pages/NutritionPage";
-import MeditationPage from "../pages/MeditationPage";
-import WorkoutPage from "../pages/WorkoutPage";
-import TrackerPage from "../pages/TrackerPage";
-import ShopPage from "../pages/ShopPage";
-import ArticlesAndTipsPage from "../pages/ArticlesAndTipsPage";
-
-import TrackerPage from "../pages/TrackerPage";
-import WorkoutPage from "../pages/WorkoutPage";
-import React from "react";
+import MainLayout from "@/layouts/MainLayout";
+import ArticlesAndTipsPage from "@/pages/ArticlesAndTipsPage";
+import ErrorPage from "@/pages/ErrorPage";
+import HomePage from "@/pages/HomePage";
+import JoinUs from "@/pages/JoinUs";
+import LoginPage from "@/pages/LoginPage";
+import MeditationPage from "@/pages/MeditationPage";
+import NutritionPage from "@/pages/NutritionPage";
+import ShopPage from "@/pages/ShopPage";
+import SignupPage from "@/pages/SignupPage";
+import TrackerPage from "@/pages/TrackerPage";
+import WorkoutPage from "@/pages/WorkoutPage";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -45,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/nutrition",
         element: <NutritionPage />,
+      },
+      {
+        path: "/join-us",
+        element: <JoinUs />,
       },
       {
         path: "/meditation",
