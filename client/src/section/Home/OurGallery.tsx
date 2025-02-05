@@ -46,7 +46,7 @@ const OurGallery = () => {
               >
                 <CardContent className="p-0 w-full h-full">
                   <img
-                    src={photo}
+                    src="https://img.freepik.com/free-photo/young-man-hoodie-showing-namaste-gesture-looking-pleased-front-view_176474-65179.jpg?t=st=1738732240~exp=1738735840~hmac=e1e5f105a619fbaef9b41c0de16c41a831bd78120e2438893e260006a590d518&w=1380"
                     alt={`Gallery Image ${index + 1}`}
                     className="w-full h-full object-cover rounded-md hover:scale-105 transition-transform duration-300"
                   />

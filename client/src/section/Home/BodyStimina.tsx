@@ -1,5 +1,5 @@
 import { HiCheck } from "react-icons/hi";
-import body from "../../assets/image/body1.jpg";
+/* import body from "../../assets/image/body1.jpg"; */
 
 const BodyStamina = () => {
   return (
@@ -7,7 +7,7 @@ const BodyStamina = () => {
       <div className="md:w-1/3  flex justify-center items-center">
         <div className=" h-[610px] w-[700px]  overflow-hidden shadow-md">
           <img
-            src={body}
+            src="https://img.freepik.com/free-photo/incognito-shirtless-sportsman-posing-gym_7502-5122.jpg?t=st=1738732350~exp=1738735950~hmac=b5b393923209c7229ceadd75e995bace1fb67dd7ceed9906ddc9bc29272a5fbf&w=996"
             alt="Body Stamina"
             className="w-full h-full object-cover"
           />

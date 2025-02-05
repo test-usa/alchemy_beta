@@ -32,7 +32,7 @@ const WhyChoose = () => {
         {services.map((service, index) => (
           <Card key={index} className="relative w-full h-full shadow-lg">
             <img
-              src={service.image}
+              src="https://img.freepik.com/free-photo/young-man-hoodie-showing-namaste-gesture-looking-pleased-front-view_176474-65179.jpg?t=st=1738732240~exp=1738735840~hmac=e1e5f105a619fbaef9b41c0de16c41a831bd78120e2438893e260006a590d518&w=1380"
               alt={service.title}
               className="w-full h-96 object-cover"
             />
