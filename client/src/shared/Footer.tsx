@@ -2,21 +2,21 @@
 
 export default function Footer() {
   return (
-    <footer className="h-[624px] bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
+    <footer className="h-[624px] bg-black text-white flex items-center justify-center">
+      <div className=" px-4 py-12 md:py-16">
         {/* Main Container */}
-        <div className="flex flex-col md:flex-row md:justify-between gap-8">
+        <div className="w-[1320px] flex flex-col md:flex-row md:justify-between p-[10px] gap-[10px]">
           {/* Left Section */}
-          <div className="flex-1 flex flex-col justify-start gap-4">
+          <div className="w-[360px] h-[358px] flex-1 flex flex-col justify-start gap-[32px]">
           {/* Logo + Title */}
-          <div className="flex items-center gap-2">
+          <div className="w-[235px] h-[68px] flex items-center gap-2">
             {/* Replace with your actual logo image if available */}
             <img
               src="/images/totalu_logo.png"
               alt="TotalU Logo"
               className="h-12 w-auto"
             />
-            <span className="text-2xl font-bold">TotalU</span>
+            <span className=" text-2xl font-bold">TotalU</span>
           </div>
 
           {/* Short Description */}
@@ -34,15 +34,16 @@ export default function Footer() {
                 placeholder="Email"
                 className="bg-white text-black px-4 py-2 rounded-md focus:outline-none"
               />
-              <button className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors">
+              <button className="bg-primary text-white px-4 py-2 rounded-md transition-colors">
                 Subscribe
               </button>
+
             </div>
           </div>
         </div>
 
           {/* Right Section */}
-          <div className="flex-1 grid grid-cols-2 grid-rows-2 gap-[10px]">
+          <div className="w-[292px] h-[326px] flex-1 grid grid-cols-2 grid-rows-2 gap-[24px] place-items-center">
           {/* Service */}
           <div>
             <h4 className="mb-2 font-semibold">Service</h4>
