@@ -1,4 +1,4 @@
-import React from 'react'
+
 const ArticleCard = () => {
   return (
     <div className="w-[315px] min-h-[561px] flex flex-col gap-[26px] mr-5 ">

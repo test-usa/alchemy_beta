@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { FormEvent } from "react";
 import Breadcrumbs from "../components/breadcrumbs"
 import { Link } from "react-router-dom";
@@ -15,8 +15,8 @@ const LoginPage = () => {
         bg="https://static.wixstatic.com/media/0e0e1e_0c8aae9e3ac34ac999469617a8a54208~mv2.jpg/v1/fill/w_320,h_128,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e0e1e_0c8aae9e3ac34ac999469617a8a54208~mv2.jpg"
         title="Sign In"
       />
-      <div className="max-w-2xl my-20 mx-auto bg-white rounded-lg">
-        <h2 className="text-2xl font-semibold text-center mb-6 text-[#6636EE]">Sign In Account!</h2>
+      <div className="max-w-2xl my-20 mx-auto bg-white rounded-lg mb-10">
+        <h2 className="text-2xl lg:text-4xl font-semibold text-center mb-6 text-[#6636EE]">Sign In Account!</h2>
 
         <form onSubmit={handle}>
           <div className="mb-4">

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import ArticleCard from "./ArticleCard";
 
 const LatestArticle = () => {

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import { HiCheck } from "react-icons/hi";
 /* import body from "../../assets/image/body1.jpg"; */
 
