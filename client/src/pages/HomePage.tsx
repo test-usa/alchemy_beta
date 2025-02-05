@@ -1,17 +1,21 @@
-import BestServices from "../section/Home/BestServices"
-import CustomerSay from "../section/Home/CustomerSay"
-import Hero from "../section/Home/Hero"
-import LatestArticle from "../section/Home/LatestArticle"
+import BestServices from "../section/Home/BestServices";
+import BmiSection from "../section/Home/BmiSection";
+import Hero from "../section/Home/Hero";
+import LatestArticle from "../section/Home/LatestArticle";
+import PricingPlan from "../section/Home/PricingPlan";
+import VideoSection from "../section/Home/VideoSection";
 
 const HomePage = () => {
   return (
-    <div className="w-full overflow-hidden mx-auto">
-      <Hero/>
+    <div>
+      <Hero />
       <BestServices />
-      <LatestArticle/>
-      <CustomerSay/>
+      <VideoSection />
+      <BmiSection />
+      <LatestArticle />
+      <PricingPlan />
     </div>
-  )
-}
+  );
+};
 
-export default HomePage
+export default HomePage;
