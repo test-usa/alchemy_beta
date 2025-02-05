@@ -32,7 +32,7 @@ const OurGallery = () => {
         </div>
 
         <CarouselContent className="flex items-center justify-center">
-          {[0, 1, 2, 3].map((photo, index) => (
+          {[0, 1, 2, 3].map((_photo, index) => (
             <CarouselItem
               key={index}
               className="md:basis-1/3 p-2 flex justify-center"

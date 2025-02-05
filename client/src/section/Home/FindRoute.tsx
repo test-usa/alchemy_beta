@@ -1,26 +1,24 @@
-import { Button } from "@/components/ui/button";
 import Title from "@/shared/Title";
 
 const FindRoute = () => {
   return (
     <div className="text-center justify-center py-12 px-4 md:px-16 bg-white">
       <Title
-        heading="Find Your Suitable Route"
-        subHeading="We offer top-notch fitness services designed to help you reach your
-        goals. From personalized workout plans to expert nutrition guidance, our
-        team is dedicated to your success."
-      ></Title>
-      <div>
-        <Button>Begineer</Button>
-        <Button>Intermeidate</Button>
-        <Button>Advance</Button>
+        heading="Find Your Suitable Routine"
+        subHeading="We offer top-notch fitness services designed to help you reach your goals. From personalized workout plans to expert nutrition guidance, our team is dedicated to your success."
+      />
+
+      <div className=" inline-flex  border border-purple-500 rounded-lg overflow-hidden">
+        <button className="h-[60px] w-[116px] bg-primary text-white hover:bg-purple-700 rounded-none px-6 py-2">
+          Beginner
+        </button>
+        <button className="h-[60px] w-[144px] text-purple-600 hover:bg-purple-100 rounded-none px-6 py-2">
+          Intermediate
+        </button>
+        <button className="h-[60px] w-[144px] text-purple-600 hover:bg-purple-100 rounded-none px-6 py-2">
+          Advance
+        </button>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel
-        accusantium nulla maxime, alias vitae totam praesentium repudiandae
-        ratione. Nemo optio exercitationem quam consequuntur iusto incidunt
-        ratione obcaecati ad maxime.
-      </p>
     </div>
   );
 };

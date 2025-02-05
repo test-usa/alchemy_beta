@@ -4,6 +4,7 @@ import MidNavCom from "../section/Home/MidNavCom";
 import WhyChoose from "@/section/Home/WhyChoose";
 import OurGallery from "@/section/Home/OurGallery";
 import FindRoute from "@/section/Home/FindRoute";
+import { WickendList } from "@/section/Home/WickendList";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <OurGallery />
       <MidNavCom />
       <FindRoute />
+      <WickendList />
     </div>
   );
 };
