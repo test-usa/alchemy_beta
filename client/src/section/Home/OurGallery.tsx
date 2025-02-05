@@ -1,3 +1,4 @@
+import React from 'react'
 import Title from "@/shared/Title";
 /* import photo1 from "../../assets/image/card1.jpg";
 import photo2 from "../../assets/image/card1.jpg";

@@ -1,3 +1,4 @@
+import React from 'react'
 import CustomerSay from "../section/Home/CustomerSay"
 import Hero from "../section/Home/Hero"
 import LatestArticle from "../section/Home/LatestArticle"
