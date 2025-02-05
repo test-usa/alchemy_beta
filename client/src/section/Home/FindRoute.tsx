@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Title from "@/shared/Title";
 
 const FindRoute = () => {
@@ -9,6 +10,17 @@ const FindRoute = () => {
         goals. From personalized workout plans to expert nutrition guidance, our
         team is dedicated to your success."
       ></Title>
+      <div>
+        <Button>Begineer</Button>
+        <Button>Intermeidate</Button>
+        <Button>Advance</Button>
+      </div>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel
+        accusantium nulla maxime, alias vitae totam praesentium repudiandae
+        ratione. Nemo optio exercitationem quam consequuntur iusto incidunt
+        ratione obcaecati ad maxime.
+      </p>
     </div>
   );
 };

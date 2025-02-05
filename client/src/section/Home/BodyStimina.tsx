@@ -1,5 +1,5 @@
 import { HiCheck } from "react-icons/hi";
-import body from "../../assets/image/body.jpg";
+import body from "../../assets/image/body1.jpg";
 
 const BodyStamina = () => {
   return (

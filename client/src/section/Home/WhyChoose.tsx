@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import photo1 from "../../assets/image/card.jpg";
-import photo2 from "../../assets/image/card.jpg";
-import photo3 from "../../assets/image/card.jpg";
+import photo1 from "../../assets/image/card1.jpg";
+import photo2 from "../../assets/image/card1.jpg";
+import photo3 from "../../assets/image/card1.jpg";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Title from "@/shared/Title";
 
