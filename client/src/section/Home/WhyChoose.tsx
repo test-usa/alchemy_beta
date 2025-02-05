@@ -1,22 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
-import photo1 from "../../assets/image/card1.jpg";
+/* import photo1 from "../../assets/image/card1.jpg";
 import photo2 from "../../assets/image/card1.jpg";
-import photo3 from "../../assets/image/card1.jpg";
+import photo3 from "../../assets/image/card1.jpg"; */
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Title from "@/shared/Title";
 
 const services = [
   {
     title: "Body Balance",
-    image: photo1,
+    image: "https://img.freepik.com/free-photo/young-man-hoodie-showing-namaste-gesture-looking-pleased-front-view_176474-65179.jpg?t=st=1738732240~exp=1738735840~hmac=e1e5f105a619fbaef9b41c0de16c41a831bd78120e2438893e260006a590d518&w=1380",
   },
   {
     title: "Self Defence",
-    image: photo2,
+    image: "https://img.freepik.com/free-photo/young-man-hoodie-showing-namaste-gesture-looking-pleased-front-view_176474-65179.jpg?t=st=1738732240~exp=1738735840~hmac=e1e5f105a619fbaef9b41c0de16c41a831bd78120e2438893e260006a590d518&w=1380",
   },
   {
     title: "Self Defence",
-    image: photo3,
+    image: "https://img.freepik.com/free-photo/young-man-hoodie-showing-namaste-gesture-looking-pleased-front-view_176474-65179.jpg?t=st=1738732240~exp=1738735840~hmac=e1e5f105a619fbaef9b41c0de16c41a831bd78120e2438893e260006a590d518&w=1380",
   },
 ];
 
