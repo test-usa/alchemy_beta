@@ -1,3 +1,4 @@
+
 import { Link } from 'react-router-dom';
 import { FaHome } from "react-icons/fa";
 
@@ -22,7 +23,7 @@ const Breadcrumbs = ({ bg, title }: TBreadcrumbs) => {
                 <div className='text-white uppercase flex items-center gap-2'>
                     <Link className='flex items-center gap-3' to='/'><FaHome />Home</Link>
                     <span className='text-primary'>&gt;</span>
-                    <span className='text-dark-gray'>{title}</span>
+                    <span className=''>{title}</span>
                 </div>
             </div>
         </div>

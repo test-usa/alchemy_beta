@@ -1,10 +1,9 @@
-import React from 'react'
-import Title from "@/shared/Title";
+
+
 /* import photo1 from "../../assets/image/card1.jpg";
 import photo2 from "../../assets/image/card1.jpg";
 import photo3 from "../../assets/image/card1.jpg";
 import photo4 from "../../assets/image/card1.jpg"; */
-import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
   CarouselContent,
@@ -12,6 +11,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import Title from '@/shared/Title';
+import { Card, CardContent } from '@/components/ui/card';
 
 /* const images = [photo1, photo2, photo3, photo4, photo1, photo2, photo3]; */
 

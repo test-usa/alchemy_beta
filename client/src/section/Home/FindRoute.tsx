@@ -1,6 +1,6 @@
-import React from 'react'
-import { Button } from "@/components/ui/button";
-import Title from "@/shared/Title";
+
+import { Button } from '@/components/ui/button';
+import Title from '@/shared/Title';
 
 const FindRoute = () => {
   return (
