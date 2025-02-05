@@ -31,7 +31,7 @@ const WhyChoose = () => {
         subHeading="We offer top-notch fitness services designed to help you reach your goals. From personalized workout plans to expert nutrition guidance, our team is dedicated to your success."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-[1320px] mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-[1320px] relative mx-auto">
         {services.map((service, index) => (
           <Card key={index} className="relative w-full h-full shadow-lg">
             <img
