@@ -8,12 +8,15 @@ import MidNavCom from "../section/Home/MidNavCom";
 import WhyChoose from "../section/Home/WhyChoose";
 import OurGallery from "../section/Home/OurGallery";
 import FindRoute from "../section/Home/FindRoute";
+import Badge from "@/section/Home/Badge";
 
 const HomePage = () => {
   return (
     <div>
       <Hero />
+      <div className="mt-[-80px]"><MidNavCom/></div>
       <BestServices />
+      <Badge/>
       <BodyStimina />
       <MidNavCom />
       <WhyChoose />
