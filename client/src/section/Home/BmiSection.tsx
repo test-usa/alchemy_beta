@@ -1,6 +1,8 @@
 import { BmiChart } from "@/components/ui/BmiChart";
 import React from "react";
 import MidNavCom from "./MidNavCom";
+import { IoIosMale } from "react-icons/io";
+import { MdOutlineFemale } from "react-icons/md";
 
 const BmiSection = () => {
   return (
@@ -35,16 +37,22 @@ const BmiSection = () => {
                   <div className="w-full flex gap-4">
                     <div className="w-[172px] rounded-[4px] border border-solid p-4 flex flex-col gap-2">
                       <div className="w-[55px] h-[26px] flex">
-                        <p className="font-inter font-normal text-[16px] leading-[26.24px] text-center">
-                          Female
-                        </p>
+                        <button className="font-inter font-normal text-[16px] leading-[26.24px] text-center">
+                          <div className="flex ">
+                          <IoIosMale size={25} className="pt-2" />    Female
+                          </div>
+                      
+                        </button>
                       </div>
                     </div>
                     <div className="w-[172px] rounded-[4px] border border-solid p-4 flex flex-col gap-2">
                       <div className="w-[55px] h-[26px] flex">
-                        <p className="font-inter font-normal text-[16px] leading-[26.24px] text-center">
-                          Male
-                        </p>
+                      <button className="font-inter font-normal text-[16px] leading-[26.24px] text-center flex">
+                          <div className="flex ">
+                          <MdOutlineFemale  size={27} className="pt-2" />    Female
+                          </div>
+                      
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -73,14 +81,14 @@ const BmiSection = () => {
                     </h2>
                   </div>
                   <div className="w-full flex items-center gap-[10px] p-4 border border-gray-300 rounded-[4px]">
-                    <div className="w-[246px] flex items-center gap-[15px] p-4 border border-gray-300 rounded-[4px]">
+                  
                       <input
                         type="number"
                         className="font-inter font-semibold text-[16px] leading-[21.12px] tracking-[-0.02em] text-[#141414] w-full p-2 border-none outline-none"
                         value={170}
                         onChange={(e) => console.log(e.target.value)} // Add your change handler here
                       />
-                    </div>
+                  
 
                     <select className="w-auto max-w-[97px] h-[58px] p-4 border border-gray-300 rounded-[4px] bg-white focus:outline-none">
                       <option value="option1">CM</option>
@@ -96,14 +104,14 @@ const BmiSection = () => {
                     </h2>
                   </div>
                   <div className="w-full flex items-center gap-[10px] p-4 border border-gray-300 rounded-[4px]">
-                    <div className="w-[246px] flex items-center gap-[15px] p-4 border border-gray-300 rounded-[4px]">
+           
                       <input
                         type="number"
                         className="font-inter font-semibold text-[16px] leading-[21.12px] tracking-[-0.02em] text-[#141414] w-full p-2 border-none outline-none"
                         value={58}
                         onChange={(e) => console.log(e.target.value)} // Add your change handler here
                       />
-                    </div>
+              
 
                     <select className="w-auto max-w-[97px] h-[58px] p-4 border border-gray-300 rounded-[4px] bg-white focus:outline-none">
                       <option value="option1">KG</option>

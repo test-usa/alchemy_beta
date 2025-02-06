@@ -1,8 +1,10 @@
+import CustomerSayCarousel from "./CustomerSayCarousel";
 import MidNavCom from "./MidNavCom";
+
 
 const CustomerSay = () => {
   return (
-    <div className="">
+    <div >
       <MidNavCom />
       <div className="">
         <h1 className="text-[24px] leading-[31.68px] font-inter font-semibold tracking-[-0.02em] text-center text-[#6636EE] py-8">
@@ -63,6 +65,10 @@ const CustomerSay = () => {
           </div>
         </div>
       </div>
+
+      {/* <CustomerSayCarousel/> */}
+
+
     </div>
   );
 };

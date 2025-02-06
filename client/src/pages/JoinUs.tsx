@@ -1,5 +1,8 @@
 import PricingPlan from "@/section/JoinUs/PricingPlan";
 
+
+
+
 const JoinUs = () => {
   return (
     <div>

@@ -2,6 +2,7 @@
 import { FormEvent } from "react";
 import Breadcrumbs from "../components/breadcrumbs"
 import { Link } from "react-router-dom";
+import Steps from "@/section/SIgnup/Steps";
 
 const SignupPage = () => {
   const handle = (e: FormEvent) => {
@@ -69,6 +70,10 @@ const SignupPage = () => {
           </div>
           <p className="text-center">Already have an account? <Link to="/login" className="text-[#6636EE] cursor-pointer">Sign in</Link></p>
         </div>
+      </div>
+
+      <div>
+        <Steps />
       </div>
     </div>
   )
