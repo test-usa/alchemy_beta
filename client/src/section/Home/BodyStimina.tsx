@@ -1,3 +1,4 @@
+
 import { HiCheck } from "react-icons/hi";
 
 const BodyStamina = () => {

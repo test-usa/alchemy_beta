@@ -1,3 +1,4 @@
+
 import { MdStarRate } from "react-icons/md";
 
 const MidNavCom = () => {

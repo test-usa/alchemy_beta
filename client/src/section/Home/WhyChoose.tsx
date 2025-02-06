@@ -1,5 +1,9 @@
-import { Card, CardContent } from "@/components/ui/card";
 
+import { Card, CardContent } from "@/components/ui/card";
+<<<<<<< HEAD
+
+=======
+>>>>>>> 41eee23d4e99347dcb6e6364f20734c2161976ee
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Title from "@/shared/Title";
 
