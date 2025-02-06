@@ -57,9 +57,12 @@ const BmiSection = () => {
                     </h2>
                   </div>
                   <div className="w-full flex items-center gap-[10px] p-4 border border-gray-300 rounded-[4px]">
-                    <p className="text-[16px] leading-[26.24px] font-inter font-normal">
-                      16
-                    </p>
+                    <input
+                      type="number"
+                      className="text-[16px] leading-[26.24px] font-inter font-normal w-full p-2 border-none outline-none"
+                      value={16}
+                      onChange={(e) => console.log(e.target.value)} // Add your change handler here
+                    />
                   </div>
                 </div>
 
@@ -71,10 +74,14 @@ const BmiSection = () => {
                   </div>
                   <div className="w-full flex items-center gap-[10px] p-4 border border-gray-300 rounded-[4px]">
                     <div className="w-[246px] flex items-center gap-[15px] p-4 border border-gray-300 rounded-[4px]">
-                      <h2 className="font-inter font-semibold text-[16px] leading-[21.12px] tracking-[-0.02em] text-[#141414]">
-                        170
-                      </h2>
+                      <input
+                        type="number"
+                        className="font-inter font-semibold text-[16px] leading-[21.12px] tracking-[-0.02em] text-[#141414] w-full p-2 border-none outline-none"
+                        value={170}
+                        onChange={(e) => console.log(e.target.value)} // Add your change handler here
+                      />
                     </div>
+
                     <select className="w-auto max-w-[97px] h-[58px] p-4 border border-gray-300 rounded-[4px] bg-white focus:outline-none">
                       <option value="option1">CM</option>
                       <option value="option2">M</option>
@@ -90,10 +97,14 @@ const BmiSection = () => {
                   </div>
                   <div className="w-full flex items-center gap-[10px] p-4 border border-gray-300 rounded-[4px]">
                     <div className="w-[246px] flex items-center gap-[15px] p-4 border border-gray-300 rounded-[4px]">
-                      <h2 className="font-inter font-semibold text-[16px] leading-[21.12px] tracking-[-0.02em] text-[#141414]">
-                        58
-                      </h2>
+                      <input
+                        type="number"
+                        className="font-inter font-semibold text-[16px] leading-[21.12px] tracking-[-0.02em] text-[#141414] w-full p-2 border-none outline-none"
+                        value={58}
+                        onChange={(e) => console.log(e.target.value)} // Add your change handler here
+                      />
                     </div>
+
                     <select className="w-auto max-w-[97px] h-[58px] p-4 border border-gray-300 rounded-[4px] bg-white focus:outline-none">
                       <option value="option1">KG</option>
                       <option value="option2">Gram</option>
