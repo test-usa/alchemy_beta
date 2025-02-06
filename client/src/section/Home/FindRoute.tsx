@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import Title from "@/shared/Title";
-=======
 
-import { Button } from '@/components/ui/button';
 import Title from '@/shared/Title';
->>>>>>> 41eee23d4e99347dcb6e6364f20734c2161976ee
 
 const FindRoute = () => {
   return (
@@ -18,10 +13,10 @@ const FindRoute = () => {
         <button className="h-[60px] w-[116px] sm:w-[130px] md:w-[160px] bg-primary text-white hover:bg-purple-700 rounded-md px-6 py-2">
           Beginner
         </button>
-        <button className="h-[60px] w-[116px] sm:w-[130px] md:w-[160px] text-purple-600 hover:bg-purple-100 rounded-md px-6 py-2">
+        <button className="h-[60px] w-[116px] sm:w-[130px] md:w-[160px] text-primary hover:bg-purple-100 rounded-md px-6 py-2">
           Intermediate
         </button>
-        <button className="h-[60px] w-[116px] sm:w-[130px] md:w-[160px] text-purple-600 hover:bg-purple-100 rounded-md px-6 py-2">
+        <button className="h-[60px] w-[116px] sm:w-[130px] md:w-[160px] text-primary hover:bg-purple-100 rounded-md px-6 py-2">
           Advance
         </button>
       </div>

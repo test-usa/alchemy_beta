@@ -10,6 +10,9 @@ import OurGallery from "@/section/Home/OurGallery";
 import FindRoute from "@/section/Home/FindRoute";
 import { WickendList } from "@/section/Home/WickendList";
 import FaqPage from "@/section/SidePage/FaqPage";
+import Confirm from "@/section/SidePage/Confirm";
+import AddCardInfo from "..//section/SidePage/AddCardInfo";
+import Checkout from "@/section/SidePage/Checkout";
 
 const HomePage = () => {
   return (
@@ -23,9 +26,15 @@ const HomePage = () => {
       <MidNavCom />
       <FindRoute />
       <WickendList />
+{/* TOday */}
+      <Checkout/>
+      <AddCardInfo/>
+      <Confirm/>
       <FaqPage />
+
       <LatestArticle/>
       <CustomerSay/>
+      
     </div>
   );
 };
