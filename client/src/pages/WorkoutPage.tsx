@@ -1,6 +1,6 @@
 import Breadcrumbs from "@/components/breadcrumbs";
-import image1 from "../assets/image1.jpg";
-import image2 from "../assets/image2.webp";
+import image1 from "../assets/image1.jpg"
+import image2 from "../assets/image2.webp"
 import workoutImage from "../assets/workout.jpg";
 import WorkoutCard from "@/section/workout/WorkoutCard";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@radix-ui/react-accordion";
@@ -11,7 +11,6 @@ import { CiPhone } from "react-icons/ci";
 import { CiLocationArrow1 } from "react-icons/ci";
 import { SlDocs } from "react-icons/sl";
 import { FaRegFilePdf } from "react-icons/fa6";
-
 const WorkoutPage = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,16 +33,16 @@ const WorkoutPage = () => {
   ];
 
   return (
-    <div >
+    <div>
+
       <div className="w-full lg:h-[440px] top-[88px] overflow-hidden">
         <Breadcrumbs bg={workoutImage} title="Articles & tips" />
       </div>
 
-      <div className="w-full h-full flex justify-center">
-        <div className="lg:max-w-full lg:max-h-full flex flex-col lg:flex-row gap-5 justify-center mt-10 px-4">
+      <div className=" lg:w-full lg:h-full flex gap-5 justify-center mt-10  ">
 
-
-          {/* Left section */}
+        {/* left */}
+        <div className=" ">
           {/* category */}
           <div className="lg:w-[335px] lg:max-h-[536px] top-[588px] left-[300px] gap-[32px] border pb-5 ">
             <div className="flex flex-col items-center  ">
@@ -177,20 +176,131 @@ const WorkoutPage = () => {
             </div>
 
           </div>
-
-          {/* Right section */}
-          <div className="lg:w-[calc(100%-335px)] flex flex-col gap-5">
-            {dummyData.map((data, index) => (
-              <div key={index} className="pb-3">
-                <WorkoutCard image={data.image} title={data.title} description={data.description} />
+          {/* contracts */}
+          <div className="w-[335px] h-[330px] top-[1782px] left-[300px] rounded-[4px] gap-[10px] border mt-2">
+            <div className=" w-full h-full">
+              <div className="py-3">
+                <p className="font-inter font-semibold text-[20px] leading-[26.4px] tracking-[-2%] text-[#6636EE] ">
+                  Contracts
+                </p>
               </div>
-            ))}
+              <div className="w-[287px] h-[36px]  pb-[10px] gap-[10px] flex mb-8">
+                <div className="w-[58px] h-[58px] rounded-[41.08px] p-[13.29px] gap-[12.08px] bg-[#EDE7FF] flex justify-center items-center">
+                  <SlEnvolopeLetter />
+                </div>
+                <div className="w-[124px] h-[54px] gap-[4px]">
+                  <div className="w-[124px] h-[24px]">
+                    <p className="font-inter font-semibold text-[12px] leading-[23.76px] tracking-[-2%]">
+                      Email Address
+                    </p>
+                    <div className="w-[124px] h-[26px]">
+                      info@totalu.com
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div className="w-[287px] h-[36px]  pb-[10px] gap-[10px] flex mb-8">
+                <div className="w-[58px] h-[58px] rounded-[41.08px] p-[13.29px] gap-[12.08px] bg-[#EDE7FF] flex justify-center items-center">
+                  <CiPhone />
+                </div>
+                <div className="w-[124px] h-[54px] gap-[4px]">
+                  <div className="w-[124px] h-[24px]">
+                    <p className="font-inter font-semibold text-[12px] leading-[23.76px] tracking-[-2%]">
+                      Phone Number
+                    </p>
+                    <div className="w-[124px] h-[26px]">
+                      64388867
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+              <div className="w-[287px] h-[36px]  pb-[10px] gap-[10px] flex mb-5">
+                <div className="w-[58px] h-[58px] rounded-[41.08px] p-[13.29px] gap-[12.08px] bg-[#EDE7FF] flex justify-center items-center">
+                  <CiLocationArrow1 />
+                </div>
+                <div className="w-[124px] h-[54px] gap-[4px]">
+                  <div className="w-[124px] h-[24px]">
+                    <p className="font-inter font-semibold text-[12px] leading-[23.76px] tracking-[-2%]">
+                      Loaction
+                    </p>
+                    <div className="w-[124px] h-[26px]">
+                      street road
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
           </div>
+          {/* brocer */}
+          <div className="w-[335px]  rounded-[4px] p-[24px] gap-[10px] pb-8 border mt-3 ">
+            <div className="w-[287px] gap-[24px] ">
+              <div className="py-3">
+                <p className="font-inter font-semibold text-[20px] leading-[26.4px] tracking-[-2%] text-[#6636EE] ">
+                  Brochures
+                </p>
+              </div>
+              <div className="w-[287px] h-[36px]  pb-[10px] gap-[10px] flex mb-8">
+                <div className="w-[58px] h-[58px] rounded-[41.08px] p-[13.29px] gap-[12.08px]">
+                  <FaRegFilePdf />
+                </div>
+                <div className="w-[124px] h-[54px] gap-[4px]">
+                  <div className="w-full h-auto gap-[22px]">
+                    Download.pdf
+                  </div>
+
+                </div>
+
+              </div>
+              <div className="w-[287px] h-[36px]  pb-[10px] gap-[10px] flex mb-8">
+                <div className="w-[58px] h-[58px] rounded-[41.08px] p-[13.29px] gap-[12.08px]">
+                  <SlDocs />
+
+                </div>
+                <div className="w-full h-auto gap-[22px]">
+                  Download.docx
+                </div>
+
+              </div>
+
+            </div>
+          </div>
+
+          {/* help */}
+          <div className="w-[335px] h-[320px] top-[1782px] left-[300px] rounded-[4px] gap-[10px]">
+
+          </div>
+
+        </div>
+
+        {/* right */}
+        <div className="">
+          {dummyData.map((data, index) => {
+            return (  // Add a return statement here
+              <div className="pb-3">
+                <WorkoutCard
+
+                  key={index} // Add a unique key for each element in the map
+                  image={data.image}
+                  title={data.title}
+                  description={data.description}
+                />
+              </div>
+
+            );
+          })}
         </div>
 
       </div>
-
-
 
     </div>
   );
