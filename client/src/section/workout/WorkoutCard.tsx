@@ -24,7 +24,7 @@ const WorkoutCard = ({ image, title, description, additionalImage }: { image: st
 
                 {/* Full Title Section - Show full title when expanded */}
                 <div className="text-[32px] font-inter font-bold leading-[42.24px] tracking-[-1%] text-[#333333]">
-                    {isExpanded ? title : title.substring(0, 30) + "..."}
+                    {isExpanded ? title : title}
                 </div>
 
                 {/* Main Description */}
