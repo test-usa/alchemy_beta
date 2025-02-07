@@ -33,8 +33,11 @@ const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
                     {title}
                 </h1>
                 <div className='text-white uppercase flex items-center gap-2 text-sm md:text-base'>
-                    <Link className='flex items-center gap-3' to='/'><FaHome />Home</Link>
-                    <span>&gt;</span>
+                    <Link className='flex items-center gap-3 mr-2' to='/'>
+                    <FaHome size={20} />
+                    Home
+                    </Link>
+                    <span className='text-5xl -mt-2'>&bull;</span>
                     <span>{title}</span>
                 </div>
             </div>
