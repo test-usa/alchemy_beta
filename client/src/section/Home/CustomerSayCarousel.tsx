@@ -22,7 +22,7 @@ const CustomerSayCarousel = () => {
             {[0, 1, 2].map((photo, index) => (
               <CarouselItem
                 key={index}
-                className="md:basis-1/2 p-2 flex justify-center lg:w-full lg:flex-shrink-0 -mr-[40px] lg:mr-0 "
+                className="md:basis-1/2 p-2 flex justify-center lg:w-full lg:flex-shrink-0 lg:mr-0 "
               >
                 <Card
                   className={`transition-transform duration-300 ${index === 1
@@ -86,9 +86,9 @@ const CustomerSayCarousel = () => {
                         </div>
                       </div>
 
-                      <div className="w-[506.23px] h-[363.76px] top-[14.12px] left-[502.33px] rounded-[5.19px] p-[31.15px] gap-[12.98px]">
-                        <div className="w-[433.54px] h-[250.46px] gap-[62.3px] bg-[#FFFFFF] p-3">
-                          <div className="flex flex-col gap-10">
+                      <div className="lg:w-[506.23px] lg:h-[363.76px] top-[14.12px] lg:left-[502.33px] rounded-[5.19px] lg:p-[31.15px] lg:gap-[12.98px]">
+                        <div className="lg:w-[433.54px] lg:h-[250.46px] gap-[62.3px] bg-[#FFFFFF] p-3">
+                          <div className="flex flex-col gap-10 text-center">
                             <p>
                               We offer top-notch fitness services designed to help
                               you reach your goals. From personalized workout
@@ -109,7 +109,7 @@ const CustomerSayCarousel = () => {
           </CarouselContent>
 
           {/* Carousel Controls */}
-          <div className="absolute left-1/2 transform -translate-x-1/2  flex gap-2 z-10 mx-auto top-[500px] lg:top-[420px]">
+          <div className="absolute left-1/2 transform -translate-x-1/2  flex gap-2 z-10 mx-auto lg:top-[500px] lg:top-[420px]">
             <CarouselPrevious className="bg-[#EDE7FF] text-primary rounded-full p-2 hover:bg-purple-300" />
             <CarouselNext className="bg-[#EDE7FF] text-primary rounded-full p-2 hover:bg-purple-300" />
           </div>
