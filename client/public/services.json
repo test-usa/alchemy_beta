@@ -1,0 +1,10 @@
+[
+    {
+        "name": "Service 1",
+        "description": "This is service 1"
+    }, 
+    {
+        "name": "Service 2",
+        "description": "This is service 2"  
+    }
+]

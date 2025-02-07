@@ -1,16 +1,28 @@
-import { useState } from "react";
+import { StepperContext } from "@/providers/StepperProvider";
+import { useContext, useEffect } from "react";
 
 const Gender = () => {
-    const [selectedGender, setSelectedGender] = useState<string | null>(null);
+    const { setState1, userData, setUserData } = useContext(StepperContext);
 
     const handleClick = (gender: string) => {
-        setSelectedGender(prevGender => (prevGender === gender ? null : gender));
+        const updatedGender = userData?.gender === gender ? null : gender;
+        setUserData((prevData : {gender: string}) => ({ ...prevData, gender: updatedGender }));
     };
+
+    useEffect(() => {
+        if (userData?.gender !== null) {
+            setState1(true);
+        } else {
+            setState1(false);
+        }
+    }, [userData?.gender, setState1]);
 
     return (
         <div>
             <h2 className="text-4xl text-center font-semibold my-10">Select your gender</h2>
             <div className="max-w-lg mx-auto">
+
+                {/* Female */}
                 <div
                     className="flex justify-between items-center border border-[#6636EE] px-3 py-2 mb-5 cursor-pointer"
                     onClick={() => handleClick("Female")}
@@ -18,21 +30,19 @@ const Gender = () => {
                     <label
                         className="text-[#6636EE] cursor-pointer"
                         htmlFor="Female"
-                        onChange={() => handleClick("Female")}
-                        onClick={() => handleClick("Female")}
                     >
                         Female
                     </label>
-
                     <input
                         id="Female"
                         type="checkbox"
                         className="cursor-pointer"
-                        checked={selectedGender === "Female"}
+                        checked={userData?.gender === "Female"}
                         onChange={() => handleClick("Female")}
-                        onClick={() => handleClick("Female")}
                     />
                 </div>
+
+                {/* Male */}
                 <div
                     className="flex justify-between items-center border border-[#6636EE] px-3 py-2 cursor-pointer"
                     onClick={() => handleClick("Male")}
@@ -40,8 +50,6 @@ const Gender = () => {
                     <label
                         className="text-[#6636EE] cursor-pointer"
                         htmlFor="Male"
-                        onChange={() => handleClick("Male")}
-                        onClick={() => handleClick("Male")}
                     >
                         Male
                     </label>
@@ -49,9 +57,8 @@ const Gender = () => {
                         id="Male"
                         type="checkbox"
                         className="cursor-pointer"
-                        checked={selectedGender === "Male"}
+                        checked={userData?.gender === "Male"}
                         onChange={() => handleClick("Male")}
-                        onClick={() => handleClick("Male")}
                     />
                 </div>
             </div>

@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { StepperContext } from "@/providers/StepperProvider";
+import { useContext, useEffect } from "react";
 
 const YourGoal = () => {
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+    const { state4, setState4, userData, setUserData } = useContext(StepperContext)
 
-  const handleClick = (g: string) => {
-    setSelectedOption(prev => (prev === g ? null : g));
-  };
+  // const handleClick = (g: string) => {
+  //   setSelectedOption(prev => (prev === g ? null : g));
+  // };
+
+  const handleClick = (activityLevel: string) => {
+    const updatedActivityLevel = userData?.activityLevel === activityLevel ? null : activityLevel;
+    setUserData((prevData : {activityLevel: string}) => ({ ...prevData, activityLevel: updatedActivityLevel }));
+};
+
+  useEffect(() => {
+    if (userData?.activityLevel !== null) {
+      setState4(true);
+    } else {
+      setState4(false);
+    }
+  }, [userData?.activityLevel, setState4, state4]);
  
   return (
     <div>
@@ -29,7 +43,7 @@ const YourGoal = () => {
             id="b"
             type="checkbox"
             className="cursor-pointer"
-            checked={selectedOption === "Beginner"}
+            checked={userData?.activityLevel === "Beginner"}
             onChange={() => handleClick("Beginner")}
             onClick={() => handleClick("Beginner")}
           />
@@ -53,7 +67,7 @@ const YourGoal = () => {
             id="i"
             type="checkbox"
             className="cursor-pointer"
-            checked={selectedOption === "Intermediate"}
+            checked={userData?.activityLevel === "Intermediate"}
             onChange={() => handleClick("Intermediate")}
             onClick={() => handleClick("Intermediate")}
           />
@@ -77,7 +91,7 @@ const YourGoal = () => {
             id="e"
             type="checkbox"
             className="cursor-pointer"
-            checked={selectedOption === "Expert"}
+            checked={userData?.activityLevel === "Expert"}
             onChange={() => handleClick("Expert")}
             onClick={() => handleClick("Expert")}
           />

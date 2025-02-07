@@ -5,25 +5,37 @@ import { FaHome } from "react-icons/fa";
 type TBreadcrumbs = {
     bg: string;
     title: string;
+    heading?: string
 };
 
-const Breadcrumbs = ({ bg, title }: TBreadcrumbs) => {
+const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
     return (
-        <div className='relative w-full'>
+        <div className='relative w-full pb-64 md:pb-96'>
             {/* Background Image */}
-            <div className='absolute inset-0 h-[440px]'>
+            <div className='absolute inset-0 h-80 md:h-[440px]'>
                 <img src={bg} alt='Background' className='w-full h-full object-cover' />
             </div>
+
+            {/* Heading */}
+            {
+                heading && (
+                    <div className='absolute top-32 md:top-40 left-12 md:left-28 lg:left-48 xl:left-64 duration-300'>
+                        <h1 className='font-semibold text-white text-2xl md:text-4xl leading-snug uppercase drop-shadow-lg'>
+                            {heading}
+                        </h1>
+                    </div>
+                )
+            }
             
             {/* Overlay & Content */}
-            <div className='relative bg-primary/20 h-[440px] pt-20 pl-60 md:pt-[160px] pb-8 flex flex-col justify-end'>
-                <h1 className='font-semibold text-white text-2xl leading-snug uppercase drop-shadow-lg'>
+            <div className='relative top-52 md:top-[280px] left-12 md:left-28 lg:left-48 xl:left-64 duration-300 flex flex-col justify-end'>
+                <h1 className='font-semibold text-white text-lg md:text-2xl leading-snug uppercase drop-shadow-lg mb-2'>
                     {title}
                 </h1>
-                <div className='text-white uppercase flex items-center gap-2'>
+                <div className='text-white uppercase flex items-center gap-2 text-sm md:text-base'>
                     <Link className='flex items-center gap-3' to='/'><FaHome />Home</Link>
-                    <span className='text-primary'>&gt;</span>
-                    <span className=''>{title}</span>
+                    <span>&gt;</span>
+                    <span>{title}</span>
                 </div>
             </div>
         </div>
