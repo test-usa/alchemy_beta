@@ -20,7 +20,7 @@ const schedule = [
   { day: "Sunday", activity: "Power Yoga", time: "09:00" },
 ];
 
-export function WickendList() {
+export function WickedList() {
   const [activeFilter, setActiveFilter] = useState("All");
 
   return (
@@ -32,11 +32,10 @@ export function WickendList() {
               key={filter}
               onClick={() => setActiveFilter(filter)}
               variant={activeFilter === filter ? "default" : "outline"}
-              className={`$${
-                activeFilter === filter
+              className={`$${activeFilter === filter
                   ? "bg-primary text-white"
                   : "text-primary"
-              } px-4 py-2 text-sm sm:text-base`}
+                } px-4 py-2 text-sm sm:text-base`}
             >
               {filter}
             </Button>

@@ -7,12 +7,8 @@ import BestServices from "../section/Home/BestServices";
 import WhyChoose from "@/section/Home/WhyChoose";
 import OurGallery from "@/section/Home/OurGallery";
 import FindRoute from "@/section/Home/FindRoute";
-import { WickendList } from "@/section/Home/WickendList";
-import FaqPage from "@/section/SidePage/FaqPage";
-import Confirm from "@/section/SidePage/Confirm";
-import AddCardInfo from "..//section/SidePage/AddCardInfo";
-import Checkout from "@/section/SidePage/Checkout";
 import MidNavCom from "@/shared/MidNavCom";
+import { WickedList } from "@/section/Home/WickedList";
 
 const HomePage = () => {
   return (
@@ -25,10 +21,8 @@ const HomePage = () => {
       <OurGallery />
       <MidNavCom />
       <FindRoute />
-      <WickendList />
+      <WickedList />
       <LatestArticle />
-
-
     </div>
   );
 };
