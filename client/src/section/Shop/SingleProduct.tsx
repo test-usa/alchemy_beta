@@ -28,7 +28,7 @@ export const SingleProduct = () => {
   } = useQuery({
     queryKey: ["product", id],
     queryFn: () => fetchProductDetails(id!),
-    enabled: !!id, // Only run query if ID exists
+    enabled: !!id,
   });
 
   console.log(product?.name)
