@@ -37,7 +37,7 @@ const Hero = () => {
   {/* Athlete Image */}
   <div className="w-[900px] relative mt-10 md:mt-0 z-30">
     <div className="absolute inset-0 flex justify-center items-center ">
-      <div className="w-[972px] h-[872px] md:w-[972px] md:h-[672px] bg-gradient-to-r from-[#FFFFFF] to-[#C6C6C600] rounded-full blur-[84px] relative top-16 left-[96px]"></div>
+      <div className="w-[972px] h-[872px] md:w-[972px] md:h-[672px] bg-gradient-to-r from-[#FFFFFF]/30 to-[#C6C6C600]/30 rounded-full blur-[84px] relative  left-[26px]"></div>
     </div>
     <img
       src={athlete}

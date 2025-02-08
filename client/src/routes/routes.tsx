@@ -16,7 +16,6 @@ import KetoMealPlan from "@/section/nutrition/KetoMealPlan";
 import Macros from "@/section/nutrition/Macros";
 import IntermittentFasting from "@/section/nutrition/IntermittentFasting";
 
-
 const router = createBrowserRouter([
     {
         path: "/",
@@ -45,7 +44,5 @@ const router = createBrowserRouter([
         ]
     }
 ]);
-
-
 
 export default router;
