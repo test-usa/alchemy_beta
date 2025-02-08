@@ -15,7 +15,7 @@ const navLinks = [
   },
   {
     lebel: "Meditation",
-    href: "/meditation",
+    href: "/mindhandling",
   },
   {
     lebel: "Workout",

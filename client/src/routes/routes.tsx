@@ -19,6 +19,13 @@ import CheckoutPage from "@/pages/CheckoutPage";
 import { ShopDetailsPage } from "@/pages/ShopDetailsPage";
 import { Goal } from "lucide-react";
 import Community from "@/pages/Community";
+import Confirm from "@/section/SidePage/Confirm";
+import MindHandling from "@/section/MindHandling/MindHandling";
+import Meditations from "@/section/MindHandling/Meditations";
+import AddCardInfo from "@/section/SidePage/AddCardInfo";
+import SoundHandeling from "@/section/MindHandling/SoundHandeling";
+import GetOrganization from "@/section/MindHandling/GetOrganization";
+import RecoveryCounseling from "@/section/MindHandling/RecoveryCounseling";
 
 const router = createBrowserRouter([
     {
@@ -29,7 +36,7 @@ const router = createBrowserRouter([
             { path: "/", element: <HomePage /> },
             { path: "signup", element: <SignupPage /> },
             { path: "login", element: <LoginPage /> },
-            { 
+            {
                 path: "nutrition",
                 element: <NutritionPage />,
                 children: [
@@ -49,6 +56,21 @@ const router = createBrowserRouter([
             { path: "checkout", element: <CheckoutPage /> },
             { path: "goal", element: <Goal /> },
             { path: "community", element: <Community /> },
+            { path: "place-order", element: <AddCardInfo /> },
+            { path: "pay", element: <Confirm /> },
+
+            {
+                path: "mindhandling",
+                element: <MindHandling />,
+                children: [
+                    { path: "meditation", element: <Meditations /> },
+                    { path: "sound-handeling", element: <SoundHandeling /> },
+                    { path: "get-organization", element: <GetOrganization /> },
+                    { path: "recovery-counseling", element: <RecoveryCounseling /> },
+
+                ]
+
+            },
 
         ]
     }

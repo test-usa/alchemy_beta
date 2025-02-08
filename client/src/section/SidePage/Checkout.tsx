@@ -8,6 +8,7 @@ import Breadcrumbs from "@/components/breadcrumbs";
 import visa from "../../assets/image/visa.png";
 import mastercard from "../../assets/image/mastercard.png";
 import unionpay from "../../assets/image/unionpay.png";
+import { Link } from "react-router-dom";
 
 const Checkout = () => {
   return (
@@ -113,8 +114,10 @@ const Checkout = () => {
         <p className="text-xs text-gray-600 mt-4">
           Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.
         </p>
+        <Link to="/place-order">
+          <Button className="w-full bg-primary text-white mt-6">Place Order</Button>
+        </Link>
 
-        <Button className="w-full bg-primary text-white mt-6">Place Order</Button>
       </div>
     </div>
   );

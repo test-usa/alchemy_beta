@@ -34,7 +34,7 @@ const BodyStamina = () => {
             explicabo inventore consequatur.
           </p>
 
-          {/* List of Features */}
+          {/* Features */}
           <div className="space-y-3">
             {[
               "Vite quam touror enim est pharetra integer",
@@ -60,7 +60,6 @@ const BodyStamina = () => {
             ))}
           </div>
 
-          {/* See More Button */}
           <button className="mt-6 w-full md:w-[180px] h-12 bg-primary text-white rounded-md flex justify-center items-center hover:bg-blue-700 transition duration-300 text-base font-medium">
             See More
           </button>

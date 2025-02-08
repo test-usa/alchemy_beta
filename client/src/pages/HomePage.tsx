@@ -1,15 +1,13 @@
-
-import Hero from "@/section/Home/Hero"
-import LatestArticle from "@/section/Home/LatestArticle"
-import BodyStimina from "@/section/Home/BodyStimina";
 import BestServices from "@/section/Home/BestServices";
-import WhyChoose from "@/section/Home/WhyChoose";
-import OurGallery from "@/section/Home/OurGallery";
+import BodyStamina from "@/section/Home/BodyStimina";
 import FindRoute from "@/section/Home/FindRoute";
-import Badge from "@/section/Home/Badge";
-import { WickendList } from "@/section/Home/WickendList";
+import Hero from "@/section/Home/Hero";
+import LatestArticle from "@/section/Home/LatestArticle";
+import OurGallery from "@/section/Home/OurGallery";
+import WhyChoose from "@/section/Home/WhyChoose";
+import { WickedList } from "@/section/Home/WickedList";
 import MidNavCom from "@/shared/MidNavCom";
-import CustomerSay from "@/section/Home/CustomerSay";
+import WorkoutPage from "./WorkoutPage";
 
 const HomePage = () => {
   return (
@@ -17,16 +15,15 @@ const HomePage = () => {
       <Hero />
       <MidNavCom />
       <BestServices />
-      <Badge />
-      <BodyStimina />
+      <BodyStamina />
       <MidNavCom />
       <WhyChoose />
       <OurGallery />
       <MidNavCom />
       <FindRoute />
-      <WickendList />
+      <WickedList />
       <LatestArticle />
-      <CustomerSay />
+      <WorkoutPage />
     </div>
   );
 };
