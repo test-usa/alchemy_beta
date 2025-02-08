@@ -15,6 +15,7 @@ import Keto from "@/section/nutrition/Keto";
 import KetoMealPlan from "@/section/nutrition/KetoMealPlan";
 import Macros from "@/section/nutrition/Macros";
 import IntermittentFasting from "@/section/nutrition/IntermittentFasting";
+import CheckoutPage from "@/pages/CheckoutPage";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +42,8 @@ const router = createBrowserRouter([
             { path: "tracker", element: <TrackerPage /> },
             { path: "articles-and-tips", element: <ArticlesAndTipsPage /> },
             { path: "shop", element: <ShopPage /> },
+            { path: "checkout", element: <CheckoutPage /> },
+
         ]
     }
 ]);

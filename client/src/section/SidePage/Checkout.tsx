@@ -5,6 +5,10 @@ import { Button } from "@/components/ui/button";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import Breadcrumbs from "@/components/breadcrumbs";
 
+import visa from "../../assets/image/visa.png";
+import mastercard from "../../assets/image/mastercard.png";
+import unionpay from "../../assets/image/unionpay.png";
+
 const Checkout = () => {
   return (
     <div>
@@ -82,7 +86,7 @@ const Checkout = () => {
           <div className="flex items-center space-x-4">
             <RadioGroupItem value="visa" id="visa" />
             <label htmlFor="visa" className="flex items-center space-x-2 cursor-pointer">
-              <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Fsearch%3Fq%3DVisa%2BCredit%2Bcard&psig=AOvVaw382nuLXqfqxJAkI6C2bEVy&ust=1739071657385000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCct5GRs4sDFQAAAAAdAAAAABAE" alt="Visa" className="h-5" />
+              <img src={visa} alt="Visa" className="h-5" />
               <span>Visa Payment</span>
             </label>
           </div>
@@ -90,7 +94,7 @@ const Checkout = () => {
           <div className="flex items-center space-x-4">
             <RadioGroupItem value="mastercard" id="mastercard" />
             <label htmlFor="mastercard" className="flex items-center space-x-2 cursor-pointer">
-              <img src="/mastercard.png" alt="Mastercard" className="h-5" />
+              <img src={mastercard} alt="Mastercard" className="h-5" />
               <span>Mastercard Payment</span>
             </label>
           </div>
@@ -98,7 +102,7 @@ const Checkout = () => {
           <div className="flex items-center space-x-4">
             <RadioGroupItem value="unionpay" id="unionpay" defaultChecked />
             <label htmlFor="unionpay" className="flex items-center space-x-2 cursor-pointer">
-              <img src="/unionpay.png" alt="UnionPay" className="h-5" />
+              <img src={unionpay} alt="UnionPay" className="h-5" />
               <span>UnionPay Payment</span>
             </label>
           </div>

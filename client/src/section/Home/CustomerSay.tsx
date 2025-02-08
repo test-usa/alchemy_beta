@@ -1,5 +1,6 @@
+import MidNavCom from "@/shared/MidNavCom";
 import CustomerSayCarousel from "./CustomerSayCarousel";
-import MidNavCom from "./MidNavCom";
+
 
 const CustomerSay = () => {
   return (
