@@ -13,11 +13,11 @@ const WeightLossProgram = () => {
 
       {/* First section */}
       <div className='md:grid grid-cols-2 gap-3 md:gap-5 lg:gap-8 mb-5 lg:mb-10'>
-        <img className='w-full' src="https://img.freepik.com/premium-photo/happy-young-woman-joggling-oranges-kitchen-background_116317-3349.jpg?w=996" alt="" />
+        <img className='w-full mb-3' src="https://img.freepik.com/premium-photo/happy-young-woman-joggling-oranges-kitchen-background_116317-3349.jpg?w=996" alt="" />
 
         <div className="grid grid-cols-1 gap-1">
           <div>
-            <h3 className='font-semibold text-lg lg:text-xl'>Planning and Prep</h3>
+            <h3 className='font-bold text-xl md:text-3xl'>Planning and Prep</h3>
             <p className='mt-2 mb-3'>Our nutrition team love the benefit of exercise and healthy food Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laboriosam quis ullam quisquam repellat </p>
             <div className="flex items-center gap-2 bg-white p-2">
               <button className="flex items-center justify-center rounded-full text-[#6636EE]  border border-[#6636EE] p-1">
@@ -54,7 +54,7 @@ const WeightLossProgram = () => {
       <div className='flex flex-col-reverse md:grid grid-cols-2 gap-3 md:gap-5 lg:gap-8 mb-5 lg:mb-10'>
         <div className="grid grid-cols-1 gap-1">
           <div>
-            <h3 className='font-semibold text-lg lg:text-xl'>Planning and Prep</h3>
+            <h3 className='font-bold text-xl md:text-3xl'>Planning and Prep</h3>
             <p className='mt-2 mb-3'>Our nutrition team love the benefit of exercise and healthy food Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laboriosam quis ullam quisquam repellat perspiciatis provident. Odio minima asperiores</p>
             <div className="flex items-center gap-2 bg-white p-2">
               <button className="flex items-center justify-center rounded-full text-[#6636EE]  border border-[#6636EE] p-1">
@@ -89,6 +89,10 @@ const WeightLossProgram = () => {
         <img className='w-full' src="https://img.freepik.com/free-photo/expressive-pretty-woman-posing_344912-1393.jpg?t=st=1739001537~exp=1739005137~hmac=4ee33ff6daf5b9155bd6675d18fbc932bb97cc9d4e7256b0edf1a13cfcb00ca7&w=1380" alt="" />
       </div>
 
+{/* Weight Loss Program */}
+<h2 className="text-xl lg:text-3xl font-bold mb-4">Weight Loss Program</h2>
+<p className="mb-4">Our nutrition team love the benefit of exercise and healthy food Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laboriosam quis ullam quisquam repellat perspiciatis provident. Odio minima asperiores Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum dolorem, ducimus in cum incidunt, eligendi vero dignissimos qui officiis laudantium error quaerat neque laboriosam harum perferendis possimus beatae? Voluptas, sunt.</p>
+<p className='mb-4'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia laudantium nihil officia aspernatur magnam eos tempora minus! Voluptatum, nihil inventore.</p>
       <p className="border-b-2 border-b-gray-300 mt-4 mb-2"></p>
 
       {/* Three Photos */}
@@ -112,7 +116,7 @@ const WeightLossProgram = () => {
 
       {/* FAQ */}
       <div>
-        <h3 className='font-semibold text-lg lg:text-xl'>Frequently Asked Questions</h3>
+        <h3 className='font-bold text-xl lg:text-3xl'>Frequently Asked Questions</h3>
         <p className='mt-2 mb-3'>Our nutrition team love the benefit of exercise and healthy food Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur laboriosam quis ullam quisquam repellat </p>
 
         <Accordion className='mt-5 mb-10' type="single" collapsible>

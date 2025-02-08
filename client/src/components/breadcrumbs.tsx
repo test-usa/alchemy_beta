@@ -19,23 +19,23 @@ const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
             {/* Heading */}
             {
                 heading && (
-                    <div className='absolute top-32 md:top-40 left-12 md:left-28 lg:left-48 xl:left-64 duration-300'>
+                    <div className='w-fit absolute top-32 md:top-40 left-12 md:left-28 lg:left-48 xl:left-64 duration-300'>
                         <h1 className='font-semibold text-white text-2xl md:text-4xl leading-snug uppercase drop-shadow-lg'>
                             {heading}
                         </h1>
                     </div>
                 )
             }
-            
+
             {/* Overlay & Content */}
-            <div className='relative top-52 md:top-[280px] left-12 md:left-28 lg:left-48 xl:left-64 duration-300 flex flex-col justify-end'>
+            <div className='w-fit relative top-52 md:top-[280px] left-12 md:left-28 lg:left-48 xl:left-64 duration-300 flex flex-col justify-end'>
                 <h1 className='font-semibold text-white text-lg md:text-2xl leading-snug uppercase drop-shadow-lg mb-2'>
                     {title}
                 </h1>
                 <div className='text-white uppercase flex items-center gap-2 text-sm md:text-base'>
                     <Link className='flex items-center gap-3 mr-2' to='/'>
-                    <FaHome size={20} />
-                    Home
+                        <FaHome size={20} />
+                        Home
                     </Link>
                     <span className='text-5xl -mt-2'>&bull;</span>
                     <span>{title}</span>

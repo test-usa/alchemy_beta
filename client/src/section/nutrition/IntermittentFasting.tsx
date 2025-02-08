@@ -5,8 +5,8 @@ const IntermittentFasting = () => {
         <div className="mb-10">
             {/* Intermittent Fasting */}
             <img className='w-full rounded max-w-2xl' src="https://img.freepik.com/free-photo/young-guy-aged-man-sitting-sofa_23-2148030251.jpg?t=st=1738925315~exp=1738928915~hmac=dc57c81d65b94f934dd739ec8680131abc5c14430a0cd79e527c173d57557cad&w=1380" alt="" />
-            <h2 className='text-xl font-semibold mt-3 mb-2'>Intermittent Fasting</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio reprehenderit quae repellendus consequuntur est eaque. Debitis, dignissimos blanditiis? Odit neque labore voluptatem nesciunt ex amet atque doloremque quam vel laudantium quas, temporibus accusamus sapiente consectetur, totam veniam deserunt possimus!</p>
+            <h2 className='font-bold text-xl md:text-3xl my-4'>Intermittent Fasting</h2>
+            <p className="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio reprehenderit quae repellendus consequuntur est eaque. Debitis, dignissimos blanditiis? Odit neque labore voluptatem nesciunt ex amet atque doloremque quam vel laudantium quas, temporibus accusamus sapiente consectetur, totam veniam deserunt possimus!</p>
             <p>neque labore voluptatem nesciunt ex amet atque doloremque quam vel laudantium quas, temporibus accusamus sapiente consectetur, totam veniam deserunt possimus!</p>
             <p className="border-b-2 border-b-gray-300 mt-4 mb-2"></p>
 
@@ -30,8 +30,8 @@ const IntermittentFasting = () => {
             </div>
 
             {/* What we are Best? */}
-            <h2 className='text-xl font-semibold mt-3 mb-2'>What we are Best?</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio reprehenderit quae repellendus consequuntur est eaque. Debitis, dignissimos blanditiis? Odit neque labore voluptatem nesciunt onsectetur, totam veniam deserunt possimus!</p>
+            <h2 className='font-bold text-xl md:text-3xl my-4'>What we are Best?</h2>
+            <p className="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio reprehenderit quae repellendus consequuntur est eaque. Debitis, dignissimos blanditiis? Odit neque labore voluptatem nesciunt onsectetur, totam veniam deserunt possimus!</p>
 
             <div className="grid md:grid-cols-2 gap-10 mt-5">
                 <div className="flex items-center gap-5">
@@ -73,8 +73,8 @@ const IntermittentFasting = () => {
             </div>
 
             {/* Nutritionist */}
-            <h2 className='text-xl font-semibold mt-3 mb-2'>Our popular nutritionist</h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio reprehenderit quae repellendus consequuntur est eaque. Debitis, dignissimos blanditiis? Odit neque labore voluptatem nesciunt onsectetur, totam veniam deserunt possimus!</p>
+            <h2 className='font-bold text-xl md:text-3xl my-4'>Our popular nutritionist</h2>
+            <p className="mb-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio reprehenderit quae repellendus consequuntur est eaque. Debitis, dignissimos blanditiis? Odit neque labore voluptatem nesciunt onsectetur, totam veniam deserunt possimus!</p>
 
             <div className="grid grid-cols-2 md:flex md:justify-between items-center gap-5 mt-5">
                 <div className="w-full flex flex-col items-center justify-center gap-2 shadow-lg p-3 md:p-5 rounded">
