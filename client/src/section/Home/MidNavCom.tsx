@@ -3,7 +3,7 @@ import { MdStarRate } from "react-icons/md";
 
 const MidNavCom = () => {
   return (
-    <div className="w-[1920px] h-[80px] max-auto text-white bg-[#6636EE] flex justify-around items-center px-6 shadow-md border-b mt-20">
+    <div className="w-[1920px] h-[80px] max-auto  text-white bg-[#6636EE] flex justify-around items-center px-6 shadow-md border-b">
       <div className="flex items-center gap-4">
         <p className="text-xl font-bold">
           <MdStarRate className="w-[28px] h-[28px]" />
