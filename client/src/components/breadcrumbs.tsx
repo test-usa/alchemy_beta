@@ -1,11 +1,10 @@
-
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import { FaHome } from "react-icons/fa";
 
 type TBreadcrumbs = {
-    bg: string;
-    title: string;
-    heading?: string
+  bg: string;
+  title: string;
+  heading?: string;
 };
 
 const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
@@ -43,7 +42,6 @@ const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
                 </div>
             </div>
         </div>
-    );
-};
+      )}
 
 export default Breadcrumbs;

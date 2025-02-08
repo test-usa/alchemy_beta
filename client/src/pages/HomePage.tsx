@@ -15,7 +15,7 @@ const HomePage = () => {
   return (
     <div>
       <Hero />
-      <div className="mt-[-80px]"><MidNavCom /></div>
+      <MidNavCom />
       <BestServices />
       <Badge />
       <BodyStimina />
