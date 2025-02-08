@@ -1,87 +1,89 @@
-
+import Logo from "../assets/logo.png"
 
 export default function Footer() {
   return (
-    <footer className="h-[624px] bg-black text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12 md:py-16">
+    <footer className="h-[624px] bg-black text-white flex items-center justify-center">
+      <div className=" px-4 py-12 md:py-16">
         {/* Main Container */}
-        <div className="flex flex-col md:flex-row md:justify-between gap-8">
+        <div className="w-[1320px] flex flex-col md:flex-row md:justify-between items-center p-[10px] gap-[10px]">
           {/* Left Section */}
-          <div className="flex-1 flex flex-col justify-start gap-4">
-          {/* Logo + Title */}
-          <div className="flex items-center gap-2">
-            {/* Replace with your actual logo image if available */}
-            <img
-              src="/images/totalu_logo.png"
-              alt="TotalU Logo"
-              className="h-12 w-auto"
-            />
-            <span className="text-2xl font-bold">TotalU</span>
-          </div>
+          <div className="flex flex-col items-start text-white p-8 rounded-lg w-96 shadow-lg">
+     <div className="w-[235px] h-[68px] flex gap-4 items-center">
+       {/* Logo */}
+       <div className="mb-4">
+        <img src={Logo} alt="TotalU" className="h-12" />
+      </div>
 
-          {/* Short Description */}
-          <p className="text-gray-400 max-w-sm">
-            We offer top-notch fitness services designed to help you reach
-            your goals.
-          </p>
+      {/* Title */}
+      <h1 className="text-3xl font-bold">TotalU</h1>
+     </div>
 
-          {/* Newsletter Section */}
-          <div className="mt-4">
-            <h3 className="mb-2 font-semibold">Newsletter</h3>
-            <div className="flex flex-col gap-2 w-full max-w-xs">
-              <input
-                type="email"
-                placeholder="Email"
-                className="bg-white text-black px-4 py-2 rounded-md focus:outline-none"
-              />
-              <button className="bg-primary hover:bg-purple-700 text-white px-4 py-2 rounded-md transition-colors">
-                Subscribe
-              </button>
-            </div>
-          </div>
-        </div>
+      {/* Description */}
+      <p className="text-gray-300 mt-2">
+        We offer top-notch fitness services designed to help you reach your goals.
+      </p>
+
+      {/* Newsletter Section */}
+      <div className="w-full mt-6">
+        <h2 className="text-lg font-semibold mb-2">Newsletter</h2>
+
+        {/* Input Field */}
+        <input
+          type="email"
+          placeholder="Email"
+          className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+        />
+
+        {/* Subscribe Button */}
+        <button className="w-full bg-primary text-white font-semibold py-3 rounded-md mt-4">
+          Subscribe
+        </button>
+      </div>
+    </div>
 
           {/* Right Section */}
-          <div className="flex-1 grid grid-cols-2 grid-rows-2 gap-[10px]">
-          {/* Service */}
-          <div>
-            <h4 className="mb-2 font-semibold">Service</h4>
-            <ul className="space-y-1 text-gray-400 text-sm">
-              <li><a href="#">Nutrition</a></li>
-              <li><a href="#">Meditation</a></li>
-              <li><a href="#">Workout</a></li>
-              <li><a href="#">Shop</a></li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="mb-2 font-semibold">Resources</h4>
-            <ul className="space-y-1 text-gray-400 text-sm">
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Community</a></li>
-            </ul>
-          </div>
-
-          {/* Tools */}
-          <div>
-            <h4 className="mb-2 font-semibold">Tools</h4>
-            <ul className="space-y-1 text-gray-400 text-sm">
-              <li><a href="#">Water</a></li>
-              <li><a href="#">Weight</a></li>
-              <li><a href="#">Goal</a></li>
-            </ul>
-          </div>
-
-          {/* About */}
-          <div>
-            <h4 className="mb-2 font-semibold">About</h4>
-            <ul className="space-y-1 text-gray-400 text-sm">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">FAQ</a></li>
-            </ul>
-          </div>
+          <div className=" text-white p-6">
+      <div className="grid grid-cols-2 md:grid-cols-2 gap-8 text-sm">
+        {/* Service Section */}
+        <div>
+          <h3 className="font-semibold mb-2">Service</h3>
+          <ul className="space-y-1">
+            <li>Nutrition</li>
+            <li>Meditation</li>
+            <li>Workout</li>
+            <li>Shop</li>
+          </ul>
         </div>
+
+        {/* Resources Section */}
+        <div>
+          <h3 className="font-semibold mb-2">Resources</h3>
+          <ul className="space-y-1">
+            <li>Blog</li>
+            <li>Community</li>
+          </ul>
+        </div>
+
+        {/* Tools Section */}
+        <div>
+          <h3 className="font-semibold mb-2">Tools</h3>
+          <ul className="space-y-1">
+            <li>Water</li>
+            <li>Weight</li>
+            <li>Goal</li>
+          </ul>
+        </div>
+
+        {/* About Section */}
+        <div>
+          <h3 className="font-semibold mb-2">About</h3>
+          <ul className="space-y-1">
+            <li>About Us</li>
+            <li>FAQ</li>
+          </ul>
+        </div>
+      </div>
+    </div>
         </div>
       </div>
     </footer>

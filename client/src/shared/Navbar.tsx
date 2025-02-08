@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { Button } from "../components/ui/button";
+import { Button } from "@/components/ui/button";
 import { SearchIcon, User2, Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
+import Logo from "../assets/logo.png"
 
 const navLinks = [
   {
@@ -26,7 +27,7 @@ const navLinks = [
   },
   {
     lebel: "Articles & Tips",
-    href: "/articles & tips",
+    href: "/articles-and-tips",
   },
   {
     lebel: "Shop",
@@ -43,9 +44,9 @@ const Navbar = () => {
         {/* Left: Logo */}
         <Link to="/" className="flex items-center">
           <img
-            src="/images/polish_pro.png"
+            src={Logo}
             alt="TotalU Logo"
-            className="h-10 w-auto"
+            className="w-[110px] h-[85px]"
           />
         </Link>
 
