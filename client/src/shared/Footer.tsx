@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="h-[624px] bg-black text-white flex items-center justify-center">
       <div className=" px-4 py-12 md:py-16">
         {/* Main Container */}
-        <div className="lg:w-[1320px] flex flex-col md:flex-row md:justify-between items-center p-[10px] gap-[10px]">
+        <div className="lg:w-[1320px] flex flex-col lg:flex-row md:flex-col md:justify-between items-center p-[10px] gap-[10px]">
           {/* Left Section */}
           <div className="flex flex-col items-start text-white p-8 rounded-lg w-96 shadow-lg">
      <div className="w-[235px] h-[68px] flex gap-4 items-center">

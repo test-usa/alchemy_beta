@@ -26,7 +26,7 @@ const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
       )}
 
       {/* Overlay & Content */}
-      <div className="relative top-52 md:top-[280px] left-12 md:left-28 lg:left-48 xl:left-64 duration-300 flex flex-col justify-end">
+      <div className="w-fit relative top-52 md:top-[280px] left-12 md:left-28 lg:left-48 xl:left-64 duration-300 flex flex-col justify-end">
         <h1 className="font-semibold text-white text-lg md:text-2xl leading-snug uppercase drop-shadow-lg mb-2">
           {title}
         </h1>

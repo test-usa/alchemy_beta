@@ -35,7 +35,7 @@ export const AllProducts = () => {
   console.log(data, error);
   if (isLoading)
     return (
-      <div className="flex flex-row justify-between space-y-3">
+      <div className="flex flex-row justify-evenly space-y-3">
         <div className="space-y-2">
           <Skeleton className="h-[125px] w-[250px] rounded-xl" />
           <Skeleton className="h-4 w-[250px]" />
@@ -56,7 +56,7 @@ export const AllProducts = () => {
   if (error) return <p>Error: {error.message}</p>;
 
   return (
-    <div className="w-[1320px] mx-auto max-h-screen">
+    <div className="w-[1320px] mx-auto">
       {/* Product Grid */}
       <div className="px-6 pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
