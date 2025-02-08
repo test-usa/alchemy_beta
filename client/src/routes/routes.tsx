@@ -10,11 +10,11 @@ import WorkoutPage from "@/pages/WorkoutPage";
 import TrackerPage from "@/pages/TrackerPage";
 import ShopPage from "@/pages/ShopPage";
 import ArticlesAndTipsPage from "@/pages/ArticlesAndTipsPage";
-import IntermediateFasting from "@/section/nutrition/IntermediateFasting";
 import WeightLossProgram from "@/section/nutrition/WeightLossProgram";
 import Keto from "@/section/nutrition/Keto";
 import KetoMealPlan from "@/section/nutrition/KetoMealPlan";
 import Macros from "@/section/nutrition/Macros";
+import IntermittentFasting from "@/section/nutrition/IntermittentFasting";
 
 
 const router = createBrowserRouter([
@@ -30,7 +30,7 @@ const router = createBrowserRouter([
                 path: "nutrition",
                 element: <NutritionPage />,
                 children: [
-                    { path: "intermediate-fasting", element: <IntermediateFasting /> },
+                    { path: "intermittent-fasting", element: <IntermittentFasting /> },
                     { path: "weight-loss-program", element: <WeightLossProgram /> },
                     { path: "keto", element: <Keto /> },
                     { path: "keto-meal-plan", element: <KetoMealPlan /> },

@@ -1,6 +1,6 @@
 import { HeartPulse } from "lucide-react"
 
-const IntermediateFasting = () => {
+const IntermittentFasting = () => {
     return (
         <div className="mb-10">
             <img className='w-full rounded max-w-2xl' src="https://img.freepik.com/free-photo/young-guy-aged-man-sitting-sofa_23-2148030251.jpg?t=st=1738925315~exp=1738928915~hmac=dc57c81d65b94f934dd739ec8680131abc5c14430a0cd79e527c173d57557cad&w=1380" alt="" />
@@ -98,4 +98,4 @@ const IntermediateFasting = () => {
     )
 }
 
-export default IntermediateFasting
+export default IntermittentFasting
