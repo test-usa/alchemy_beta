@@ -8,8 +8,8 @@ const NutritionNavItems = () => {
             <NavLink
               to="/nutrition/intermittent-fasting"
               className={({ isActive }) => isActive ?
-                "border border-[#66636EE] bg-[#6636EE] text-white w-full px-3 py-2 rounded":
-                "border border-gray-200 rounded px-3 py-2 w-full"}>
+                "border border-[#66636EE] bg-[#6636EE] text-white w-full text-sm md:text-base px-3 py-2 rounded":
+                "border border-gray-200 rounded px-3 py-2 w-full text-sm md:text-base"}>
               Intermittent Fasting
             </NavLink>
           </li>
@@ -17,8 +17,8 @@ const NutritionNavItems = () => {
             <NavLink
               to="/nutrition/weight-loss-program"
               className={({ isActive }) => isActive ?
-                "border border-[#66636EE] bg-[#6636EE] w-full text-white px-3 py-2 rounded ":
-                "border border-gray-200 rounded  px-3 py-2 w-full"}>
+                "border border-[#66636EE] bg-[#6636EE] w-full text-sm md:text-base text-white px-3 py-2 rounded":
+                "border border-gray-200 rounded  px-3 py-2 w-full text-sm md:text-base"}>
               Weight Loss Program
             </NavLink>
           </li>
@@ -26,8 +26,8 @@ const NutritionNavItems = () => {
             <NavLink
               to="/nutrition/keto"
               className={({ isActive }) => isActive ?
-                "border border-[#66636EE] bg-[#6636EE] w-full text-white px-3 py-2 rounded ":
-                "border border-gray-200 rounded w-full px-3 py-2"}>
+                "border border-[#66636EE] bg-[#6636EE] w-full text-sm md:text-base text-white px-3 py-2 rounded":
+                "border border-gray-200 rounded w-full text-sm md:text-base px-3 py-2"}>
               Keto
             </NavLink>
           </li>
@@ -35,8 +35,8 @@ const NutritionNavItems = () => {
             <NavLink
               to="/nutrition/keto-meal-plan"
               className={({ isActive }) => isActive ?
-                "border border-[#66636EE] bg-[#6636EE] w-full text-white px-3 py-2 rounded":
-                "border border-gray-200 rounded w-full px-3 py-2"}>
+                "border border-[#66636EE] bg-[#6636EE] w-full text-sm md:text-base text-white px-3 py-2 rounded":
+                "border border-gray-200 rounded w-full text-sm md:text-base px-3 py-2"}>
               Keto Meal Plan
             </NavLink>
           </li>
@@ -44,8 +44,8 @@ const NutritionNavItems = () => {
             <NavLink
               to="/nutrition/macros"
               className={({ isActive }) => isActive ?
-                "border border-[#66636EE] bg-[#6636EE] w-full text-white px-3 py-2 rounded":
-                "border border-gray-200 rounded w-full px-3 py-2"}>
+                "border border-[#66636EE] bg-[#6636EE] w-full text-sm md:text-base text-white px-3 py-2 rounded":
+                "border border-gray-200 rounded w-full text-sm md:text-base px-3 py-2"}>
               Macros
             </NavLink>
           </li>
