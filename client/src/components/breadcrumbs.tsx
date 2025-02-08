@@ -14,6 +14,7 @@ const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
             {/* Background Image */}
             <div className='absolute inset-0 h-80 md:h-[440px]'>
                 <img src={bg} alt='Background' className='w-full h-full object-cover' />
+                <div className="absolute inset-0 bg-black/50"></div>
             </div>
 
             {/* Heading */}
