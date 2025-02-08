@@ -27,7 +27,7 @@ const HomePage = () => {
       <FindRoute />
       <WickendList />
       <LatestArticle />
-      <CustomerSay />
+
 
     </div>
   );
