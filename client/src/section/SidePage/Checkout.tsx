@@ -12,7 +12,7 @@ const Checkout = () => {
         bg="https://static.wixstatic.com/media/0e0e1e_0c8aae9e3ac34ac999469617a8a54208~mv2.jpg/v1/fill/w_320,h_128,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e0e1e_0c8aae9e3ac34ac999469617a8a54208~mv2.jpg"
         title="Checkout"
       />
-      
+
       <div className="max-w-7xl mx-auto p-6 grid grid-cols-1 lg:grid-cols-2 gap-8">
         <div className="space-y-6">
           <div className="">
@@ -31,18 +31,18 @@ const Checkout = () => {
           <Input placeholder="Your Company Name (Optional)" className="mt-4" />
 
           <div className="mt-4">
-          <Select >
-            <SelectTrigger>
-              <SelectValue placeholder="Country" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="usa">USA</SelectItem>
-              <SelectItem value="uk">UK</SelectItem>
-              <SelectItem value="canada">Canada</SelectItem>
-            </SelectContent>
-          </Select>
+            <Select >
+              <SelectTrigger>
+                <SelectValue placeholder="Country" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="usa">USA</SelectItem>
+                <SelectItem value="uk">UK</SelectItem>
+                <SelectItem value="canada">Canada</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
-          
+
 
           <Input placeholder="Street Address" className="mt-4" />
           <Input placeholder="Town/ City" className="mt-4" />
@@ -50,7 +50,7 @@ const Checkout = () => {
           <Input placeholder="Postcode/ ZIP (Optional)" className="mt-4" />
         </div>
 
-        {/* Right Column: Additional Information */}
+        {/*  Additional Info  */}
         <div className="space-y-6">
           <h2 className="text-2xl font-semibold">Additional Information</h2>
           <Textarea placeholder="Order Note (Optional)" className="mt-4 h-40" />
@@ -82,7 +82,7 @@ const Checkout = () => {
           <div className="flex items-center space-x-4">
             <RadioGroupItem value="visa" id="visa" />
             <label htmlFor="visa" className="flex items-center space-x-2 cursor-pointer">
-              <img src="/visa.png" alt="Visa" className="h-5" />
+              <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pngwing.com%2Fen%2Fsearch%3Fq%3DVisa%2BCredit%2Bcard&psig=AOvVaw382nuLXqfqxJAkI6C2bEVy&ust=1739071657385000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCPCct5GRs4sDFQAAAAAdAAAAABAE" alt="Visa" className="h-5" />
               <span>Visa Payment</span>
             </label>
           </div>
