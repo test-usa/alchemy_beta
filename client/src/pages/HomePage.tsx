@@ -13,6 +13,8 @@ import Checkout from "@/section/SidePage/Checkout";
 import AddCardInfo from "@/section/SidePage/AddCardInfo";
 import Confirm from "@/section/SidePage/Confirm";
 import FaqPage from "@/section/SidePage/FaqPage";
+import VideoSection from "@/section/Home/VideoSection";
+import BmiSection from "@/section/Home/BmiSection";
 
 const HomePage = () => {
   return (
@@ -37,6 +39,11 @@ const HomePage = () => {
       <LatestArticle />
       <CustomerSay />
 
+      <LatestArticle />
+      <VideoSection />
+
+      <BmiSection />
+      <CustomerSay />
     </div>
   );
 };

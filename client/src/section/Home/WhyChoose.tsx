@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Title from "@/shared/Title";

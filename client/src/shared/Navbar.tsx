@@ -27,7 +27,7 @@ const navLinks = [
   },
   {
     lebel: "Articles & Tips",
-    href: "/articles & tips",
+    href: "/articles-and-tips",
   },
   {
     lebel: "Shop",
