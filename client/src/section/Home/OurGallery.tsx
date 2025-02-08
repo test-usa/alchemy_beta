@@ -15,7 +15,7 @@ import { Card, CardContent } from '@/components/ui/card';
 
 const OurGallery = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-4 px-4 md:px-16 bg-white">
+    <div className="flex flex-col items-center justify-center py-16 mb-6 px-4 md:px-16 bg-white">
       <Title
         heading="View Our Gallery"
         subHeading="We offer top-notch fitness services designed to help you reach your goals. From personalized workout plans to expert nutrition guidance, our team is dedicated to your success."
@@ -23,7 +23,7 @@ const OurGallery = () => {
 
       <Carousel
         opts={{ align: "center" }}
-        className="w-full max-w-[1320px] relative"
+        className="w-full max-w-[1320px] relative mt-4"
       >
         <div className="absolute right-4 -mt-16 mr-10 mb-6 flex gap-2 z-10 ">
           <CarouselPrevious className="bg-[#EDE7FF] text-primary rounded-full p-2 hover:bg-purple-300" />
@@ -37,11 +37,10 @@ const OurGallery = () => {
               className="md:basis-1/3 p-2 flex justify-center"
             >
               <Card
-                className={`transition-transform duration-300 ${
-                  index === 1
-                    ? "w-[650px] h-[414px] scale-105"
-                    : "w-[315px] h-[414px] opacity-90"
-                }`}
+                className={`transition-transform duration-300 ${index === 1
+                  ? "w-[650px] h-[414px] scale-105"
+                  : "w-[315px] h-[414px] opacity-90"
+                  }`}
               >
                 <CardContent className="p-0 w-full h-full">
                   <img

@@ -2,19 +2,17 @@ import { useState } from "react";
 import { HiCheck } from "react-icons/hi";
 
 const BodyStamina = () => {
-  // Create state to keep track of clicked button
-  const [clickedButton, setClickedButton] = useState<number | null>(null);
+  const [clickedButton, setClickedButton] = useState<number | null>(null); // No default active button
 
-  // Function to handle button click and set the clicked state
-  const handleButtonClick = (index: 2) => {
+  const handleButtonClick = (index: number) => {
     setClickedButton(index);
   };
 
   return (
-    <div className="bg-[#F9F9F9]  h-[797px]  mx-auto flex justify-center">
+    <div className="bg-[#F9F9F9] h-[797px] mx-auto flex justify-center">
       <div className="mt-[93.5px] mb-[93.5px] relative flex flex-col md:flex-row w-full max-w-[1320px] h-auto md:h-[610px] gap-6 md:gap-[132px] mx-auto md:px-0">
         <div className="md:w-1/3 w-full flex justify-center items-center">
-          <div className="h-[610px] w-[650] md:h-[610px]  md:w-[700px] overflow-hidden shadow-md">
+          <div className="h-[610px] w-[650] md:h-[610px] md:w-[700px] overflow-hidden shadow-md">
             <img
               src="https://img.freepik.com/free-photo/front-view-sporty-woman-with-copy-space_23-2148499108.jpg?t=st=1738747270~exp=1738750870~hmac=67625eb21d8cf6cd2993ec4ba52abf187644dff48dcf9ad66b61b0e7d0672778&w=826"
               alt="Body Stamina"
@@ -40,15 +38,17 @@ const BodyStamina = () => {
                 "Morbi vitae tortor at enim est pharetra integer",
                 "Curabitur non nulla sit amet nisl tempus",
                 "Vestibulum ante ipsum primis in faucibus",
-                "Vestibulum ante ipsum primis in faucibus"
-              ].map((text, index: number) => (
+                "Vestibulum ante ipsum primis in faucibus",
+              ].map((text, index) => (
                 <div key={index} className="flex items-center gap-2 p-2">
                   <button
                     onClick={() => handleButtonClick(index)}
-                    className={`p-1 w-8 h-8 md:w-10 md:h-10 ${clickedButton === index
-                      ? "bg-primary text-gray-400"
-                      : "bg-transparent text-gray-400"
-                      } rounded-full shadow-md flex items-center justify-center border border-gray-400`}
+                    className={`p-1 w-8 h-8 md:w-10 md:h-10 transition-all duration-300 
+                    ${clickedButton === index
+                        ? "bg-primary text-white"
+                        : "bg-transparent text-gray-400"
+                      } 
+                    rounded-full shadow-md flex items-center justify-center border border-gray-400`}
                   >
                     <HiCheck />
                   </button>
