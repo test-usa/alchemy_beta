@@ -7,23 +7,18 @@ import Transformation from "./Transformation";
 
 const CHECKOUT_STEPS = [
     {
-        name: "Customer Info",
         Component: () => <Gender />,
     },
     {
-        name: "Shipping Info",
         Component: () => <Measurements />,
     },
     {
-        name: "Payment",
         Component: () => <YourGoal />,
     },
     {
-        name: "Delivered",
         Component: () => <ActivityLevel />,
     },
     {
-        name: "Sent",
         Component: () => <Transformation />,
     },
 ];

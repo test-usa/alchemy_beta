@@ -15,7 +15,7 @@ const CustomerSay = () => {
                 </div>
                 <div className="w-[294.65px] h-[75.28px] gap-[20.77px] flex">
                     <div className="">
-                    <img src="https://images.app.goo.gl/iHxwCtTUStLB1YKD9" alt="" className="w-[75.28px] h-[75.28px]" />
+                    <img src="https://images.app.goo.gl/iHxwCtTUStLB1YKD9" alt="Customer Image" className="w-[75.28px] h-[75.28px]" />
                     </div>
                     <div className="w-[198.6px] h-[62.19px] gap-[5.19px] flex ">
                         <div className="w-[198.6px] h-[30px]">

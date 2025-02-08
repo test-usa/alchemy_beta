@@ -30,7 +30,15 @@
     --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem
-  }
+  ;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%}
   .dark {
     --background: 240 10% 3.9%;
     --foreground: 0 0% 98%;
@@ -56,7 +64,15 @@
     --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%
-  }
+  ;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%}
 }
 @layer base {
   * {
@@ -89,8 +105,8 @@
 .step-number {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
-  background-color: #ccc;
+  background-color: #FFF;
+  color: #6636EE;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -103,25 +119,25 @@
 }
 
 .active .step-number {
-  background-color: #007bff;
+  background-color: #6636EE;
   color: #fff;
 }
 
 .complete .step-number {
-  background-color: #28a745;
+  background-color: #6636EE;
   color: #fff;
 }
 
 .progress-bar {
   position: absolute;
-  top: 25%;
+  top: 30%;
   left: 0;
-  height: 4px;
-  background-color: #ccc;
+  height: 6px;
+  background-color: #E8E8E8;
 }
 
 .progress {
   height: 100%;
-  background-color: #28a745;
+  background-color: #6636EE;
   transition: 0.2s ease;
 }

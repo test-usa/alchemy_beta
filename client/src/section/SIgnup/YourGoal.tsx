@@ -1,11 +1,25 @@
-import { useState } from "react";
+import { StepperContext } from "@/providers/StepperProvider";
+import { useContext, useEffect } from "react";
 
 const YourGoal = () => {
-  const [selectedOption, setSelectedOption] = useState<string | null>(null);
+  const { setState3, userData, setUserData } = useContext(StepperContext)
 
-  const handleClick = (g: string) => {
-    setSelectedOption(prev => (prev === g ? null : g));
-  };
+  // const handleClick = (g: string) => {
+  //   setSelectedOption(prev => (prev === g ? null : g));
+  // };
+
+  const handleClick = (goal: string) => {
+    const updatedGoal = userData?.goal === goal ? null : goal;
+    setUserData((prevData : {goal: string}) => ({ ...prevData, goal: updatedGoal }));
+};
+
+  useEffect(() => {
+    if (userData?.goal !== null) {
+      setState3(true);
+    } else {
+      setState3(false);
+    }
+  }, [userData?.goal, setState3]);
 
   return (
     <div>
@@ -30,7 +44,7 @@ const YourGoal = () => {
             id="lw"
             type="checkbox"
             className="cursor-pointer"
-            checked={selectedOption === "Lose weight"}
+            checked={userData?.goal === "Lose weight"}
             onChange={() => handleClick("Lose weight")}
             onClick={() => handleClick("Lose weight")}
           />
@@ -54,7 +68,7 @@ const YourGoal = () => {
             id="gw"
             type="checkbox"
             className="cursor-pointer"
-            checked={selectedOption === "Gain weight"}
+            checked={userData?.goal === "Gain weight"}
             onChange={() => handleClick("Gain weight")}
             onClick={() => handleClick("Gain weight")}
           />
@@ -78,7 +92,7 @@ const YourGoal = () => {
             id="mmg"
             type="checkbox"
             className="cursor-pointer"
-            checked={selectedOption === "Muscle Mass Gain"}
+            checked={userData?.goal === "Muscle Mass Gain"}
             onChange={() => handleClick("Muscle Mass Gain")}
             onClick={() => handleClick("Muscle Mass Gain")}
           />
@@ -102,7 +116,7 @@ const YourGoal = () => {
             id="sb"
             type="checkbox"
             className="cursor-pointer"
-            checked={selectedOption === "Shape body"}
+            checked={userData?.goal === "Shape body"}
             onChange={() => handleClick("Shape body")}
             onClick={() => handleClick("Shape body")}
           />
@@ -126,13 +140,13 @@ const YourGoal = () => {
             id="o"
             type="checkbox"
             className="cursor-pointer"
-            checked={selectedOption === "Others"}
+            checked={userData?.goal === "Others"}
             onChange={() => handleClick("Others")}
             onClick={() => handleClick("Others")}
           />
         </div>
 
-    
+
       </div>
     </div>
   );

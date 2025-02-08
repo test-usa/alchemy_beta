@@ -1,9 +1,3 @@
-
-
-/* import photo1 from "../../assets/image/card1.jpg";
-import photo2 from "../../assets/image/card1.jpg";
-import photo3 from "../../assets/image/card1.jpg";
-import photo4 from "../../assets/image/card1.jpg"; */
 import {
   Carousel,
   CarouselContent,

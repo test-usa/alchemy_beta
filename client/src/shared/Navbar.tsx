@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "../components/ui/button";
+import { Button } from "@/components/ui/button";
 import { SearchIcon, User2, Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png"

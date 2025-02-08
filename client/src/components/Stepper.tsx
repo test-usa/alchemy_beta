@@ -1,8 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { StepperContext } from "@/providers/StepperProvider";
+import { ComponentType, useContext, useEffect, useRef, useState } from "react";
 
 interface StepConfig {
-  name: string;
-  Component: React.ComponentType<any>;
+  Component: ComponentType;
 }
 
 interface CheckoutStepperProps {
@@ -10,6 +10,8 @@ interface CheckoutStepperProps {
 }
 
 const CheckoutStepper = ({ stepsConfig }: CheckoutStepperProps) => {
+  const { state1, state2, state3, state4, state5, userData } = useContext(StepperContext)
+
   const [currentStep, setCurrentStep] = useState<number>(1);
   const [isComplete, setIsComplete] = useState<boolean>(false);
   const [margins, setMargins] = useState<{ marginLeft: number; marginRight: number }>({
@@ -17,6 +19,7 @@ const CheckoutStepper = ({ stepsConfig }: CheckoutStepperProps) => {
     marginRight: 0,
   });
   const stepRef = useRef<(HTMLDivElement | null)[]>([]);
+  console.log(currentStep, userData)
 
   useEffect(() => {
     // Ensure that the refs are set and offsetWidth is available before performing calculations
@@ -56,18 +59,17 @@ const CheckoutStepper = ({ stepsConfig }: CheckoutStepperProps) => {
         {stepsConfig.map((step, index) => {
           return (
             <div
-              key={step.name}
+              key={index}
               ref={(el) => (stepRef.current[index] = el)}
               className={`step ${currentStep > index + 1 || isComplete ? "complete" : ""} ${currentStep === index + 1 ? "active" : ""}`}
             >
-              <div className="step-number">
+              <div className="step-number rounded-full border border-[#6636EE]">
                 {currentStep > index + 1 || isComplete ? (
                   <span>&#10003;</span>
                 ) : (
-                  index + 1
+                  '0' + `${index + 1}`
                 )}
               </div>
-              <div className="step-name">{step.name}</div>
             </div>
           );
         })}
@@ -87,8 +89,15 @@ const CheckoutStepper = ({ stepsConfig }: CheckoutStepperProps) => {
       {ActiveComponent && <ActiveComponent />}
 
       {!isComplete && (
-        <button className="btn" onClick={handleNext}>
-          {currentStep === stepsConfig.length ? "Finish" : "Next"}
+        <button
+         className={`flex justify-end ml-auto  text-white px-8 py-2 mt-10 
+          ${(currentStep ===1 && !state1 || currentStep ===2 && !state2 || currentStep ===3 && !state3 || currentStep ===4 && !state4 || currentStep ===5 && !state5)? 
+            "cursor-not-allowed bg-gray-300 text-muted" : 
+            "cursor-pointer bg-[#6636EE]"}`}
+         onClick={handleNext}
+         disabled={currentStep ===1 && !state1 || currentStep ===2 && !state2 || currentStep ===3 && !state3 || currentStep ===4 && !state4 || currentStep ===5 && !state5}
+         >
+          {currentStep === stepsConfig.length ? "Finish" : "Continue"}
         </button>
       )}
     </>
