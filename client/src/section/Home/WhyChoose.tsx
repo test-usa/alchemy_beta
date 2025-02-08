@@ -34,7 +34,7 @@ const WhyChoose = () => {
             <img
               src={service.image}
               alt={service.title}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-full object-cover "
             />
             <CardContent
               className="absolute bottom-0 left-0 w-full p-6 text-white flex items-center justify-between 
@@ -43,10 +43,11 @@ const WhyChoose = () => {
               <h2 className="text-xl sm:text-2xl font-bold">{service.title}</h2>
               <div
                 className="w-10 h-10 flex items-center justify-center bg-white rounded-full transition-all duration-300 
-                group-hover:bg-[#6636EE]"
+  group-hover:bg-white"
               >
-                <MdOutlineArrowOutward className="text-[#6636EE] text-xl transition-all duration-300 group-hover:text-white" />
+                <MdOutlineArrowOutward className="text-[#6636EE] text-xl transition-all duration-300 group-hover:text-gray-500" />
               </div>
+
             </CardContent>
           </Card>
         ))}
