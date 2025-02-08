@@ -6,11 +6,11 @@ const NutritionNavItems = () => {
     <ul className="space-y-2">
           <li className="flex flex-1">
             <NavLink
-              to="/nutrition/intermediate-fasting"
+              to="/nutrition/intermittent-fasting"
               className={({ isActive }) => isActive ?
                 "border border-[#66636EE] bg-[#6636EE] text-white w-full px-3 py-2 rounded":
                 "border border-gray-200 rounded px-3 py-2 w-full"}>
-              Intermediate Fasting
+              Intermittent Fasting
             </NavLink>
           </li>
           <li className="flex flex-1">

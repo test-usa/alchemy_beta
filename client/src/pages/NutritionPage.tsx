@@ -1,8 +1,16 @@
 import NutritionNavItems from "@/shared/NutritionNavItems";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { Mail, Phone } from 'lucide-react';
+import { useEffect } from "react";
 
 const NutritionPage = () => {
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/nutrition/intermittent-fasting", { replace: true });
+  }, [navigate]);
+
   return (
     <div className="container mx-auto flex px-4 mt-10">
       {/* Sidebar */}

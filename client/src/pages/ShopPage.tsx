@@ -1,6 +1,5 @@
 import Breadcrumbs from "@/components/breadcrumbs";
 import { AllProducts } from "@/section/Shop/AllProducts";
-import { Banner } from "@/section/Shop/Banner";
 import { Home } from "lucide-react";
 
 const ShopPage = () => {
