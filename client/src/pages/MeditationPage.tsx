@@ -1,4 +1,3 @@
-
 const MeditationPage = () => {
   return (
     <div>

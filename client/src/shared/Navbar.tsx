@@ -111,8 +111,8 @@ const Navbar = () => {
                 className={({ isActive }) =>
                   "font-normal text-[16px] font-sans transition-colors " +
                   (isActive
-                    ? "text-purple-600"
-                    : "text-[#5A5C5F] hover:text-purple-600")
+                    ? "text-primary"
+                    : "text-[#5A5C5F] hover:text-primary")
                 }
               >
                 {lebel}
