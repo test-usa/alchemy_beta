@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 
-const MindNavItems = () => {
+const WaterTrackNavItem = () => {
   return (
     <ul className="space-y-2">
       <li className="flex flex-1">
@@ -55,4 +55,4 @@ const MindNavItems = () => {
   );
 };
 
-export default MindNavItems;
+export default WaterTrackNavItem;

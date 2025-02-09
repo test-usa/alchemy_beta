@@ -6,7 +6,6 @@ import SignupPage from "@/pages/SignupPage";
 import LoginPage from "@/pages/LoginPage";
 import NutritionPage from "@/pages/NutritionPage";
 import MeditationPage from "@/pages/MeditationPage";
-import WorkoutPage from "@/pages/WorkoutPage";
 import TrackerPage from "@/pages/TrackerPage";
 import ShopPage from "@/pages/ShopPage";
 import ArticlesAndTipsPage from "@/pages/ArticlesAndTipsPage";
@@ -26,6 +25,8 @@ import AddCardInfo from "@/section/SidePage/AddCardInfo";
 import SoundHandeling from "@/section/MindHandling/SoundHandeling";
 import GetOrganization from "@/section/MindHandling/GetOrganization";
 import RecoveryCounseling from "@/section/MindHandling/RecoveryCounseling";
+import WorkoutPage from "@/pages/WorkoutPage";
+import WaterTrack from "@/section/Tracker/WaterTrack";
 
 const router = createBrowserRouter([
     {
@@ -48,8 +49,17 @@ const router = createBrowserRouter([
                 ]
             },
             { path: "meditation", element: <MeditationPage /> },
-            { path: "workout", element: <WorkoutPage /> },
-            { path: "tracker", element: <TrackerPage /> },
+            { path: "workout", element: <WorkoutPage />  },
+
+            {  path: "tracker",
+                 element: <TrackerPage /> , 
+                 children: [
+                    { path: "water-tracker", element: <WaterTrack/>},
+                    
+
+                ]
+          
+            },
             { path: "articles-and-tips", element: <ArticlesAndTipsPage /> },
             { path: "shop", element: <ShopPage /> },
             {path: "/shop-details/:id", element: <ShopDetailsPage/>},
@@ -58,7 +68,6 @@ const router = createBrowserRouter([
             { path: "community", element: <Community /> },
             { path: "place-order", element: <AddCardInfo /> },
             { path: "pay", element: <Confirm /> },
-
             {
                 path: "mindhandling",
                 element: <MindHandling />,

@@ -5,7 +5,6 @@ import { HeartPulse } from "lucide-react"
 const Meditations = () => {
     return (
         <div className="mb-10 ">
-
             <div className="w-[953px] h-[762px] max-auto ">
                 <img className='w-[953px] h-[505.36px]  rounded ' src="https://plus.unsplash.com/premium_photo-1667249323404-d150e397493d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM2fHx8ZW58MHx8fHx8" alt="" />
                 <div className="w-[953px] h-[225.36px]">

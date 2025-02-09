@@ -7,7 +7,9 @@ import OurGallery from "@/section/Home/OurGallery";
 import WhyChoose from "@/section/Home/WhyChoose";
 import { WickedList } from "@/section/Home/WickedList";
 import MidNavCom from "@/shared/MidNavCom";
-import WorkoutPage from "./WorkoutPage";
+import VideoSection from "@/section/Home/VideoSection";
+import BmiSection from "@/section/Home/BmiSection";
+import CustomerSay from "@/section/Home/CustomerSay";
 
 const HomePage = () => {
   return (
@@ -22,8 +24,11 @@ const HomePage = () => {
       <MidNavCom />
       <FindRoute />
       <WickedList />
-      <LatestArticle />
-      <WorkoutPage />
+      <VideoSection/>
+      <BmiSection/>
+      <CustomerSay/>
+      <LatestArticle/>
+     
     </div>
   );
 };
