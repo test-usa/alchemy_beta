@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import addcartphoto from '@/assets/image/addcartphoto.png'
 import Breadcrumbs from "@/components/breadcrumbs";
+import { Link } from "react-router-dom";
 
 const AddCardInfo = () => {
   return (
@@ -57,8 +58,10 @@ const AddCardInfo = () => {
                 <span>$150</span>
               </div>
             </div>
-
+              <Link to={'/payment'}>
+              
             <Button className="w-full bg-primary text-white mt-4">Pay Now</Button>
+              </Link>
           </div>
         </div>
       </div>
