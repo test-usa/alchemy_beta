@@ -8,6 +8,7 @@ import WhyChoose from "@/section/Home/WhyChoose";
 import { WickedList } from "@/section/Home/WickedList";
 import MidNavCom from "@/shared/MidNavCom";
 import WorkoutPage from "./WorkoutPage";
+import BlogChallenge from "@/section/Blog/BlogChallenge";
 
 
 
@@ -25,6 +26,7 @@ const HomePage = () => {
       <WickedList />
       <LatestArticle />
       <WorkoutPage />
+      <BlogChallenge />
     </div>
   );
 };

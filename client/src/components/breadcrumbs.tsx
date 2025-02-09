@@ -26,7 +26,7 @@ const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
                     </div>
                 )
             }
-            
+
             {/* Overlay & Content */}
             <div className='relative top-52 md:top-[280px] left-12 md:left-28 lg:left-48 xl:left-64 duration-300 flex flex-col justify-end'>
                 <h1 className='font-semibold text-white text-lg md:text-2xl leading-snug uppercase drop-shadow-lg mb-2'>
@@ -34,8 +34,8 @@ const Breadcrumbs = ({ bg, title, heading }: TBreadcrumbs) => {
                 </h1>
                 <div className='text-white uppercase flex items-center gap-2 text-sm md:text-base'>
                     <Link className='flex items-center gap-3 mr-2' to='/'>
-                    <FaHome size={20} />
-                    Home
+                        <FaHome size={20} />
+                        Home
                     </Link>
                     <span className='text-5xl -mt-2'>&bull;</span>
                     <span>{title}</span>
