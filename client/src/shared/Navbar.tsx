@@ -33,6 +33,10 @@ const navLinks = [
     lebel: "Shop",
     href: "/shop",
   },
+  {
+    lebel: "Goal",
+    href: "/goal",
+  },
 ];
 
 const Navbar = () => {
