@@ -42,7 +42,7 @@ const Hero = () => {
           <img
             src={athlete}
             alt="Athlete"
-            className="relative w-[300px] h-[400px] md:w-[738px] md:h-[825px] top-[74px] z-10 object-fill"
+            className="relative w-[450px] h-[550px] md:w-[738px] md:h-[825px] lg:top-[74px] top-[100px] z-10 object-fill"
           />
         </div>
       </div>

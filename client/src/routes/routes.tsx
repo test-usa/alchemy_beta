@@ -26,7 +26,6 @@ import AddCardInfo from "@/section/SidePage/AddCardInfo";
 import SoundHandeling from "@/section/MindHandling/SoundHandeling";
 import GetOrganization from "@/section/MindHandling/GetOrganization";
 import RecoveryCounseling from "@/section/MindHandling/RecoveryCounseling";
-import Payment from "@/pages/Payment";
 
 
 const router = createBrowserRouter([
@@ -57,7 +56,6 @@ const router = createBrowserRouter([
             {path: "/shop-details/:id", element: <ShopDetailsPage/>},
    
             { path: "checkout", element: <CheckoutPage /> },
-            { path: "/payment", element: <Payment /> },
             { path: "goal", element: <Goal /> },
             { path: "community", element: <Community /> },
             { path: "/place-order", element: <AddCardInfo /> },

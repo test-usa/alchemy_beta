@@ -1,7 +1,7 @@
 import { Skeleton } from "@/components/ui/skeleton";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 const fetchProductDetails = async (id: string) => {
@@ -115,12 +115,12 @@ export const SingleProduct = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-4">
               {relatedProducts.length > 0 ? (
                 relatedProducts.map((relatedProduct: any) => (
-                  <div key={relatedProduct.id} className="bg-white shadow-md rounded-lg p-4">
+                  <div key={relatedProduct.id} className="bg-white rounded-sm p-4">
                     <img src={relatedProduct.image} alt={relatedProduct.name} className="w-full h-48 object-cover rounded-md" />
                     <h3 className="text-lg font-medium mt-3">{relatedProduct.name}</h3>
                     <p className="text-gray-600">{relatedProduct.price}$</p>
-                    <Link to={`/product/${relatedProduct.id}`}>
-                      <button className="mt-3 bg-primary text-white px-4 py-2 rounded-md w-full">
+                    <Link to={`/shop-details/${relatedProduct._id}`}>
+                      <button className="mt-3 bg-primary text-white px-4 py-2 rounded-sm w-full">
                         View Product
                       </button>
                     </Link>
