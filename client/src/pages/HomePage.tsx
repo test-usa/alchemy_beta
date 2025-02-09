@@ -8,6 +8,7 @@ import WhyChoose from "@/section/Home/WhyChoose";
 import { WickedList } from "@/section/Home/WickedList";
 import MidNavCom from "@/shared/MidNavCom";
 import WorkoutPage from "./WorkoutPage";
+import Badge from "@/section/Home/Badge";
 
 const HomePage = () => {
   return (
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Hero />
       <MidNavCom />
       <BestServices />
+      <Badge/>
       <BodyStamina />
       <MidNavCom />
       <WhyChoose />
@@ -23,7 +25,7 @@ const HomePage = () => {
       <FindRoute />
       <WickedList />
       <LatestArticle />
-      <WorkoutPage />
+    
     </div>
   );
 };
