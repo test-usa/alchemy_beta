@@ -8,7 +8,7 @@ const VideoSection = () => {
         loop
         muted
         playsInline
-        className="lg:max-w-[1320px] lg:max-h-[559px] object-cover"
+        className="lg:max-w-[1320px] lg:max-h-[500px] object-cover"
       >
         <source src={video} type="video/webm" />
         <source src={video} type="video/mp4" />

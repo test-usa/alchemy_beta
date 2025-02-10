@@ -1,7 +1,6 @@
 import { RiArrowLeftLine } from "react-icons/ri";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
 import addcartphoto from '@/assets/image/addcartphoto.png'
 import Breadcrumbs from "@/components/breadcrumbs";
 import { Link } from "react-router-dom";
@@ -36,37 +35,23 @@ const AddCardInfo = () => {
                 <Input placeholder="Expiration Date" />
                 <Input placeholder="Security Code" />
               </div>
-
-              <div className="flex items-center mt-4">
-                <Checkbox id="billing-address" defaultChecked />
-                <label htmlFor="billing-address" className="ml-2 text-sm">
-                  Use shipping address as billing address
-                </label>
+              <div className="flex justify-between">
+                <span>Sub Total</span>
+                <span>$150</span>
               </div>
-
-              <div className="border-t mt-4 pt-4 space-y-2">
-                <div className="flex justify-between">
-                  <span>Product Name</span>
-                  <span>$150</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sub Total</span>
-                  <span>$150</span>
-                </div>
-                <div className="flex justify-between font-bold">
-                  <span>Total</span>
-                  <span>$150</span>
-                </div>
+              <div className="flex justify-between font-bold">
+                <span>Total</span>
+                <span>$150</span>
               </div>
-              <Link to='/pay'>
-                <Button className="w-full bg-primary text-white mt-4">Pay Now</Button>
-              </Link>
             </div>
+              <Link to={'/payment'}>
+              
+            <Button className="w-full bg-primary text-white mt-4">Pay Now</Button>
+              </Link>
           </div>
         </div>
       </div>
     </div>
-
   );
 };
 

@@ -35,6 +35,7 @@ import UniqueWork from "@/section/Workout/UniqueWork";
 import Blog from "@/section/Blog/Blog";
 import BlogChallenge from "@/section/Blog/BlogChallenge";
 
+
 const router = createBrowserRouter([
     {
         path: "/",
@@ -60,10 +61,11 @@ const router = createBrowserRouter([
             { path: "articles-and-tips", element: <ArticlesAndTipsPage /> },
             { path: "shop", element: <ShopPage /> },
             {path: "/shop-details/:id", element: <ShopDetailsPage/>},
+   
             { path: "checkout", element: <CheckoutPage /> },
             { path: "goal", element: <Goal /> },
             { path: "community", element: <Community /> },
-            { path: "place-order", element: <AddCardInfo /> },
+            { path: "/place-order", element: <AddCardInfo /> },
             { path: "pay", element: <Confirm /> },
             /*  { path: "blog", element: <Blog /> }, */
             {

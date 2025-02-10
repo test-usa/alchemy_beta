@@ -7,8 +7,7 @@ import OurGallery from "@/section/Home/OurGallery";
 import WhyChoose from "@/section/Home/WhyChoose";
 import { WickedList } from "@/section/Home/WickedList";
 import MidNavCom from "@/shared/MidNavCom";
-import WorkoutPage from "./WorkoutPage";
-import BlogChallenge from "@/section/Blog/BlogChallenge";
+import Badge from "@/section/Home/Badge";
 
 const HomePage = () => {
   return (
@@ -16,6 +15,7 @@ const HomePage = () => {
       <Hero />
       <MidNavCom />
       <BestServices />
+      <Badge/>
       <BodyStamina />
       <MidNavCom />
       <WhyChoose />
@@ -24,8 +24,6 @@ const HomePage = () => {
       <FindRoute />
       <WickedList />
       <LatestArticle />
-      <WorkoutPage />
-      <BlogChallenge />
     </div>
   );
 };

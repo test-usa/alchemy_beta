@@ -33,37 +33,38 @@ const BestServices = () => {
         subHeading="We offer top-notch fitness services designed to help you reach your goals. From personalized workout plans to expert nutrition guidance, our team is dedicated to your success. "
       />
 
-      <div className="flex justify-center gap-[20px]">
-        {gymCards?.map((card) => {
-          return (
-            <div className="relative w-[315px] h-[398px] rounded-md overflow-hidden">
-              {/* Main Image */}
-              <img
-                src={card.image}
-                alt="Weight and Cardio"
-                className="w-full h-full object-cover"
-              />
+<div className="flex flex-col md:flex-row md:flex-wrap items-center justify-center gap-5">
+  {gymCards?.map((card, index) => (
+    <div
+      key={index}
+      className="relative w-[315px] h-[398px] rounded-md overflow-hidden"
+    >
+      {/* Main Image */}
+      <img
+        src={card.image}
+        alt="Weight and Cardio"
+        className="w-full h-full object-cover"
+      />
 
-              {/* Blurred Overlay Behind Text */}
-              <div className="absolute bottom-0 left-0 w-full flex justify-between items-center px-[33px] py-[30px]">
-                <div className="absolute inset-0 backdrop-blur-sm bg-[#35353580]/10 rounded-md"></div>
+      {/* Blurred Overlay Behind Text */}
+      <div className="absolute bottom-0 left-0 w-full flex justify-between items-center px-6 py-5">
+        <div className="absolute inset-0 backdrop-blur-sm bg-[#35353580]/10 rounded-md"></div>
 
-                {/* Text */}
-                <div className="flex">
-                  <h2 className="text-white text-lg font-semibold relative z-10 w-[158px]">
-                    {card.heading}
-                  </h2>
+        {/* Text */}
+        <div className="flex items-center gap-3 relative z-10">
+          <h2 className="text-white text-lg font-semibold w-[158px]">
+            {card.heading}
+          </h2>
 
-                  {/* Arrow Button */}
-                  <div className="relative z-10 bg-white w-[54px] h-[54px] flex items-center justify-center rounded-full shadow-md">
-                    <ArrowUpRight className="text-purple-600" size={28} />
-                  </div>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+          {/* Arrow Button */}
+          <div className="bg-white w-12 h-12 flex items-center justify-center rounded-full shadow-md">
+            <ArrowUpRight className="text-primary" size={28} />
+          </div>
+        </div>
       </div>
+    </div>
+  ))}
+</div>
     </div>
   );
 };
