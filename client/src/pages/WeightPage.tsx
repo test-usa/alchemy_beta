@@ -94,7 +94,7 @@ const TrackerPage = () => {
       </div>
 
       {/* Content */}
-      <div className="flex-1 pl-5">
+      <div className="flex-1 md:pl-5">
         <Outlet />
       </div>
     </div>

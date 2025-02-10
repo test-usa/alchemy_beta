@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-
 import photo from '@/assets/image/confirm.png'
 import Breadcrumbs from "@/components/breadcrumbs";
 import { Link } from "react-router-dom";

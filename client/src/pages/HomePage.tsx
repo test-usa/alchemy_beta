@@ -11,8 +11,15 @@ import Badge from "@/section/Home/Badge";
 import VideoSection from "@/section/Home/VideoSection";
 import BmiSection from "@/section/Home/BmiSection";
 import CustomerSay from "@/section/Home/CustomerSay";
+import { useAuth } from "@/auth/AuthContext";
 
 const HomePage = () => {
+
+  const { user } = useAuth(); // Destructure `user` from the context
+  const { id, email } = user || { id: null, email: null }; // Fallback if user is null
+
+  console.log(user)
+
   return (
     <div>
       <Hero />

@@ -115,7 +115,3 @@ const MindHandlingPage = () => {
 };
 
 export default MindHandlingPage;
-
-
-
-

@@ -1,4 +1,3 @@
-
 const ArticleCard = ({ category, title, date, comments, imageUrl }: { category: string, title: string, date: string, comments: number, imageUrl: string }) => {
   return (
     <div className="w-[315px] min-h-[561px] flex flex-col items-start justify-center gap-[26px] mr-5 ">
