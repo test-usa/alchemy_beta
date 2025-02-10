@@ -39,6 +39,9 @@ import FinancialGoals from "@/section/Goals/FinacialGoals";
 import WaterTrack from "@/section/Tracker/WaterTrack";
 import Weight from "@/section/Tracker/Weight";
 import PublicRoute from "@/guardRoute/PublicRoute";
+import YourGoals from "@/section/Goals/YourGoals";
+import GoalDetailsPage from "@/pages/GoalDetailsPage";
+
 
 const router = createBrowserRouter([
     {
@@ -83,7 +86,8 @@ const router = createBrowserRouter([
                     { path: "relationship-goals", element: <FinancialGoals /> },
                     { path: "travel", element: <FinancialGoals /> },
                     { path: "bank-goals", element: <FinancialGoals /> },
-                    { path: "your-goals", element: <FinancialGoals /> },
+                    { path: "your-goals", element: <YourGoals /> },
+                    { path: "goal-details/:id", element: <GoalDetailsPage /> },
                 ]
             },
             { path: "community", element: <Community /> },
