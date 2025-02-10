@@ -17,7 +17,7 @@ const WorkoutPage = () => {
   }, [navigate]);
 
   return (
-    <div className="container mx-auto flex flex-col sm:flex-row px-4  ">
+    <div className="h-full container mx-auto flex flex-col sm:flex-row px-4  ">
       {/* Sidebar Toggle Button */}
       <div className="md:hidden flex justify-start">
         <button
@@ -32,10 +32,10 @@ const WorkoutPage = () => {
       </div>
 
       {/* Sidebar/Help  */}
-      <div className="sm:w-64 lg:w-1/4 flex flex-col gap-6 ">
+      <div className="sm:w-64 lg:w-1/4 flex flex-col gap-6 h-full ">
         {/* Sidebar */}
         <div
-          className={`fixed md:static top-0 left-0 h-full md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 z-50`}
+          className={`fixed md:static top-0 left-0 h-[120px] md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 z-50`}
         >
           <button
             className="md:hidden absolute top-4 right-4 text-gray-700"
@@ -51,7 +51,7 @@ const WorkoutPage = () => {
           </div>
         </div>
         {/* Contact Info */}
-        <div className="hidden lg:block w-full max-w-[375px] mx-auto  max-auto border p-5 rounded-md my-5">
+        <div className="hidden sm:block w-full max-w-[375px] mx-auto  max-auto border p-5 rounded-md ">
           <h2 className="text-xl font-semibold text-[#6636EE]  mb-4">
             Contact
           </h2>
@@ -81,7 +81,7 @@ const WorkoutPage = () => {
         </div>
 
         {/* Brochures */}
-        <div className="hidden lg:block w-full max-w-[375px] mx-auto max-auto border p-5 rounded-md my-5">
+        <div className="hidden sm:block w-full max-w-[375px] mx-auto max-auto border p-5 rounded-md ">
           <h2 className="text-xl font-semibold text-[#6636EE] mb-4">
             Brochures
           </h2>
@@ -99,29 +99,29 @@ const WorkoutPage = () => {
         </div>
 
         {/* Help Section */}
-        <div className="hidden lg:block w-full max-w-[375px] mx-auto">
-          <div className="w-full h-auto min-h-[250px] md:h-[320px] rounded-[4px] relative overflow-hidden shadow-lg flex flex-col items-center">
-            <img
-              src="https://m.media-amazon.com/images/I/61OsDlWzdcL._AC_UY350_.jpg"
-              alt="Additional Workout Image"
-              className="w-full h-auto object-cover"
-            />
+        <div className=" hidden sm:block w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl h-full rounded-[4px] gap-[10px] relative">
+          <img
+            src="https://m.media-amazon.com/images/I/61OsDlWzdcL._AC_UY350_.jpg"
+            alt="Additional Workout Image"
+            className="w-full h-auto object-cover rounded-[4px]"
+          />
+          <div className="w-full h-[141px] absolute bg-[#6636EEE5] bottom-0 flex flex-col items-center justify-center">
+            {/* Icon Container */}
+            <div className="absolute -top-6 w-[58px] h-[58px] bg-white rounded-full flex items-center justify-center shadow-md">
+              <LiaHeadphonesAltSolid size={25} className="text-[#6636EE]" />
+            </div>
 
-            {/* Overlay Section */}
-            <div className="absolute bottom-0 w-full bg-[#6636EEE5] p-4 flex flex-col items-center text-center">
-              <div className="w-[58px] h-[58px] bg-white rounded-full flex justify-center items-center shadow-lg">
-                <LiaHeadphonesAltSolid size={25} className="text-[#6636EE]" />
-              </div>
-              <h1 className="text-white font-semibold mt-3 text-base sm:text-lg">How can we help?</h1>
-              <p className="text-white text-xs sm:text-sm mt-1">info.gmail.com</p>
-              <p className="text-white text-xs sm:text-sm">+798725783</p>
+            {/* Text Content */}
+            <div className="text-center text-white px-4">
+              <h1 className="text-lg font-semibold">How can we help?</h1>
+              <p className="text-sm mt-1">info.gmail.com</p>
+              <p className="text-sm">+798725783</p>
             </div>
           </div>
         </div>
 
-
-
       </div>
+
 
       {/* Content Section */}
       <div className="flex-1 mt-2 ">
