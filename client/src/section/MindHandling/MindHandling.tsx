@@ -11,7 +11,6 @@ const MindHandling = () => {
             />
             <MindHandlingPage />
 
-
         </div>
     );
 };

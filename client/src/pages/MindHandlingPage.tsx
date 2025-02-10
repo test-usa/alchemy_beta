@@ -1,11 +1,10 @@
-import NutritionNavItems from "@/shared/NutritionNavItems";
 import { Outlet, useNavigate } from "react-router-dom";
-import { Mail, Phone } from 'lucide-react';
 import { useEffect } from "react";
 import MindNavItems from "@/shared/MindNavItems";
 import { FaRegFilePdf } from "react-icons/fa";
 import { SlDocs, SlEnvolopeLetter } from "react-icons/sl";
 import { CiLocationArrow1, CiPhone } from "react-icons/ci";
+import { LiaHeadphonesAltSolid } from "react-icons/lia";
 
 const MindHandlingPage = () => {
 
@@ -19,13 +18,13 @@ const MindHandlingPage = () => {
         <div className="container mx-auto flex px-4 mt-10">
             {/* Sidebar */}
             <div className="w-40 sm:w-48 md:w-64">
-                <div className="border border-gray-200 rounded p-6">
+                <div className="w-[335px] max-auto border border-gray-200 rounded p-6">
                     <h2 className="text-xl font-bold mb-4 text-[#6636EE] border-b border-b-gray-200 pb-2">Our Services</h2>
                     <MindNavItems />
                 </div>
 
                 {/* Contact Information */}
-                <div className="border p-5 rounded-md my-5">
+                <div className=" w-[335px] max-auto border p-5 rounded-md my-5">
                     <h2 className="text-xl font-semibold text-[#6636EE]  mb-4">
                         Contact
                     </h2>
@@ -55,7 +54,7 @@ const MindHandlingPage = () => {
                 </div>
 
                 {/* Brochures */}
-                <div className="border p-5 rounded-md my-5">
+                <div className="w-[335px] max-auto border p-5 rounded-md my-5">
                     <h2 className="text-xl font-semibold text-[#6636EE] mb-4">
                         Brochures
                     </h2>
@@ -72,19 +71,43 @@ const MindHandlingPage = () => {
                     ))}
                 </div>
 
+                {/* help */}
+                <div className="w-[335px] h-[320px] rounded-[4px]  gap-[10px] relative  ">
+                    {
+                        <img
+                            src="https://m.media-amazon.com/images/I/61OsDlWzdcL._AC_UY350_.jpg"
+                            alt="Additional Workout Image"
+                            className="w-full h-auto object-cover"
+                        />
+                    }
 
-                <div className="rounded my-5">
-                    <img className="w-full" src="https://img.freepik.com/free-photo/young-guy-aged-man-sitting-sofa_23-2148030251.jpg?t=st=1738925315~exp=1738928915~hmac=dc57c81d65b94f934dd739ec8680131abc5c14430a0cd79e527c173d57557cad&w=1380" alt="Help Image" />
-                    <div className="bg-[#6636EE] text-white p-2 text-center">
-                        <p className="text-xl mb-2">How Can We Help?</p>
-                        <p className="flex justify-center items-center gap-2 text-sm mb-1"> <Mail size={14} />info@totalu.com</p>
-                        <p className="flex justify-center items-center gap-2 text-sm"><Phone size={14} />+123 905 6566</p>
+                    <div className="w-[335px] h-[141px] absolute bg-[#6636EEE5] z-0">
+                        <div className="w-full h-full relative flex justify-center">
+                            <div className="w-[58px] h-[58px] bg-white rounded-full absolute -mt-7 z-20 flex justify-center items-center">
+                                <LiaHeadphonesAltSolid size={25} className="relative z-10" />
+                            </div>
+                            <div className="w-[70px] h-[70px] rounded-full bg-[#6636EEE5] absolute -top-8 "></div>
+                            <div className="w-[213px] h-[87px]">
+                                <div className="w-full h-full mt-8 flex justify-center">
+                                    <h1 className="text-white absolute text-center">
+                                        How can we help?
+                                    </h1>
+                                    <h1 className="text-center absolute mt-12 mx-3 text-white">
+                                        info.gmail.com
+                                    </h1>
+                                    <h1 className="text-center absolute pt-6 text-white">
+                                        +798725783
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
 
             {/* Content */}
-            <div className="flex-1 pl-5">
+            <div className="flex-1 pl-24">
                 <Outlet />
             </div>
         </div>

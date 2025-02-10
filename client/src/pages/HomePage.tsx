@@ -7,7 +7,10 @@ import OurGallery from "@/section/Home/OurGallery";
 import WhyChoose from "@/section/Home/WhyChoose";
 import { WickedList } from "@/section/Home/WickedList";
 import MidNavCom from "@/shared/MidNavCom";
-import WorkoutPage from "./WorkoutPage";
+import Badge from "@/section/Home/Badge";
+import VideoSection from "@/section/Home/VideoSection";
+import BmiSection from "@/section/Home/BmiSection";
+import CustomerSay from "@/section/Home/CustomerSay";
 import { useAuth } from "@/auth/AuthContext";
 
 const HomePage = () => {
@@ -22,6 +25,7 @@ const HomePage = () => {
       <Hero />
       <MidNavCom />
       <BestServices />
+      <Badge/>
       <BodyStamina />
       <MidNavCom />
       <WhyChoose />
@@ -29,8 +33,11 @@ const HomePage = () => {
       <MidNavCom />
       <FindRoute />
       <WickedList />
-      <LatestArticle />
-      <WorkoutPage />
+      <VideoSection/>
+      <MidNavCom />
+      <BmiSection/>
+      <CustomerSay/>
+      <LatestArticle/>
     </div>
   );
 };

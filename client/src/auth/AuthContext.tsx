@@ -21,6 +21,7 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
             method: 'GET',
             credentials: 'include', // Ensure credentials (cookies) are sent with the request
           });
+          console.log(response)
         if (!response.ok) {
           throw new Error('There is a problem with fetching data');
         }

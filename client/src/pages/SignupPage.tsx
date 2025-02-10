@@ -6,75 +6,63 @@ import Steps from "../section/SIgnup/Steps";
 import { useAuth } from "@/auth/AuthContext";
 
 const SignupPage = () => {
-
-  const navigate = useNavigate() ;
-
-  const {setUser} = useAuth() ;
-
+  const navigate = useNavigate();
+  const { setUser } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
+  // Handle form submission here
+  const handle = async (e: FormEvent) => {
+    e.preventDefault();
 
+    // Check if passwords match
+    if (password !== confirmPassword) {
+      setErrorMessage("Passwords do not match!");
+      return;
+    }
 
-
- 
-
-
-    // Handle form submission here
-    const handle = async (e: FormEvent) => {
-      e.preventDefault();
-  
-      // Check if passwords match
-      if (password !== confirmPassword) {
-        setErrorMessage("Passwords do not match!");
-        return;
-      }
-  
-      // Prepare data
-      const userData = {
-        email: username,
-        password,
-        confirmPassword,
-      };
-  
-      try {
-        // Send the data to the server
-        const response = await fetch("https://alchemy-beta-server-3.onrender.com/api/register", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(userData),
-          credentials:"include"
-        });
-  
-        if (response.ok) {
-          // Handle successful response
-          const data = await response.json();
-          setSuccessMessage(data.message);
-          setErrorMessage(""); // Reset any previous errors
-          console.log("User registered successfully" , data );
-          setUser({
-            id:data?.id ,
-            email:data?.email
-          })
-          navigate("/")
-        } else {
-          // If response is not ok (e.g., 400 status), handle the error
-          const errorData = await response.json();
-          setErrorMessage(errorData.message || "An error occurred during registration");
-         
-        }
-      } catch (error) {
-        console.error(error);
-        setErrorMessage("An error occurred while signing up");
-      }
+    // Prepare data
+    const userData = {
+      email: username,
+      password,
+      confirmPassword,
     };
 
-   
-  
+    try {
+      // Send the data to the server
+      const response = await fetch("https://alchemy-beta-server-3.onrender.com/api/register", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData),
+        credentials: "include"
+      });
+
+      if (response.ok) {
+        // Handle successful response
+        const data = await response.json();
+        setSuccessMessage(data.message);
+        setErrorMessage(""); // Reset any previous errors
+        console.log("User registered successfully", data);
+        setUser({
+          id: data?.id,
+          email: data?.email
+        })
+        navigate("/")
+      } else {
+        // If response is not ok (e.g., 400 status), handle the error
+        const errorData = await response.json();
+        setErrorMessage(errorData.message || "An error occurred during registration");
+
+      }
+    } catch (error) {
+      console.error(error);
+      setErrorMessage("An error occurred while signing up");
+    }
+  };
 
   return (
     <div>
@@ -85,7 +73,7 @@ const SignupPage = () => {
       <div className="max-w-2xl my-20 mx-auto bg-white rounded-lg px-3">
         <h2 className="text-2xl font-semibold text-center mb-6 text-[#6636EE]">Create an Account!</h2>
 
-        <form onSubmit={(e)=>handle(e)}>
+        <form onSubmit={(e) => handle(e)}>
           <div className="mb-4">
             <input
               type="text"

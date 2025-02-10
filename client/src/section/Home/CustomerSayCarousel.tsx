@@ -11,12 +11,12 @@ import {
 
 const CustomerSayCarousel = () => {
   return (
-    <div className="mb-36">
+    <div className="mt-2 pb-36">
       <p className="text-[#6636EE] text-[24px] font-inter font-semibold leading-[31.68px] tracking-[-0.02em] text-center py-5">
         Customer Say
       </p>
 
-      <div className="flex lg:flex-col items-center justify-center bg-white">
+      <div className="flex lg:flex-col items-center justify-center bg-white ">
         <Carousel opts={{ align: "center" }} className="w-full relative">
           <CarouselContent className="flex items-center justify-center">
             {[0, 1, 2].map((photo, index) => (
@@ -34,14 +34,14 @@ const CustomerSayCarousel = () => {
                     <div className="flex flex-col lg:flex-row  relative">
                       <div
                         className={`${index === 1
-                          ? "w-[294.65px] h-[328.14px] flex flex-col gap-48 lg:w-[35%]"
-                          : "w-[260px] h-[253px] mt-6 ml-10 gap-[150px] flex flex-col lg:w-[35%]"
+                          ? "h-[328.14px] flex flex-col gap-48 lg:w-[35%]"
+                          : "h-[253px] mt-6 ml-10 gap-[150px] flex flex-col lg:w-[35%]"
                           }`}
                       >
                         <div
                           className={`${index === 1
-                            ? "w-[294.65px] h-[27px] flex flex-col gap-48 p-5 "
-                            : "w-[294.65px] h-[21px]"
+                            ? "lg:w-[294.65px] h-[27px] flex flex-col gap-48 p-5 "
+                            : "lg:w-[294.65px] h-[21px]"
                             }`}
                         >
 
@@ -109,7 +109,7 @@ const CustomerSayCarousel = () => {
           </CarouselContent>
 
           {/* Carousel Controls */}
-          <div className="absolute left-1/2 transform -translate-x-1/2  flex gap-2 z-10 mx-auto lg:top-[500px] lg:top-[420px]">
+          <div className="absolute left-1/2 transform -translate-x-1/2  flex gap-2 z-10 mx-auto lg:top-[500px] md:top-[400px] lg:mt-0 ">
             <CarouselPrevious className="bg-[#EDE7FF] text-primary rounded-full p-2 hover:bg-purple-300" />
             <CarouselNext className="bg-[#EDE7FF] text-primary rounded-full p-2 hover:bg-purple-300" />
           </div>
