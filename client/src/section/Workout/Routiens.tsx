@@ -1,6 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight } from "lucide-react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Routines = () => {
