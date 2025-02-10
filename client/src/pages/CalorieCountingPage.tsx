@@ -1,19 +1,15 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
-import MindNavItems from "@/shared/MindNavItems";
-import { FaRegFilePdf } from "react-icons/fa";
-import { SlDocs, SlEnvolopeLetter } from "react-icons/sl";
-import { CiLocationArrow1, CiPhone } from "react-icons/ci";
 import { LiaHeadphonesAltSolid } from "react-icons/lia";
+import CalorieNavItem from "@/shared/CalorieNavItem";
 import { Menu, X } from "lucide-react";
 
-const MindHandlingPage = () => {
-
+const CalorieCountingPage = () => {
     const navigate = useNavigate();
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
     useEffect(() => {
-        navigate("/mindhandling/meditation", { replace: true });
+        navigate("/calorie/calorie-counting", { replace: true });
     }, [navigate]);
 
     return (
@@ -47,59 +43,12 @@ const MindHandlingPage = () => {
                         <h2 className="text-xl font-bold mb-4 text-[#6636EE] border-b pb-2">
                             Our Services
                         </h2>
-                        <MindNavItems />
+                        <CalorieNavItem />
                     </div>
-                </div>
-                {/* Contact Information */}
-                <div className="hidden lg:block w-full max-w-[375px] mx-auto  max-auto border p-5 rounded-md my-5">
-                    <h2 className="text-xl font-semibold text-[#6636EE]  mb-4">
-                        Contact
-                    </h2>
-                    {[
-                        {
-                            icon: <SlEnvolopeLetter />,
-                            label: "Email",
-                            value: "info@totalu.com",
-                        },
-                        { icon: <CiPhone />, label: "Phone", value: "64388867" },
-                        {
-                            icon: <CiLocationArrow1 />,
-                            label: "Location",
-                            value: "Street Road",
-                        },
-                    ].map((item, index) => (
-                        <div key={index} className="flex items-center gap-3 mb-4">
-                            <div className="p-3 bg-[#EDE7FF] rounded-full flex items-center justify-center text-xl">
-                                {item.icon}
-                            </div>
-                            <div>
-                                <p className="text-sm font-semibold">{item.label}</p>
-                                <p className="text-sm text-gray-700">{item.value}</p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Brochures */}
-                <div className="hidden lg:block w-full max-w-[375px] mx-auto max-auto border p-5 rounded-md my-5">
-                    <h2 className="text-xl font-semibold text-[#6636EE] mb-4">
-                        Brochures
-                    </h2>
-                    {[
-                        { icon: <FaRegFilePdf />, label: "Download.pdf" },
-                        { icon: <SlDocs />, label: "Download.docx" },
-                    ].map((item, index) => (
-                        <div key={index} className="flex items-center gap-3 mb-4">
-                            <div className="p-3 bg-gray-200 rounded-full flex items-center justify-center text-xl">
-                                {item.icon}
-                            </div>
-                            <p className="text-sm text-gray-700">{item.label}</p>
-                        </div>
-                    ))}
                 </div>
 
                 {/* Help Section */}
-                <div className="hidden lg:block w-full max-w-[375px] mx-auto">
+                <div className="w-full max-w-[375px] mx-auto">
                     <div className="w-full h-auto min-h-[250px] md:h-[320px] rounded-[4px] relative overflow-hidden shadow-lg flex flex-col items-center">
                         <img
                             src="https://m.media-amazon.com/images/I/61OsDlWzdcL._AC_UY350_.jpg"
@@ -124,15 +73,11 @@ const MindHandlingPage = () => {
             </div>
 
             {/* Content Section */}
-            <div className="flex-1 mt-2 ">
+            <div className="flex-1">
                 <Outlet />
             </div>
         </div>
     );
 };
 
-export default MindHandlingPage;
-
-
-
-
+export default CalorieCountingPage;

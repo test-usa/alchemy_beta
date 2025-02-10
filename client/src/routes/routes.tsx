@@ -32,6 +32,8 @@ import OnlineProgram from "@/section/Workout/OnlineProgram";
 import UniqueWork from "@/section/Workout/UniqueWork";
 import Blog from "@/section/Blog/Blog";
 import BlogChallenge from "@/section/Blog/BlogChallenge";
+import Calorie from "@/section/Calorie/Calorie";
+import CalorieCounting from "@/section/Calorie/CalorieCounting";
 
 const router = createBrowserRouter([
     {
@@ -94,8 +96,14 @@ const router = createBrowserRouter([
                 element: <Blog />,
                 children: [
                     { path: "challenge", element: <BlogChallenge /> },
+                ]
 
-
+            },
+            {
+                path: "calorie",
+                element: <Calorie />,
+                children: [
+                    { path: "calorie-counting", element: <CalorieCounting /> },
                 ]
 
             },
