@@ -30,12 +30,15 @@ export const WeightTrackChart = () => {
           </PieChart>
         </ResponsiveContainer>
         <div className="absolute flex justify-center w-full">
-          <div className="text-green-700">
+          <div className="text-bold">
             78.5 <span className="pt-5 text-[13.48px]">kg</span>
           </div>
         </div>
+        <div className="absolute font-inter font-normal text-[13.48px] leading-[22.11px] tracking-[0] text-center w-[279.71px] h-[27px] flex justify-center gap-[49.71px] top-[170px]">
+          <div className="w-[72px] h-[72px]"></div>
+        </div>
 
-        <div className="absolute font-inter font-normal text-[13.48px] leading-[22.11px] tracking-[0] text-center w-[279.71px] h-[27px] flex justify-center gap-[49.71px] top-72">
+        <div className="absolute font-inter font-normal text-[13.48px] leading-[22.11px] tracking-[0] text-center w-[279.71px] h-[27px] flex justify-center gap-[49.71px] top-[170px]">
           <div className="font-inter font-normal text-[16.18px] leading-[26.53px] tracking-[0] text-center">
             Starting: 80.0 Kg
           </div>
