@@ -1,3 +1,4 @@
+
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import {
@@ -9,12 +10,19 @@ import {
 } from "react-router-dom";
 import './index.css'
 import router from './routes/routes';
+import { StepperProvider } from './providers/StepperProvider'; 
+import AuthProvider from './auth/AuthContext';
+
 const queryClient = new QueryClient()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
+        <AuthProvider>
+          <StepperProvider>
+            <RouterProvider router={router} />
+          </StepperProvider>
+        </AuthProvider>
     </QueryClientProvider>
   </StrictMode>,
 )
