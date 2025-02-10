@@ -26,8 +26,8 @@ const HomePage = () => {
       <MidNavCom />
       <FindRoute />
       <WickedList />
-      <LatestArticle />
       <VideoSection/>
+      <MidNavCom />
       <BmiSection/>
       <CustomerSay/>
       <LatestArticle/>

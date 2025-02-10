@@ -49,11 +49,9 @@ const LatestArticle = () => {
       </div>
       <div className="mt-10 flex justify-center">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-           {articles.map((article, index) => (
-        <ArticleCard key={index} {...article} />
-      ))}
-          
-         
+          {articles.map((article, index) => (
+            <ArticleCard key={index} {...article} />
+          ))}
         </div>
       </div>
     </div>

@@ -86,7 +86,7 @@ const router = createBrowserRouter([
                 ]
             },
             { path: "community", element: <Community /> },
-            { path: "/place-order", element: <AddCardInfo /> },
+            { path: "place-order", element: <AddCardInfo /> },
             { path: "pay", element: <Confirm /> },
             {
                 path: "mindhandling",

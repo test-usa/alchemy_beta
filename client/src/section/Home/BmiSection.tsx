@@ -1,12 +1,10 @@
 import { BmiChart } from "@/components/ui/BmiChart";
-import MidNavCom from "./MidNavCom";
 import { IoIosMale } from "react-icons/io";
 import { MdOutlineFemale } from "react-icons/md";
 
 const BmiSection = () => {
   return (
     <div className="w-full mt-10">
-      <MidNavCom />
       <div className="max-w-full h-auto pt-16 px-8 lg:px-[327px] pb-16 flex flex-col gap-4 lg:flex-row lg:gap-16">
         <div className="lg:w-[1266px] h-auto rounded-[4px] p-[32px] flex flex-col gap-4 lg:flex-row justify-between">
           {/* First section */}

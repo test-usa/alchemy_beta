@@ -47,8 +47,8 @@ const BestServices = () => {
       />
 
       {/* Blurred Overlay Behind Text */}
-      <div className="absolute bottom-0 left-0 w-full flex justify-between items-center px-6 py-5">
-        <div className="absolute inset-0 backdrop-blur-sm bg-[#35353580]/10 rounded-md"></div>
+      <div className="absolute bottom-0 left-0 w-full flex justify-between hover:bg-primary items-center px-6 py-5 transition-all duration-300 cursor-pointer">
+        <div className="absolute inset-0 backdrop-blur-sm bg-[#35353580]/10  rounded-md"></div>
 
         {/* Text */}
         <div className="flex items-center gap-3 relative z-10">
