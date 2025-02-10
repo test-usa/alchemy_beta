@@ -1,4 +1,3 @@
-
 import ArticleCard from "./ArticleCard";
 const articles = [
   {
@@ -31,7 +30,6 @@ const articles = [
   },
 ];
 
-
 const LatestArticle = () => {
   return (
     <div className="lg:w-[1916px] lg:h-[846px] ">
@@ -48,7 +46,7 @@ const LatestArticle = () => {
         </div>
       </div>
       <div className="mt-10 flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {articles.map((article, index) => (
             <ArticleCard key={index} {...article} />
           ))}
