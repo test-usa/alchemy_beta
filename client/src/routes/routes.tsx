@@ -38,6 +38,7 @@ import GoalPage from "@/pages/GoalPage";
 import FinancialGoals from "@/section/Goals/FinacialGoals";
 import WaterTrack from "@/section/Tracker/WaterTrack";
 import Weight from "@/section/Tracker/Weight";
+import PublicRoute from "@/guardRoute/PublicRoute";
 
 const router = createBrowserRouter([
     {
@@ -47,7 +48,7 @@ const router = createBrowserRouter([
         children: [
             { path: "/", element: <HomePage /> },
             { path: "signup", element: <SignupPage /> },
-            { path: "login", element: <LoginPage /> },
+            { path: "login", element: <PublicRoute><LoginPage /></PublicRoute> },
             {
                 path: "nutrition",
                 element: <NutritionPage />,

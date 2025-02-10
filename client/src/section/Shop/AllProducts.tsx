@@ -31,6 +31,8 @@ export const AllProducts = () => {
     queryFn: fetchShopItems,
   });
 
+
+  
   console.log(data, error);
   if (isLoading)
     return (
@@ -74,7 +76,7 @@ export const AllProducts = () => {
               <h3 className="text-lg font-semibold mt-4">{product.name}</h3>
               <p className="text-gray-600">{product.price}</p>
               <Link to={`/shop-details/${product._id}`}>
-                <button className="w-[113px] h-[48px] bg-primary text-white py-2 mt-4 rounded-sm transition gap-y-[24px]">
+                <button  className="w-[113px] h-[48px] bg-primary text-white py-2 mt-4 rounded-sm transition gap-y-[24px]">
                   Buy Now
                 </button>
               </Link>
