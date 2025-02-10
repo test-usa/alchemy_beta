@@ -1,8 +1,6 @@
-import NutritionNavItems from "@/shared/NutritionNavItems";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
 import { useEffect } from "react";
-import MindNavItems from "@/shared/MindNavItems";
 import { FaRegFilePdf } from "react-icons/fa";
 import { SlDocs, SlEnvolopeLetter } from "react-icons/sl";
 import { CiLocationArrow1, CiPhone } from "react-icons/ci";
