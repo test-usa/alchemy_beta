@@ -6,7 +6,7 @@ import { useAuth } from "@/auth/AuthContext";
 
 
 const LoginPage = () => {
-  const location = useLocation();
+  // const location = useLocation();
   const { setUser } = useAuth(); // This will allow us to set the authenticated user in the context
   const navigate = useNavigate()
   const [email, setEmail] = useState<string | null>(null);
@@ -15,7 +15,7 @@ const LoginPage = () => {
   
   const handle = async (e: FormEvent) => {
 
-    const redirectTo = (location.state as any)?.from || '/';
+    // const redirectTo = (location.state as any)?.from || '/';
 
     e.preventDefault();
   
@@ -47,7 +47,7 @@ const LoginPage = () => {
         // Set the user data in the global context (AuthContext)
         setUser(data);
   
-        navigate(redirectTo);
+        navigate("/");
   
         // Clear error state if login is successful
         setError(null);
