@@ -6,7 +6,6 @@ import SignupPage from "@/pages/SignupPage";
 import LoginPage from "@/pages/LoginPage";
 import NutritionPage from "@/pages/NutritionPage";
 import MeditationPage from "@/pages/MeditationPage";
-import WorkoutPage from "@/pages/WorkoutPage";
 import TrackerPage from "@/pages/TrackerPage";
 import ShopPage from "@/pages/ShopPage";
 import ArticlesAndTipsPage from "@/pages/ArticlesAndTipsPage";
@@ -19,13 +18,22 @@ import CheckoutPage from "@/pages/CheckoutPage";
 import { ShopDetailsPage } from "@/pages/ShopDetailsPage";
 import { Goal } from "lucide-react";
 import Community from "@/pages/Community";
-import Confirm from "@/section/SidePage/Confirm";
 import MindHandling from "@/section/MindHandling/MindHandling";
 import Meditations from "@/section/MindHandling/Meditations";
-import AddCardInfo from "@/section/SidePage/AddCardInfo";
 import SoundHandeling from "@/section/MindHandling/SoundHandeling";
 import GetOrganization from "@/section/MindHandling/GetOrganization";
 import RecoveryCounseling from "@/section/MindHandling/RecoveryCounseling";
+import AddCardInfo from "@/section/SidePage/AddCardInfo";
+import Confirm from "@/section/SidePage/Confirm";
+import Workout from "@/section/Workout/Workout";
+import Dance from "@/section/Workout/Dance";
+import Routiens from "@/section/Workout/Routiens";
+import Yoga from "@/section/Workout/Yoga";
+import Pilates from "@/section/Workout/Pilates";
+import OnlineProgram from "@/section/Workout/OnlineProgram";
+import UniqueWork from "@/section/Workout/UniqueWork";
+import Blog from "@/section/Blog/Blog";
+import BlogChallenge from "@/section/Blog/BlogChallenge";
 
 const router = createBrowserRouter([
     {
@@ -48,7 +56,6 @@ const router = createBrowserRouter([
                 ]
             },
             { path: "meditation", element: <MeditationPage /> },
-            { path: "workout", element: <WorkoutPage /> },
             { path: "tracker", element: <TrackerPage /> },
             { path: "articles-and-tips", element: <ArticlesAndTipsPage /> },
             { path: "shop", element: <ShopPage /> },
@@ -58,7 +65,7 @@ const router = createBrowserRouter([
             { path: "community", element: <Community /> },
             { path: "place-order", element: <AddCardInfo /> },
             { path: "pay", element: <Confirm /> },
-
+            /*  { path: "blog", element: <Blog /> }, */
             {
                 path: "mindhandling",
                 element: <MindHandling />,
@@ -67,11 +74,27 @@ const router = createBrowserRouter([
                     { path: "sound-handeling", element: <SoundHandeling /> },
                     { path: "get-organization", element: <GetOrganization /> },
                     { path: "recovery-counseling", element: <RecoveryCounseling /> },
-
                 ]
-
             },
-
+            {
+                path: "workout",
+                element: <Workout />,
+                children: [
+                    { path: "dance", element: <Dance /> },
+                    { path: "yoga", element: <Yoga /> },
+                    { path: "pilates", element: <Pilates /> },
+                    { path: "online-program", element: <OnlineProgram /> },
+                    { path: "routines", element: <Routiens /> },
+                    { path: "unique-working", element: <UniqueWork /> },
+                ]
+            },
+            {
+                path: "blog",
+                element: <Blog />,
+                children: [
+                    { path: "challenge", element: <BlogChallenge /> },
+                ]
+            },
         ]
     }
 ]);
