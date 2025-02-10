@@ -28,6 +28,7 @@ import RecoveryCounseling from "@/section/MindHandling/RecoveryCounseling";
 import PhysicalGoals from "@/section/Goals/PhysicalGoals";
 import GoalPage from "@/pages/GoalPage";
 import FinancialGoals from "@/section/Goals/FinacialGoals";
+import YourGoals from "@/section/Goals/YourGoals";
 
 
 const router = createBrowserRouter([
@@ -66,7 +67,7 @@ const router = createBrowserRouter([
                     { path: "relationship-goals", element: <FinancialGoals /> },
                     { path: "travel", element: <FinancialGoals /> },
                     { path: "bank-goals", element: <FinancialGoals /> },
-                    { path: "your-goals", element: <FinancialGoals /> },
+                    { path: "your-goals", element: <YourGoals /> },
                 ]
             },
             { path: "community", element: <Community /> },
