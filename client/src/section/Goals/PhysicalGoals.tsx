@@ -41,7 +41,7 @@ const GoalForm: React.FC = () => {
           onChange={(e) => setGoalTime(e.target.value)}
           className="mb-4"
         />
-        <Button className="w-full bg-[#6636EE] text-white">Add Task</Button>
+        <Button className="w-full bg-[#6636EE] text-white hover:bg-[#6636EE] hover:text-white hover:opacity-90">Add Task</Button>
       </CardContent>
     </Card>
   );
@@ -93,7 +93,7 @@ const HabitForm: React.FC = () => {
           placeholder="Note"
           className="mb-4"
         />
-        <Button className="w-full bg-[#6636EE] text-white">Add Task</Button>
+        <Button className="w-full bg-[#6636EE] text-white hover:bg-[#6636EE] hover:text-white hover:opacity-90">Add Task</Button>
       </CardContent>
     </Card>
   );
@@ -124,7 +124,7 @@ const TaskForm: React.FC = () => {
           onChange={(e) => setTaskTime(e.target.value)}
           className="mb-4"
         />
-        <Button className="w-full bg-[#6636EE] text-white">Add Task</Button>
+        <Button className="w-full bg-[#6636EE] text-white hover:bg-[#6636EE] hover:text-white hover:opacity-90">Add Task</Button>
       </CardContent>
     </Card>
   );

@@ -2,8 +2,8 @@ import Logo from "../assets/logo.png";
 
 export default function Footer() {
   return (
-    <footer className="h-[624px] bg-black text-white flex items-center justify-center">
-      <div className="px-4 py-12 md:py-16 w-full max-w-[1320px]">
+    <footer className="bg-black text-white flex items-center justify-center">
+      <div className="px-4 py-12 md:py-16 lg:w-full lg:max-w-[1320px]">
         {/* Main Container */}
         <div className="flex flex-col lg:flex-row md:flex-wrap md:justify-center lg:justify-between items-center p-[10px] gap-[10px]">
           {/* Left Section */}
@@ -29,7 +29,7 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-gray-500 focus:outline-none"
+                className="w-full px-4 py-3 rounded-md bg-white text-black placeholder-primary focus:outline-none"
               />
               {/* Subscribe Button */}
               <button className="w-full bg-primary text-white font-semibold py-3 rounded-md mt-4">
@@ -39,7 +39,7 @@ export default function Footer() {
           </div>
 
           {/* Right Section */}
-          <div className="text-white p-6 w-full md:w-auto">
+          <div className="text-white p-6 md:w-auto">
             <div className="grid grid-cols-2 md:grid-cols-2 gap-8 text-sm">
               {/* Service Section */}
               <div>

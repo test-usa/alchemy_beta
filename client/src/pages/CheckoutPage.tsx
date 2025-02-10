@@ -7,8 +7,8 @@ const CheckoutPage = () => {
     return (
         <div>
             <Checkout />
-            <AddCardInfo />
-            <Confirm />
+            {/* <AddCardInfo />
+            <Confirm /> */}
         </div>
     );
 };

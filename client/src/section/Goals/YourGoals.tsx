@@ -1,6 +1,7 @@
 import { Clock } from "lucide-react";
+import { Link } from "react-router-dom";
 
-// JSON Data included at the top of the file
+// JSON Data for Dynamic Goals
 const goals = [
   {
     "id": 1,
@@ -71,24 +72,24 @@ const YourGoals: React.FC = () => {
         {/* Map through JSON data */}
         <div className="grid grid-cols-1 gap-4">
           {goals.map((goal) => (
-            <div key={goal.id} className="flex gap-4 mt-4 border border-[#6636EE] p-4 rounded-sm">
-              <div>
+            // Goal Card
+            <Link key={goal.id} to={`/goal/goal-details/${goal.id}`}>
+            <div className="grid grid-cols-3 lg:flex md:flex gap-4 mt-4 border border-[#6636EE] p-4 rounded-sm">
+              <div className="col-span-1">
                 <img
-                  className="w-full max-w-[24px] h-auto lg:w-[160px] lg:h-[160px] md:w-[160px] md:h-[160px] rounded-md"
+                  className="w-[80px] h-auto lg:w-[160px] lg:h-[160px] md:w-[160px] md:h-[160px] rounded-md"
                   src={goal.image}
                   alt={goal.title}
                 />
               </div>
-              <div className="space-y-2">
+              <div className="col-span-2 space-y-2">
                 <h2 className="text-xl lg:text-2xl md:text-2xl font-semibold">{goal.title}</h2>
 
                 <div className="flex gap-2 text-xs">
-                  {/* Habit */}
-                  <p className="text-[#8E6DEC] border border-[#AB94ED] py-1 px-1 lg:px-2 md:px-2">
+                  <p className="text-[#8E6DEC] border border-[#AB94ED] rounded-sm py-1 px-1 lg:px-2 md:px-2">
                     Habit {goal.habitCount}
                   </p>
-                  {/* Task */}
-                  <p className="text-[#1778F2] border border-[#6FAEFD] py-1 px-1 lg:px-2 md:px-2">
+                  <p className="text-[#1778F2] border border-[#6FAEFD] rounded-sm py-1 px-1 lg:px-2 md:px-2">
                     Task {goal.taskCount}
                   </p>
                 </div>
@@ -99,6 +100,7 @@ const YourGoals: React.FC = () => {
                 </div>
               </div>
             </div>
+            </Link>
           ))}
         </div>
 
