@@ -23,7 +23,7 @@ const AddCardInfo = () => {
 
           <div className="max-w-4xl mx-auto w-full h-full p-6 grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="w-full h-full">
-              <img src={addcartphoto} alt="Product" className="max-w-full h-auto" />
+              <img src={addcartphoto} alt="Product" className="max-w-full h-auto mt-16" />
             </div>
 
             <div className="w-full h-full flex flex-col justify-start">

@@ -21,7 +21,7 @@ export const BmiChart = () => {
               cy="50%"
               innerRadius={70}
               outerRadius={90}
-              // label
+            // label
             >
               {data.map((entry, index) => (
                 <Cell key={`cell-${index}`} fill={entry.fill} />
@@ -33,9 +33,9 @@ export const BmiChart = () => {
           <h1>24</h1>
         </div>
         <div className="absolute mt-[250px] flex gap-2">
-         <div className="w-[16px] h-[16px] rounded-full bg-[#6636EE]  mt-2"></div>
-         <div className="font-inter font-normal text-base leading-[29.52px]">
-         Over weight</div>
+          <div className="w-[16px] h-[16px] rounded-full bg-[#6636EE]  mt-2"></div>
+          <div className="font-inter font-normal text-base leading-[29.52px]">
+            Over weight</div>
         </div>
       </div>
     </div>

@@ -44,6 +44,8 @@ import GoalDetailsPage from "@/pages/GoalDetailsPage";
 import CaloriesCouterPage from "@/pages/CaloriesCouterPage";
 import BodyBuildingPage from "@/pages/BodyBuildingPage";
 import Fitness from "@/pages/Fitness";
+import Calorie from "@/section/Calorie/Calorie";
+import CalorieCountingPage from "@/pages/CalorieCountingPage";
 
 const router = createBrowserRouter([
   {
@@ -129,6 +131,13 @@ const router = createBrowserRouter([
                 element: <Blog />,
                 children: [
                     { path: "challenge", element: <BlogChallenge /> },
+                ]
+            },
+            {
+                path: "calorie",
+                element: <Calorie />,
+                children: [
+                    { path: "calorie-counting", element: <CalorieCountingPage /> },
                 ]
             },
         ]

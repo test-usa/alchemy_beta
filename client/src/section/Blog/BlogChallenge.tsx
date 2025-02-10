@@ -9,9 +9,9 @@ export default function BlogChallenge() {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="max-w-4xl mx-auto px-4 md:px-8">
+        <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             {/* Navbar */}
-            <div className="flex flex-col sm:flex-row justify-between items-center py-4 gap-4">
+            <div className="flex flex-col sm:flex-row justify-between items-center py-4 gap-4 w-full">
                 <input type="text" placeholder="Search" className="border rounded-md p-2 w-full sm:w-1/3" />
                 <Button className="bg-primary text-white w-full sm:w-auto" onClick={() => setIsOpen(true)}>
                     Create a Challenge
@@ -41,7 +41,7 @@ export default function BlogChallenge() {
             ))}
 
             {/* Comment Section */}
-            <div className="mb-8">
+            <div className="mb-8 w-full">
                 <Label htmlFor="message">Your Comments</Label>
                 <Textarea placeholder="Type your message here." id="message" className="w-full" />
                 <Button variant="default" className="mt-2 w-full sm:w-auto">Submit</Button>
@@ -49,7 +49,7 @@ export default function BlogChallenge() {
 
             {/* Challenge Form Modal */}
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <DialogContent className="max-w-sm sm:max-w-lg w-full mx-auto p-4 sm:p-8 bg-white shadow-lg rounded-lg z-50 transform transition-all duration-300 ease-in-out">
+                <DialogContent className="max-w-md sm:max-w-xl md:max-w-2xl w-full mx-auto p-4 sm:p-8 bg-white shadow-lg rounded-lg z-50 transform transition-all duration-300 ease-in-out">
                     <DialogHeader>
                         <DialogTitle className="text-center text-lg sm:text-xl font-semibold">Create a Challenge</DialogTitle>
                     </DialogHeader>
