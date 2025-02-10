@@ -4,18 +4,14 @@ import { Play } from "lucide-react";
 
 const Meditations = () => {
     return (
-        <div className="mb-10 flex flex-col  space-y-8">
-            {/* Meditation Introduction */}
-            <div className="w-[953px]">
-                <img
-                    className="w-full h-[505px] rounded"
-                    src="https://plus.unsplash.com/premium_photo-1667249323404-d150e397493d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM2fHx8ZW58MHx8fHx8"
-                    alt="Meditation Intro"
-                />
-                <div className="mt-4">
-                    <h2 className="text-xl font-semibold mb-2">Relaxation & Stress Relief</h2>
-                    <p className="text-gray-700"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex numquam nihil voluptas quis voluptatum aperiam quibusdam commodi, temporibus sunt nostrum error expedita autem necessitatibus ullam repellat esse omnis, soluta molestias?
-                        <br /> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias velit aperiam, dicta tempore sit natus amet soluta enim excepturi unde deserunt molestiae beatae! Ipsam impedit maxime, fuga dolorum voluptates nostrum.
+        <div className="mb-10 ">
+            <div className="w-[953px] h-[762px] max-auto ">
+                <img className='w-[953px] h-[505.36px]  rounded ' src="https://plus.unsplash.com/premium_photo-1667249323404-d150e397493d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDM2fHx8ZW58MHx8fHx8" alt="" />
+                <div className="w-[953px] h-[225.36px]">
+                    <h2 className='text-xl font-semibold mt-3 mb-2'>Relaxation & Stress Relief</h2>
+                    <p className="w-[953px]">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi minima officia, facilis incidunt unde nisi debitis! Id minus dignissimos reprehenderit unde, dicta iste libero maiores a laboriosam similique perferendis earum!
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae distinctio reprehenderit quae repellendus consequuntur est eaque. Debitis, dignissimos blanditiis? Odit neque labore voluptatem nesciunt ex amet atque doloremque quam vel laudantium quas, temporibus accusamus sapiente consectetur, totam veniam deserunt possimus!
                     </p>
                 </div>
             </div>

@@ -8,6 +8,9 @@ import WhyChoose from "@/section/Home/WhyChoose";
 import { WickedList } from "@/section/Home/WickedList";
 import MidNavCom from "@/shared/MidNavCom";
 import Badge from "@/section/Home/Badge";
+import VideoSection from "@/section/Home/VideoSection";
+import BmiSection from "@/section/Home/BmiSection";
+import CustomerSay from "@/section/Home/CustomerSay";
 
 const HomePage = () => {
   return (
@@ -24,6 +27,10 @@ const HomePage = () => {
       <FindRoute />
       <WickedList />
       <LatestArticle />
+      <VideoSection/>
+      <BmiSection/>
+      <CustomerSay/>
+      <LatestArticle/>
     </div>
   );
 };

@@ -9,7 +9,7 @@ const WorkoutPage = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    navigate("/workout/routines", { replace: true });  /* /workout/routines */
+    navigate("/workout/routines", { replace: true }); 
   }, [navigate]);
 
   return (
@@ -72,11 +72,6 @@ const WorkoutPage = () => {
           </div>
         </div>
       </div>
-
-
-
-
-
       {/* Content */}
       <div className="flex-1 mr-42 ">
         <Outlet />
@@ -84,7 +79,6 @@ const WorkoutPage = () => {
     </div>
   );
 };
-
 
 export default WorkoutPage;
 

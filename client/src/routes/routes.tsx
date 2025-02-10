@@ -36,7 +36,8 @@ import BlogChallenge from "@/section/Blog/BlogChallenge";
 import PhysicalGoals from "@/section/Goals/PhysicalGoals";
 import GoalPage from "@/pages/GoalPage";
 import FinancialGoals from "@/section/Goals/FinacialGoals";
-
+import WaterTrack from "@/section/Tracker/WaterTrack";
+import Weight from "@/section/Tracker/Weight";
 
 const router = createBrowserRouter([
     {
@@ -59,14 +60,21 @@ const router = createBrowserRouter([
                 ]
             },
             { path: "meditation", element: <MeditationPage /> },
-            { path: "tracker", element: <TrackerPage /> },
+            {
+                path: "tracker",
+                element: <TrackerPage />,
+                children: [
+                    { path: "water-tracker", element: <WaterTrack /> },
+                    { path: "weight", element: <Weight /> }
+                ]
+            },
             { path: "articles-and-tips", element: <ArticlesAndTipsPage /> },
             { path: "shop", element: <ShopPage /> },
-            {path: "/shop-details/:id", element: <ShopDetailsPage/>},
-   
+            { path: "/shop-details/:id", element: <ShopDetailsPage /> },
+
             { path: "checkout", element: <CheckoutPage /> },
-            { 
-                path: "goal", 
+            {
+                path: "goal",
                 element: <GoalPage />,
                 children: [
                     { path: "physical-goals", element: <PhysicalGoals /> },
@@ -80,7 +88,6 @@ const router = createBrowserRouter([
             { path: "community", element: <Community /> },
             { path: "/place-order", element: <AddCardInfo /> },
             { path: "pay", element: <Confirm /> },
-            /*  { path: "blog", element: <Blog /> }, */
             {
                 path: "mindhandling",
                 element: <MindHandling />,
