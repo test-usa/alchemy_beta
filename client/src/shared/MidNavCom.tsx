@@ -1,4 +1,3 @@
-
 import { MdStarRate } from "react-icons/md";
 
 const MidNavCom = () => {
@@ -11,7 +10,7 @@ const MidNavCom = () => {
           "TRACKER",
           "NUTRITION",
         ].map((text, index) => (
-          <div key={index} className="flex items-center justify- gap-2 md:gap-4">
+          <div key={index} className="flex items-center gap-2 md:gap-4">
             <MdStarRate className="w-6 h-6 md:w-[28px] md:h-[28px]" />
             <h1 className="text-sm md:text-[32px]  font-bold leading-tight md:leading-[42.24px] tracking-tight md:tracking-[-0.02em]">
               {text}

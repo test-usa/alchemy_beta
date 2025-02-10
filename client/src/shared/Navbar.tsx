@@ -6,32 +6,36 @@ import Logo from "../assets/logo.png"
 
 const navLinks = [
   {
-    lebel: "Home",
+    label: "Home",
     href: "/",
   },
   {
-    lebel: "Nutrition",
+    label: "Nutrition",
     href: "/nutrition",
   },
   {
-    lebel: "Meditation",
+    label: "Meditation",
     href: "/mindhandling",
   },
   {
-    lebel: "Workout",
+    label: "Workout",
     href: "/workout",
   },
   {
-    lebel: "Tracker",
+    label: "Tracker",
     href: "/tracker",
   },
   {
-    lebel: "Articles & Tips",
+    label: "Articles & Tips",
     href: "/articles-and-tips",
   },
   {
-    lebel: "Shop",
+    label: "Shop",
     href: "/shop",
+  },
+  {
+    label: "Goal",
+    href: "/goal/physical-goals",
   },
 ];
 
@@ -62,7 +66,7 @@ const Navbar = () => {
 
         {/* Center: Navigation (visible on large screens) */}
         <nav className="hidden lg:flex items-center gap-8">
-          {navLinks.map(({ href, lebel }, i) => (
+          {navLinks.map(({ href, label }, i) => (
             <NavLink
               key={i}
               to={href}
@@ -73,7 +77,7 @@ const Navbar = () => {
                   : "text-[#5A5C5F] hover:text-primary")
               }
             >
-              {lebel}
+              {label}
             </NavLink>
           ))}
         </nav>
@@ -103,19 +107,19 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <nav className="lg:hidden border-t border-gray-200">
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-4">
-            {navLinks.map(({ href, lebel }, i) => (
+            {navLinks.map(({ href, label }, i) => (
               <NavLink
                 key={i}
                 to={href}
                 onClick={() => setMobileMenuOpen(false)}
                 className={({ isActive }) =>
-                  "font-normal text-[16px] font-sans transition-colors " +
+                  "font-normal text-[16px] font-sans transition-colors" +
                   (isActive
                     ? "text-primary"
                     : "text-[#5A5C5F] hover:text-primary")
                 }
               >
-                {lebel}
+                {label}
               </NavLink>
             ))}
 
