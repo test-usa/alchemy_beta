@@ -1,5 +1,3 @@
-import Workoutdrop from "../../assets/waterDrop.webp";
-
 const ArticleCard = ({
   category,
   title,
@@ -16,11 +14,7 @@ const ArticleCard = ({
   return (
     <div className="w-[315px] min-h-[561px] flex flex-col gap-[26px] mr-5 ">
       <div className="w-full max-w-[315px] h-[398px] flex flex-col gap-[10px] bg-gray-400">
-        <img
-          className="w-full max-w-[315px] h-[398px] "
-          src={Workoutdrop}
-          alt=""
-        />
+        <img className="w-full max-w-[315px] h-[398px] " alt="" />
       </div>
       <div className="w-[293px] min-h-[137px] flex flex-col gap-[24px]">
         <div className="w-full max-w-[293px] min-h-[87px] flex flex-col gap-[9px]">
