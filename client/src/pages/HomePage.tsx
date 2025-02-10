@@ -25,7 +25,6 @@ const HomePage = () => {
       <FindRoute />
       <WickedList />
       <LatestArticle />
-    
     </div>
   );
 };
