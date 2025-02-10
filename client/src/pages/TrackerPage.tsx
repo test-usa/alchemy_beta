@@ -61,7 +61,7 @@ const TrackerPage = () => {
 
               <div className="border border-gray-200 rounded p-6 mt-12 md:mt-0">
                 <h2 className="text-xl font-bold mb-4 text-[#6636EE] border-b pb-2">
-                  Categories
+                  Our Services
                 </h2>
                 <WaterTrackNavItem />
 

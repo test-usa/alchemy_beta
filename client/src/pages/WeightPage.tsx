@@ -1,13 +1,15 @@
 import { Outlet, useNavigate } from "react-router-dom";
-import { Mail, Phone } from "lucide-react";
-import { useEffect } from "react";
+import { Mail, Menu, Phone, X } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import { FaRegFilePdf } from "react-icons/fa";
 import { SlDocs, SlEnvolopeLetter } from "react-icons/sl";
 import { CiLocationArrow1, CiPhone } from "react-icons/ci";
+import ArticleAndTipsNav from "@/section/ArticleAndTips/ArticleAndTipsNav";
 
 const TrackerPage = () => {
   const navigate = useNavigate();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   useEffect(() => {
     navigate("/tracker/water-tracker", { replace: true });

@@ -43,7 +43,7 @@ const GoalPage = () => {
           >
             <div className="flex gap-1 justify-center items-center px-2">
             <Menu size={20} />
-            <p className="text-md font-semibold">Services Menu</p>
+            <p className="text-md font-semibold">Menu</p>
             </div>
           </button>
         </div>
@@ -70,7 +70,7 @@ const GoalPage = () => {
         </div>
 
         {/* Content */}
-        <div className="col-span-4 pl-5">
+        <div className="col-span-4 md:pl-5">
           <Outlet />
         </div>
       </div>
