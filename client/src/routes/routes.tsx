@@ -16,7 +16,6 @@ import Macros from "@/section/nutrition/Macros";
 import IntermittentFasting from "@/section/nutrition/IntermittentFasting";
 import CheckoutPage from "@/pages/CheckoutPage";
 import { ShopDetailsPage } from "@/pages/ShopDetailsPage";
-import { Goal } from "lucide-react";
 import Community from "@/pages/Community";
 import MindHandling from "@/section/MindHandling/MindHandling";
 import Meditations from "@/section/MindHandling/Meditations";
@@ -34,6 +33,9 @@ import OnlineProgram from "@/section/Workout/OnlineProgram";
 import UniqueWork from "@/section/Workout/UniqueWork";
 import Blog from "@/section/Blog/Blog";
 import BlogChallenge from "@/section/Blog/BlogChallenge";
+import PhysicalGoals from "@/section/Goals/PhysicalGoals";
+import GoalPage from "@/pages/GoalPage";
+import FinancialGoals from "@/section/Goals/FinacialGoals";
 
 
 const router = createBrowserRouter([
@@ -63,7 +65,18 @@ const router = createBrowserRouter([
             {path: "/shop-details/:id", element: <ShopDetailsPage/>},
    
             { path: "checkout", element: <CheckoutPage /> },
-            { path: "goal", element: <Goal /> },
+            { 
+                path: "goal", 
+                element: <GoalPage />,
+                children: [
+                    { path: "physical-goals", element: <PhysicalGoals /> },
+                    { path: "financial-goals", element: <FinancialGoals /> },
+                    { path: "relationship-goals", element: <FinancialGoals /> },
+                    { path: "travel", element: <FinancialGoals /> },
+                    { path: "bank-goals", element: <FinancialGoals /> },
+                    { path: "your-goals", element: <FinancialGoals /> },
+                ]
+            },
             { path: "community", element: <Community /> },
             { path: "/place-order", element: <AddCardInfo /> },
             { path: "pay", element: <Confirm /> },
