@@ -27,62 +27,59 @@ import GetOrganization from "@/section/MindHandling/GetOrganization";
 import RecoveryCounseling from "@/section/MindHandling/RecoveryCounseling";
 import WorkoutPage from "@/pages/WorkoutPage";
 import WaterTrack from "@/section/Tracker/WaterTrack";
+import Weight from "@/section/Tracker/Weight";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <MainLayout />,
-        errorElement: <ErrorPage />,
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "signup", element: <SignupPage /> },
+      { path: "login", element: <LoginPage /> },
+      {
+        path: "nutrition",
+        element: <NutritionPage />,
         children: [
-            { path: "/", element: <HomePage /> },
-            { path: "signup", element: <SignupPage /> },
-            { path: "login", element: <LoginPage /> },
-            {
-                path: "nutrition",
-                element: <NutritionPage />,
-                children: [
-                    { path: "intermittent-fasting", element: <IntermittentFasting /> },
-                    { path: "weight-loss-program", element: <WeightLossProgram /> },
-                    { path: "keto", element: <Keto /> },
-                    { path: "keto-meal-plan", element: <KetoMealPlan /> },
-                    { path: "macros", element: <Macros /> },
-                ]
-            },
-            { path: "meditation", element: <MeditationPage /> },
-            { path: "workout", element: <WorkoutPage />  },
+          { path: "intermittent-fasting", element: <IntermittentFasting /> },
+          { path: "weight-loss-program", element: <WeightLossProgram /> },
+          { path: "keto", element: <Keto /> },
+          { path: "keto-meal-plan", element: <KetoMealPlan /> },
+          { path: "macros", element: <Macros /> },
+        ],
+      },
+      { path: "meditation", element: <MeditationPage /> },
+      { path: "workout", element: <WorkoutPage /> },
 
-            {  path: "tracker",
-                 element: <TrackerPage /> , 
-                 children: [
-                    { path: "water-tracker", element: <WaterTrack/>},
-                    
-
-                ]
-          
-            },
-            { path: "articles-and-tips", element: <ArticlesAndTipsPage /> },
-            { path: "shop", element: <ShopPage /> },
-            {path: "/shop-details/:id", element: <ShopDetailsPage/>},
-            { path: "checkout", element: <CheckoutPage /> },
-            { path: "goal", element: <Goal /> },
-            { path: "community", element: <Community /> },
-            { path: "place-order", element: <AddCardInfo /> },
-            { path: "pay", element: <Confirm /> },
-            {
-                path: "mindhandling",
-                element: <MindHandling />,
-                children: [
-                    { path: "meditation", element: <Meditations /> },
-                    { path: "sound-handeling", element: <SoundHandeling /> },
-                    { path: "get-organization", element: <GetOrganization /> },
-                    { path: "recovery-counseling", element: <RecoveryCounseling /> },
-
-                ]
-
-            },
-
-        ]
-    }
+      {
+        path: "tracker",
+        element: <TrackerPage />,
+        children: [
+          { path: "water-tracker", element: <WaterTrack /> },
+          { path: "weight", element: <Weight /> },
+        ],
+      },
+      { path: "articles-and-tips", element: <ArticlesAndTipsPage /> },
+      { path: "shop", element: <ShopPage /> },
+      { path: "/shop-details/:id", element: <ShopDetailsPage /> },
+      { path: "checkout", element: <CheckoutPage /> },
+      { path: "goal", element: <Goal /> },
+      { path: "community", element: <Community /> },
+      { path: "place-order", element: <AddCardInfo /> },
+      { path: "pay", element: <Confirm /> },
+      {
+        path: "mindhandling",
+        element: <MindHandling />,
+        children: [
+          { path: "meditation", element: <Meditations /> },
+          { path: "sound-handeling", element: <SoundHandeling /> },
+          { path: "get-organization", element: <GetOrganization /> },
+          { path: "recovery-counseling", element: <RecoveryCounseling /> },
+        ],
+      },
+    ],
+  },
 ]);
 
 export default router;

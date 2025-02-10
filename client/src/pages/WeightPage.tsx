@@ -1,12 +1,10 @@
-import NutritionNavItems from "@/shared/NutritionNavItems";
 import { Outlet, useNavigate } from "react-router-dom";
 import { Mail, Phone } from "lucide-react";
 import { useEffect } from "react";
-import MindNavItems from "@/shared/MindNavItems";
+
 import { FaRegFilePdf } from "react-icons/fa";
 import { SlDocs, SlEnvolopeLetter } from "react-icons/sl";
 import { CiLocationArrow1, CiPhone } from "react-icons/ci";
-import WaterTrackNavItem from "@/section/Tracker/WaterTrackNavItem";
 
 const TrackerPage = () => {
   const navigate = useNavigate();
@@ -23,7 +21,7 @@ const TrackerPage = () => {
           <h2 className="text-xl font-bold mb-4 text-[#6636EE] border-b border-b-gray-200 pb-2">
             Our Services
           </h2>
-          <WaterTrackNavItem />
+          {/* <WeightNavItem /> */}
         </div>
 
         {/* Contact Information */}

@@ -5,14 +5,14 @@ const MindNavItems = () => {
     <ul className="space-y-2">
       <li className="flex flex-1">
         <NavLink
-          to="/tracker/water-tracker"
+          to="/mindhandling/meditation"
           className={({ isActive }) =>
             isActive
               ? "border border-[#66636EE] bg-[#6636EE] text-white w-full px-3 py-2 rounded"
               : "border border-gray-200 rounded px-3 py-2 w-full"
           }
         >
-          Water Track
+          Meditations
         </NavLink>
       </li>
       <li className="flex flex-1">
@@ -24,7 +24,7 @@ const MindNavItems = () => {
               : "border border-gray-200 rounded  px-3 py-2 w-full"
           }
         >
-          Weight
+          Sound Headling
         </NavLink>
       </li>
       <li className="flex flex-1">
@@ -36,7 +36,7 @@ const MindNavItems = () => {
               : "border border-gray-200 rounded w-full px-3 py-2"
           }
         >
-          Calories counter
+          Get Organized
         </NavLink>
       </li>
       <li className="flex flex-1">
@@ -48,7 +48,7 @@ const MindNavItems = () => {
               : "border border-gray-200 rounded w-full px-3 py-2"
           }
         >
-          Goals
+          Recovery Counseling
         </NavLink>
       </li>
     </ul>

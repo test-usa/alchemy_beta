@@ -17,7 +17,7 @@ const WaterTrackNavItem = () => {
       </li>
       <li className="flex flex-1">
         <NavLink
-          to="/mindhandling/sound-handeling"
+          to="/tracker/weight"
           className={({ isActive }) =>
             isActive
               ? "border border-[#66636EE] bg-[#6636EE] w-full text-white px-3 py-2 rounded "
@@ -29,7 +29,7 @@ const WaterTrackNavItem = () => {
       </li>
       <li className="flex flex-1">
         <NavLink
-          to="/mindhandling/get-organization"
+          to="/"
           className={({ isActive }) =>
             isActive
               ? "border border-[#66636EE] bg-[#6636EE] w-full text-white px-3 py-2 rounded "
@@ -41,7 +41,7 @@ const WaterTrackNavItem = () => {
       </li>
       <li className="flex flex-1">
         <NavLink
-          to="/mindhandling/recovery-counseling"
+          to="/"
           className={({ isActive }) =>
             isActive
               ? "border border-[#66636EE] bg-[#6636EE] w-full text-white px-3 py-2 rounded"
