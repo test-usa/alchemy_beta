@@ -1,13 +1,62 @@
 
-import { FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import Breadcrumbs from "@/components/breadcrumbs"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useAuth } from "@/auth/AuthContext";
 
 const LoginPage = () => {
-  const handle = (e: FormEvent) => {
+
+  const { setUser } = useAuth(); // This will allow us to set the authenticated user in the context
+  const navigate = useNavigate()
+  const [email, setEmail] = useState<string | null>(null);
+  const [password, setPassword] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null); // State to handle any error messages
+  
+  const handle = async (e: FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-  }
+  
+    // Validating input before sending request
+    if (!email || !password) {
+      setError("Please fill out both fields.");
+      return;
+    }
+  
+    const userData = {
+      email,
+      password,
+    };
+  
+    try {
+      const response = await fetch("https://alchemy-beta-server-3.onrender.com/api/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          
+        },
+        body: JSON.stringify(userData),
+        credentials: "include"
+      });
+  
+      if (response.ok) {
+        const data = await response.json(); // Assuming the API responds with user data
+  
+        // Set the user data in the global context (AuthContext)
+        setUser(data);
+  
+        navigate("/");
+  
+        // Clear error state if login is successful
+        setError(null);
+      } else {
+        const errorData = await response.json();
+        setError(errorData.message || "Something went wrong. Please try again.");
+      }
+    } catch (e) {
+      setError("An error occurred. Please try again.");
+      console.error(e); // Log the error for debugging
+    }
+  };
+  
 
   return (
     <div>
@@ -26,6 +75,8 @@ const LoginPage = () => {
               name="username"
               placeholder="Email"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none  "
+              value={email as string}
+              onChange={(e)=>setEmail(e.target.value)}
               required
             />
           </div>
@@ -37,6 +88,8 @@ const LoginPage = () => {
               name="password"
               placeholder="Password"
               className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none  "
+              value={password as string}
+              onChange={(e)=>setPassword(e.target.value)}
               required
             />
           </div>

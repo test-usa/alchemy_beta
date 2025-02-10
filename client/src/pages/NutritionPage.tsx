@@ -74,7 +74,7 @@ const NutritionPage = () => {
                 alt="Help Image"
               />
               <div className="bg-[#6636EE] text-white p-2 text-center">
-                <p className="md:text-xl mb-2 mt-6">How Can We Help?</p>
+                <p className="md:text-xl mb-2">How Can We Help?</p>
                 <p className="flex justify-center items-center gap-2 text-sm mb-1">
                   <Mail size={14} />
                   info@totalu.com
@@ -99,4 +99,3 @@ const NutritionPage = () => {
 };
 
 export default NutritionPage;
-

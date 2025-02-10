@@ -18,7 +18,6 @@ export interface IProduct {
 }
 
 
-
 const fetchShopItems = async () => {
   const response = await axios.get(
     "https://alchemy-beta-server-3.onrender.com/api/products"

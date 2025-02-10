@@ -21,8 +21,6 @@ const Checkout = () => {
     register,
     handleSubmit,
     setValue,
-    watch,
-    formState: { errors },
   } = useForm();
 
   const onSubmit = (data: any) => {

@@ -9,6 +9,8 @@ const CheckoutPage = () => {
             <Checkout />
             {/* <AddCardInfo />
             <Confirm /> */}
+            <AddCardInfo />
+            <Confirm />
         </div>
     );
 };

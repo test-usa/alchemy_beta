@@ -34,8 +34,8 @@ const CustomerSayCarousel = () => {
                     <div className="flex flex-col lg:flex-row  relative">
                       <div
                         className={`${index === 1
-                          ? "lg:w-[294.65px] h-[328.14px] flex flex-col gap-48 lg:w-[35%]"
-                          : "lg:w-[260px] h-[253px] mt-6 ml-10 gap-[150px] flex flex-col lg:w-[35%]"
+                          ? "h-[328.14px] flex flex-col gap-48 lg:w-[35%]"
+                          : "h-[253px] mt-6 ml-10 gap-[150px] flex flex-col lg:w-[35%]"
                           }`}
                       >
                         <div
@@ -109,7 +109,7 @@ const CustomerSayCarousel = () => {
           </CarouselContent>
 
           {/* Carousel Controls */}
-          <div className="absolute left-1/2 transform -translate-x-1/2  flex gap-2 z-10 mx-auto lg:top-[500px]   md:top-[400px] lg:top-[420px]  lg:mt-0 ">
+          <div className="absolute left-1/2 transform -translate-x-1/2  flex gap-2 z-10 mx-auto lg:top-[500px] md:top-[400px] lg:mt-0 ">
             <CarouselPrevious className="bg-[#EDE7FF] text-primary rounded-full p-2 hover:bg-purple-300" />
             <CarouselNext className="bg-[#EDE7FF] text-primary rounded-full p-2 hover:bg-purple-300" />
           </div>

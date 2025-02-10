@@ -81,7 +81,3 @@ const WorkoutPage = () => {
 };
 
 export default WorkoutPage;
-
-
-
-
