@@ -1,5 +1,4 @@
-import { title } from "process";
-import workoutdrop from "../../assets/waterDrop.webp";
+import Workoutdrop from "../../assets/waterDrop.webp";
 
 const ArticleCard = ({
   category,
@@ -8,18 +7,18 @@ const ArticleCard = ({
   comments,
   imageUrl,
 }: {
-  category: String;
-  title: String;
-  date: String;
-  comments: Number;
-  imageUrl: String;
+  category: string;
+  title: string;
+  date: string;
+  comments: number;
+  imageUrl: string;
 }) => {
   return (
     <div className="w-[315px] min-h-[561px] flex flex-col gap-[26px] mr-5 ">
       <div className="w-full max-w-[315px] h-[398px] flex flex-col gap-[10px] bg-gray-400">
         <img
           className="w-full max-w-[315px] h-[398px] "
-          src={workoutdrop}
+          src={Workoutdrop}
           alt=""
         />
       </div>

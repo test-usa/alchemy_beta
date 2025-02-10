@@ -2,7 +2,7 @@ import React from "react";
 import video from "../../assets/video.webm";
 const VideoSection = () => {
   return (
-    <div className=" h-auto flex gap-[10px] justify-center gap-[10px]">
+    <div className=" h-auto flex justify-center gap-[10px] mb-10">
       <video
         autoPlay
         loop
