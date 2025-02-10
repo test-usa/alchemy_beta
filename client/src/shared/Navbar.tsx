@@ -35,7 +35,7 @@ const navLinks = [
   },
   {
     lebel: "Goal",
-    href: "/goal",
+    href: "/goal/physical-goals",
   },
 ];
 
