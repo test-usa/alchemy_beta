@@ -1,5 +1,6 @@
 import React from "react";
 import { PieChart, Pie, ResponsiveContainer, Cell } from "recharts";
+import { FaAngleUp } from "react-icons/fa";
 
 // Data representing the percentage of 24% used and 76% unused
 const data = [
@@ -34,8 +35,13 @@ export const WeightTrackChart = () => {
             78.5 <span className="pt-5 text-[13.48px]">kg</span>
           </div>
         </div>
-        <div className="absolute font-inter font-normal text-[13.48px] leading-[22.11px] tracking-[0] text-center w-[279.71px] h-[27px] flex justify-center gap-[49.71px] top-[170px]">
-          <div className="w-[72px] h-[72px]"></div>
+        <div className="absolute font-inter font-normal text-[13.48px] leading-[22.11px] tracking-[0] text-center w-[279.71px] h-[27px] flex justify-center gap-[49.71px] top-[120px]">
+          <div className="text-[#2B9B40]  font-normal text-[20px] leading-[22.11px] tracking-[0] text-center text-[13.48px] leading-[22.11px] tracking-[0] text-center">
+            <div className="flex items-center gap-2">
+              <FaAngleUp />
+              <span>- 0.2kg</span>
+            </div>
+          </div>
         </div>
 
         <div className="absolute font-inter font-normal text-[13.48px] leading-[22.11px] tracking-[0] text-center w-[279.71px] h-[27px] flex justify-center gap-[49.71px] top-[170px]">

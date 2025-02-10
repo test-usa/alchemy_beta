@@ -69,8 +69,27 @@ const Weight = () => {
 
       {/* weight track chart */}
       <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 mt-3">
-        <div className="w-full sm:w-[461px] h-[242.48px] border border-gray-300 rounded-lg p-6">
-          <WeightTrackChart />
+        <div className="flex flex-col gap-3">
+          <div className="w-full sm:w-[461px] h-[242.48px] border border-gray-300 rounded-lg p-6">
+            <WeightTrackChart />
+          </div>
+          <div className="">
+            {/* Intake Form */}
+            <div className="w-[460px] h-[177px]  left-[668px] rounded-[11px] border-[1px] p-[24px] gap-[24px] ">
+              <input
+                type="text"
+                value="Value (78 Kg)"
+                className="w-full p-2 border rounded"
+              />
+              <div className=" flex gap-2 mt-2">
+                <button className="w-1/2 p-2  rounded border">save</button>
+                <button className="w-1/2 p-2 bg-[#6636EE] text-white  rounded">
+                  {" "}
+                  Cancel
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="w-full max-w-md mx-auto p-4 border rounded-md">
@@ -104,24 +123,12 @@ const Weight = () => {
         </div>
       </div>
 
-      {/* Intake Form */}
-      <div className="w-full sm:w-[415px] my-5">
-        <input
-          type="text"
-          value="Drink (200 mL)"
-          className="w-full p-2 border rounded"
-        />
-        <button className="w-full bg-purple-600 text-white p-2 mt-2 rounded">
-          Add New
-        </button>
-      </div>
-
       {/* Today & Yesterday Data */}
       <div className="w-full sm:w-[953px]">
         <div className="md:max-w-[953px] lg:w-[953px] h-[21px] flex justify-between">
           <div className="md: max-w-[55px] lg:w-[55px] h-[21px]">
             <div className="font-inter font-semibold text-[16px] leading-[21.12px] tracking-[-2%]">
-              History
+              Weight Tracker History
             </div>
           </div>
           <div
