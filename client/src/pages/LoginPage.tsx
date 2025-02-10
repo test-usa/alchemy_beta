@@ -1,11 +1,12 @@
 
 import { FormEvent, useState } from "react";
 import Breadcrumbs from "@/components/breadcrumbs"
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "@/auth/AuthContext";
 
-const LoginPage = () => {
 
+const LoginPage = () => {
+  const location = useLocation();
   const { setUser } = useAuth(); // This will allow us to set the authenticated user in the context
   const navigate = useNavigate()
   const [email, setEmail] = useState<string | null>(null);
@@ -13,6 +14,9 @@ const LoginPage = () => {
   const [error, setError] = useState<string | null>(null); // State to handle any error messages
   
   const handle = async (e: FormEvent) => {
+
+    const redirectTo = (location.state as any)?.from || '/';
+
     e.preventDefault();
   
     // Validating input before sending request
@@ -43,7 +47,7 @@ const LoginPage = () => {
         // Set the user data in the global context (AuthContext)
         setUser(data);
   
-        navigate("/");
+        navigate(redirectTo);
   
         // Clear error state if login is successful
         setError(null);

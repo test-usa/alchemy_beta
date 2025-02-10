@@ -26,6 +26,7 @@ import AddCardInfo from "@/section/SidePage/AddCardInfo";
 import SoundHandeling from "@/section/MindHandling/SoundHandeling";
 import GetOrganization from "@/section/MindHandling/GetOrganization";
 import RecoveryCounseling from "@/section/MindHandling/RecoveryCounseling";
+import PublicRoute from "@/guardRoute/PublicRoute";
 
 const router = createBrowserRouter([
     {
@@ -35,7 +36,7 @@ const router = createBrowserRouter([
         children: [
             { path: "/", element: <HomePage /> },
             { path: "signup", element: <SignupPage /> },
-            { path: "login", element: <LoginPage /> },
+            { path: "login", element: <PublicRoute  ><LoginPage /></PublicRoute> },
             {
                 path: "nutrition",
                 element: <NutritionPage />,
