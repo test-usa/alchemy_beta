@@ -48,7 +48,7 @@ const GoalPage = () => {
         {/* Sidebar Toggle Button (Placed Before Sidebar) */}
         <div className="md:hidden flex justify-start">
           <button
-            className="p-1 bg-[#6636EE] text-white rounded-full"
+            className="p-1 bg-primary text-white rounded-full"
             onClick={() => setIsSidebarOpen(true)}
           >
             <div className="flex gap-1 justify-center items-center px-2">

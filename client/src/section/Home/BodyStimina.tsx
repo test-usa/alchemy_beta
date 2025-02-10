@@ -60,7 +60,7 @@ const BodyStamina = () => {
             ))}
           </div>
 
-          <button className="mt-6 w-full md:w-[180px] h-12 bg-primary text-white rounded-md flex justify-center items-center hover:bg-blue-700 transition duration-300 text-base font-medium">
+          <button className="mt-6 w-full md:w-[180px] h-12 bg-primary text-white rounded-md flex justify-center items-center transition duration-300 text-base font-medium">
             See More
           </button>
         </div>
