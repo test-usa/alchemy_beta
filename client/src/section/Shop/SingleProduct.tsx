@@ -73,21 +73,16 @@ export const SingleProduct = () => {
   //   }
   // };
   
+  // http://localhost:5000/api/login
 
 
   const createOrder = async (id: string, quantity: number) => {
-    console.log("flow-1")
-    // if(!user) {
-    //   return <Navigate
-    //   to="/login"
-    //   state={{ from: location }} // Correct usage of state
-    // />
-    // }
-
-    console.log("flow2")
-
+    console.log("flow-1");
+  
     try {
       setErrorMessage(null); // Clear previous error message
+  
+      // Make request to create the order
       const response = await fetch("https://alchemy-beta-server-3.onrender.com/api/orders/create-order", {
         method: "POST",
         headers: {
@@ -99,16 +94,35 @@ export const SingleProduct = () => {
         }),
         credentials: "include",
       });
-
+  
       if (response.ok) {
         const orderData = await response.json();
         console.log(orderData);
-        // You can add additional success handling logic here
-
-        // if(orderData){
-        //   await handleCheckout(orderData?.order.productId, orderData?.order.quantity)
-        // }
-
+  
+        // Ensure the order ID is correctly extracted
+        const orderId = orderData.order._id;
+  
+        // Once the order is created, call the backend to initiate the payment session
+        const paymentResponse = await fetch("https://alchemy-beta-server-3.onrender.com/api/orders/create-checkout-session", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            orderId: orderId, // Pass the correct order ID
+            quantity: orderData.order.quantity,
+          }),
+          credentials: "include",
+        });
+  
+        if (paymentResponse.ok) {
+          const paymentData = await paymentResponse.json();
+          // Redirect to Stripe checkout page
+          window.location.href = paymentData.url; // Use the URL returned by Stripe
+        } else {
+          const errorData = await paymentResponse.json();
+          setErrorMessage(errorData.message || "Failed to initiate payment. Please try again.");
+        }
       } else {
         const errorData = await response.json();
         setErrorMessage(errorData.message || "Something went wrong with your order. Please try again.");
@@ -118,6 +132,8 @@ export const SingleProduct = () => {
       console.log(e);
     }
   };
+  
+  
 
   const {
     data: product,

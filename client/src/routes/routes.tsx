@@ -39,6 +39,8 @@ import Routiens from "@/section/workout/Routiens";
 import UniqueWork from "@/section/workout/UniqueWork";
 import BlogChallenge from "@/section/Blog/BlogChallenge";
 import Blog from "@/section/Blog/Blog";
+import Success from "@/pages/Success";
+import Error from "@/pages/Error";
 
 const router = createBrowserRouter([
     {
@@ -118,6 +120,8 @@ const router = createBrowserRouter([
                     { path: "challenge", element: <BlogChallenge /> },
                 ]
             },
+            { path: "success", element: <Success /> }, // Success route
+            { path: "error", element: <Error /> }, // Error route
         ]
     }
 ]);
