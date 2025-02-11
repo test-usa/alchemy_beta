@@ -18,67 +18,56 @@ const WorkoutCard = ({
     setIsExpanded(!isExpanded);
   };
 
-  // Determine the content to show based on isExpanded state
-  const displayDescription = isExpanded ? description : description;
-
   return (
-    <div className="w-full md:max-w-[953.32px] lg:w-[953.32px] h-auto rounded-lg overflow-hidden shadow-lg">
+    <div className="w-full max-w-4xl mx-auto h-auto rounded-lg overflow-hidden  bg-white">
       {/* Image Section */}
-      <div className="w-full lg:h-[512px] relative">
+      <div className="w-full h-64 sm:h-80 md:h-96 lg:h-[512px] relative">
         <img
           src={image}
           alt="Workout Image"
-          className="w-full h-full object-cover rounded-lg"
+          className="w-full h-full object-cover rounded-t-lg"
         />
       </div>
 
       {/* Content Section */}
-      <div className="w-full py-8 px-6">
-        {/* Full Title Section - Show full title when expanded */}
-        <div className="text-[32px] font-inter font-bold leading-[42.24px] tracking-[-1%] text-[#333333]">
-          {isExpanded ? title : title}
-        </div>
+      <div className="py-4 ">
+        {/* Title Section */}
+        <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900">
+          {title}
+        </h2>
 
         {/* Main Description */}
-        <div className="w-full mt-4">
-          <p className="font-inter font-normal text-[16px] leading-[26.24px] text-[#5A5C5F]">
-            {displayDescription}
-          </p>
-        </div>
+        <p className="mt-2 sm:mt-4 text-sm sm:text-base md:text-lg text-gray-600">
+          {description}
+        </p>
 
-        {/* Additional Content shown when expanded */}
+        {/* Additional Content when expanded */}
         {isExpanded && (
-          <div className="w-full mt-8">
-            {/* Heading for additional content */}
-            <h3 className="text-[24px] font-inter font-semibold leading-[32.24px] text-[#333333] mb-4">
+          <div className="mt-6">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900">
               More Information
             </h3>
-            {/* Lorem Ipsum description */}
-            <p className="font-inter font-normal text-[16px] leading-[26.24px] text-[#5A5C5F] mb-4">
+            <p className="mt-2 text-sm sm:text-base md:text-lg text-gray-600">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
               risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing
               nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas
-              ligula massa, varius a, semper congue, euismod non, mi. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure
-              dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur.
+              ligula massa, varius a, semper congue, euismod non, mi.
             </p>
-            {/* Additional Image shown when expanded */}
             <img
               src={additionalImage}
               alt="Additional Workout Image"
-              className="w-full h-auto object-cover rounded-lg"
+              className="mt-4 w-full h-auto object-cover rounded-lg"
             />
           </div>
         )}
 
         {/* Read More/Show Less Button */}
-        <div
+        <button
           onClick={toggleDescription}
-          className="mt-6 w-[157px] h-[48px] rounded-[4px] flex justify-center items-center bg-[#6636EE] text-white font-semibold cursor-pointer  transition-colors"
+          className="mt-6 w-full sm:w-40 h-12 rounded-md flex justify-center items-center bg-purple-600 text-white font-semibold text-sm sm:text-base cursor-pointer transition hover:bg-purple-700"
         >
           {isExpanded ? "Show Less" : "Read More"}
-        </div>
+        </button>
       </div>
     </div>
   );
