@@ -49,7 +49,7 @@ export default function BlogChallenge() {
 
             {/* Challenge Form Modal */}
             <Dialog open={isOpen} onOpenChange={setIsOpen}>
-                <DialogContent className="max-w-md sm:max-w-xl md:max-w-2xl w-full mx-auto p-4 sm:p-8 bg-white shadow-lg rounded-lg z-50 transform transition-all duration-300 ease-in-out">
+                <DialogContent className="max-w-md sm:max-w-xl md:max-w-2xl w-full mx-auto p-4 sm:p-8 bg-white shadow-lg rounded-lg z-40 transform transition-all duration-300 ease-in-out">
                     <DialogHeader>
                         <DialogTitle className="text-center text-lg sm:text-xl font-semibold">Create a Challenge</DialogTitle>
                     </DialogHeader>

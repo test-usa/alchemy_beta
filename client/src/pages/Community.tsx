@@ -1,6 +1,6 @@
 const Community = () => {
   return (
-    <div>Community</div>
+    <div className="mt-20">Community</div>
   )
 }
 

@@ -1,9 +1,8 @@
 import React from "react";
 import image1 from "../assets/image1.jpg";
-
 import image2 from "../assets/image2.webp";
-
 import WorkoutCard from "@/section/ArticleAndTips/WorkoutCard";
+
 const dummyData = [
   {
     image: image1,
@@ -27,8 +26,9 @@ const dummyData = [
 
 const BodyBuildingPage = () => {
   return (
-    <div className="">
-      <div className="w-full lg:w-3/5 space-y-6">
+
+    <div className="mt-20 flex justify-center px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
+      <div className="w-full max-w-[1200px] space-y-6">
         {dummyData.map((data, index) => (
           <WorkoutCard
             key={index}

@@ -27,7 +27,7 @@ const Transformation = () => {
 
   const handleSendMessage = async () => {
     if (!imagePreview) return;
-    setUserData((prevData: { transformation: string }) => ({ ...prevData, transformation: imagePreview }));
+    setUserData((prevData: { transformation: string }) => ({ ...prevData, transformation: "FAKA" }));
     setImagePreview(null);
     setUploaded(true);
     if (fileInputRef.current) fileInputRef.current.value = "";

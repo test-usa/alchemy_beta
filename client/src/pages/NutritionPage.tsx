@@ -27,7 +27,7 @@ const NutritionPage = () => {
   }, [location]);
 
   return (
-    <div>
+    <div className="mt-20">
       <Breadcrumbs
         bg="https://img.freepik.com/premium-photo/panorama-with-fresh-fruits-water-coconut-kiwi-melon-lemon-lychee-tangerine-peach-plum-lime-very-tasty-dessert-new-year-christmas-halloween_659987-2206.jpg?w=1380"
         title={title}
@@ -51,7 +51,7 @@ const NutritionPage = () => {
           {/* Sidebar */}
           <div
             className={`fixed md:static top-0 left-0 h-full md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-              } md:translate-x-0 z-50`}
+              } md:translate-x-0 z-40`}
           >
             <button
               className="md:hidden absolute top-4 right-4 text-gray-700"

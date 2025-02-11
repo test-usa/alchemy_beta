@@ -4,7 +4,7 @@ import Checkout from "@/section/SidePage/Checkout";
 
 const CheckoutPage = () => {
   return (
-    <div>
+    <div className="mt-20">
       <Checkout />
     </div>
   );

@@ -1,7 +1,7 @@
 
 const ErrorPage = () => {
   return (
-    <div>ErrorPage</div>
+    <div className="mt-20">ErrorPage</div>
   )
 }
 

@@ -23,8 +23,7 @@ interface WaterHistory {
   image: string;
 }
 
-// Sample Data (Added Date)
-const waterHistries: WaterHistory[] = [
+const waterHistories: WaterHistory[] = [
   {
     id: 1,
     name: "Water Bottle",
@@ -54,33 +53,29 @@ const waterHistries: WaterHistory[] = [
 const today = format(new Date(), "yyyy-MM-dd");
 const yesterday = format(subDays(new Date(), 1), "yyyy-MM-dd");
 
-// Filter Data
-const todayData = waterHistries.filter((data) => data.date === today);
-const yesterdayData = waterHistries.filter((data) => data.date === yesterday);
+const todayData = waterHistories.filter((data) => data.date === today);
+const yesterdayData = waterHistories.filter((data) => data.date === yesterday);
 
 const WaterTrack = () => {
-  const [showAll, setShowAll] = useState(false); // State to toggle View All
+  const [showAll, setShowAll] = useState(false);
   const toggleViewAll = () => setShowAll(!showAll);
-  const [date, setDate] = React.useState<Date | undefined>(new Date());
-  return (
-    <div className="sm:w-full md:mx-w-[953px] lg:w-[953px]">
-      <div className="text-[32px] font-semibold mb-4">Water Track</div>
+  const [date, setDate] = useState<Date | undefined>(new Date());
 
-      {/* Section with WaterDrop and Calendar */}
-      <div className="flex flex-col sm:flex-row md:flex-row lg:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-16 mt-3">
-        <div className="w-full sm:w-[415px] h-[418.48px] border border-gray-300 rounded-lg p-6">
-          <img src={waterDrop} alt="Water Drop" className="mx-auto w-[163px]" />
-          <div className="text-center mt-4">
-            <p className="text-[29px] font-semibold">0 mL</p>
-            <p className="text-[16px]">
-              Daily goal: 2,500mL <GoPencil className="inline" />
-            </p>
-          </div>
+  return (
+    <div className="max-w-4xl mx-auto p-4">
+      <h1 className="text-2xl font-semibold mb-4">Water Track</h1>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="border rounded-lg p-6 flex flex-col items-center">
+          <img src={waterDrop} alt="Water Drop" className="w-32" />
+          <p className="text-xl font-semibold mt-4">0 mL</p>
+          <p className="text-sm">
+            Daily goal: 2,500mL <GoPencil className="inline" />
+          </p>
         </div>
 
-        <div className="w-full max-w-md mx-auto  border rounded-md ">
-          {/* Custom Header */}
-          <div className="flex justify-start items-center gap-4 text-lg font-semibold mb-2 px-6 text-[#6636EE] ">
+        <div className="border rounded-lg p-4">
+          <div className="flex justify-between items-center text-lg font-semibold text-indigo-600">
             <button className="text-gray-600 hover:text-black">‹</button>
             <span>
               {date?.toLocaleString("default", {
@@ -90,22 +85,7 @@ const WaterTrack = () => {
             </span>
             <button className="text-gray-600 hover:text-black">›</button>
           </div>
-
-          {/* Calendar Component with Custom Header Only */}
-          <Calendar
-            value={date}
-            // onChange={setDate}
-            className="w-full"
-            // Remove the default header entirely using components prop
-
-            tileClassName={({ date }) =>
-              `flex items-center justify-center p-4 w-full h-16 rounded-md transition-all px-3 ${
-                date.toDateString() === new Date().toDateString()
-                  ? "bg-indigo-600 text-white font-bold"
-                  : "hover:bg-gray-200"
-              }`
-            }
-          />
+          <Calendar value={date} className="w-full mt-2" />
         </div>
       </div>
 
@@ -121,41 +101,21 @@ const WaterTrack = () => {
         </button>
       </div>
 
-      {/* Today & Yesterday Data */}
-      <div className="w-full sm:w-[953px]">
-        <div className="md:max-w-[953px] lg:w-[953px] h-[21px] flex justify-between">
-          <div className="md: max-w-[55px] lg:w-[55px] h-[21px]">
-            <div className="font-inter font-semibold text-[16px] leading-[21.12px] tracking-[-2%]">
-              History
-            </div>
-          </div>
-          <div
-            className="w-[47px] h-[20px] cursor-pointer"
-            onClick={toggleViewAll} // Toggle the view
-          >
-            <div className="font-inter font-semibold text-[12px] leading-[19.68px] tracking-[0%] text-[#6636EE]">
-              {showAll ? "View Less" : "View All"}
-            </div>
-          </div>
+      <div className="mt-5">
+        <div className="flex justify-between items-center">
+          <h2 className="text-lg font-semibold">History</h2>
+          <button className="text-indigo-600" onClick={toggleViewAll}>
+            {showAll ? "View Less" : "View All"}
+          </button>
         </div>
 
         {showAll ? (
-          <>
-            <TableComponent data={waterHistries} /> {/* Show all data */}
-          </>
+          <TableComponent data={waterHistories} />
         ) : (
           <>
-            <div className="w-full sm:w-[953px] h-auto gap-3">
-              <div className="font-inter font-normal text-[14px] leading-[18.48px] tracking-[-2%] mb-2">
-                Today, {today}
-              </div>
-            </div>
+            <h3 className="text-sm mt-3">Today, {today}</h3>
             <TableComponent data={todayData} />
-            <div className="w-full sm:w-[953px] h-auto gap-3 mt-5">
-              <div className="font-inter font-normal text-[14px] leading-[18.48px] tracking-[-2%] mb-2">
-                Yesterday, {yesterday}
-              </div>
-            </div>
+            <h3 className="text-sm mt-5">Yesterday, {yesterday}</h3>
             <TableComponent data={yesterdayData} />
           </>
         )}
@@ -164,9 +124,8 @@ const WaterTrack = () => {
   );
 };
 
-// Table Component to Reuse for Today & Yesterday
 const TableComponent = ({ data }: { data: WaterHistory[] }) => (
-  <Table className="w-full">
+  <Table className="w-full mt-3">
     <TableHeader>
       <TableRow>
         <TableHead>Intake</TableHead>
@@ -179,7 +138,7 @@ const TableComponent = ({ data }: { data: WaterHistory[] }) => (
       {data.length > 0 ? (
         data.map((item) => (
           <TableRow key={item.id}>
-            <TableCell className="font-medium flex gap-2">
+            <TableCell className="flex gap-2 items-center">
               <img src={item.image} alt={item.name} className="w-8 h-8" />
               {item.name}
             </TableCell>

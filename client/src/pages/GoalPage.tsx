@@ -37,7 +37,7 @@ const GoalPage = () => {
   }, [location]);
 
   return (
-    <div>
+    <div className="mt-20">
       <Breadcrumbs
         bg="https://static.wixstatic.com/media/0e0e1e_0c8aae9e3ac34ac999469617a8a54208~mv2.jpg"
         title={title}
@@ -62,7 +62,7 @@ const GoalPage = () => {
         <div
           className={`fixed md:static top-0 left-0 h-full md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } md:translate-x-0 z-50 overflow-y-auto`}
+          } md:translate-x-0 z-40 overflow-y-auto`}
         >
           <button
             className="md:hidden absolute top-4 right-4 text-gray-700"

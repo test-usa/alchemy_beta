@@ -17,7 +17,7 @@ const WorkoutPage = () => {
   }, [navigate]);
 
   return (
-    <div className="h-full container mx-auto flex flex-col sm:flex-row px-4  ">
+    <div className="h-full container mx-auto flex flex-col sm:flex-row px-4  mt-20">
       {/* Sidebar Toggle Button */}
       <div className="md:hidden flex justify-start">
         <button
@@ -35,7 +35,7 @@ const WorkoutPage = () => {
       <div className="sm:w-64 lg:w-1/4 flex flex-col gap-6 h-full ">
         {/* Sidebar */}
         <div
-          className={`fixed md:static top-0 left-0 h-[120px] md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 z-50`}
+          className={`fixed md:static top-0 left-0 h-[120px] md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 z-40`}
         >
           <button
             className="md:hidden absolute top-4 right-4 text-gray-700"

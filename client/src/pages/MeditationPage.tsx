@@ -1,6 +1,6 @@
 const MeditationPage = () => {
   return (
-    <div>
+    <div className="mt-20">
       Meditation page
     </div>
   )

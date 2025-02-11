@@ -16,7 +16,7 @@ const TrackerPage = () => {
   }, [navigate]);
 
   return (
-    <div className="container mx-auto  flex flex-col md:flex-row lg:flex-row px-4 mt-10">
+    <div className="container mx-auto  flex flex-col md:flex-row lg:flex-row px-4 mt-20">
       <div className="w-full flex justify-center">
         <div className="container flex flex-col md:flex-row lg:flex-row px-4 mt-10">
           {/* Sidebar */}
@@ -38,7 +38,7 @@ const TrackerPage = () => {
             <div
               className={`fixed md:static top-0 left-0 h-full md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${
                 isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-              } md:translate-x-0 z-50`}
+              } md:translate-x-0 z-40`}
             >
               <button
                 className="md:hidden absolute top-4 right-4 text-gray-700"

@@ -11,6 +11,7 @@ import './index.css'
 import router from './routes/routes';
 import { StepperProvider } from './providers/StepperProvider'; 
 import AuthProvider from './auth/AuthContext';
+import { Toaster } from 'react-hot-toast';
 
 const queryClient = new QueryClient()
 
@@ -20,8 +21,9 @@ createRoot(document.getElementById('root')!).render(
         <AuthProvider>
           <StepperProvider>
             <RouterProvider router={router} />
+            <Toaster />
           </StepperProvider>
         </AuthProvider>
     </QueryClientProvider>
-  </StrictMode>,
+  </StrictMode>
 )

@@ -18,10 +18,9 @@ const HomePage = () => {
   const { user } = useAuth(); // Destructure `user` from the context
   const { id, email } = user || { id: null, email: null }; // Fallback if user is null
 
-  console.log(user)
 
   return (
-    <div>
+    <div className="mt-20">
       <Hero />
       <MidNavCom />
       <BestServices />
