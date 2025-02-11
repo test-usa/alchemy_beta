@@ -3,11 +3,11 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useState } from "react";
 import { Navigate, useParams, useLocation} from "react-router-dom";
-import { loadStripe } from '@stripe/stripe-js';
-import { useAuth } from "@/auth/AuthContext";
+// import { loadStripe } from '@stripe/stripe-js';
+// import { useAuth } from "@/auth/AuthContext";
 
 
-const STRIPE_PUBLISHED_KEY = "pk_test_51Qq9OPBFYajDRLyY9LandVIRaaAU9hFeHGdTNnpWAy8BMuAkU9g0Jlbmxmo3LwE6dvQ43QHPuVdGPm5BNFTmG8jq00xdmRZ848"
+// const STRIPE_PUBLISHED_KEY = "pk_test_51Qq9OPBFYajDRLyY9LandVIRaaAU9hFeHGdTNnpWAy8BMuAkU9g0Jlbmxmo3LwE6dvQ43QHPuVdGPm5BNFTmG8jq00xdmRZ848"
 
 const fetchProductDetails = async (id: string) => {
 
@@ -27,10 +27,10 @@ const fetchAllProducts = async () => {
 
 export const SingleProduct = () => {
 
-  const {user} = useAuth()
-  const location = useLocation();
+  // const {user} = useAuth()
+  // const location = useLocation();
 
-  const stripePromise = loadStripe(STRIPE_PUBLISHED_KEY);
+  // const stripePromise = loadStripe(STRIPE_PUBLISHED_KEY);
 
   const { id } = useParams<{ id: string }>();
   const [orderQuantity, setQuantity] = useState(1);
@@ -40,54 +40,49 @@ export const SingleProduct = () => {
   const handleDecrease = () => setQuantity((prev) => (prev > 1 ? prev - 1 : 1));
 
  
-  const handleCheckout = async (productId: string, totalQuantity: number) => {
-    // Create a checkout session on the server side
-    const response = await fetch('/create-checkout-session', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        productId: productId, // You can dynamically set the productId and quantity based on user input
-        quantity: totalQuantity, // Set quantity dynamically if needed
-      }),
-    });
+  // const handleCheckout = async (productId: string, totalQuantity: number) => {
+  //   // Create a checkout session on the server side
+  //   const response = await fetch('/create-checkout-session', {
+  //     method: 'POST',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //     },
+  //     body: JSON.stringify({
+  //       productId: productId, // You can dynamically set the productId and quantity based on user input
+  //       quantity: totalQuantity, // Set quantity dynamically if needed
+  //     }),
+  //   });
   
-    const session = await response.json();
+  //   const session = await response.json();
   
-    // Wait for the stripePromise to resolve and check if stripe is available
-    const stripe = await stripePromise;
+  //   // Wait for the stripePromise to resolve and check if stripe is available
+  //   const stripe = await stripePromise;
   
-    if (stripe) {
-      // Redirect to Stripe Checkout using the session ID
-      const { error } = await stripe.redirectToCheckout({
-        sessionId: session.id,
-      });
+  //   if (stripe) {
+  //     // Redirect to Stripe Checkout using the session ID
+  //     const { error } = await stripe.redirectToCheckout({
+  //       sessionId: session.id,
+  //     });
   
-      if (error) {
-        console.error("Error redirecting to checkout:", error);
-      }
-    } else {
-      console.error("Stripe has not loaded yet. Please try again.");
-      setErrorMessage("There was an issue with processing your payment. Please try again later.");
-    }
-  };
+  //     if (error) {
+  //       console.error("Error redirecting to checkout:", error);
+  //     }
+  //   } else {
+  //     console.error("Stripe has not loaded yet. Please try again.");
+  //     setErrorMessage("There was an issue with processing your payment. Please try again later.");
+  //   }
+  // };
   
+  // http://localhost:5000/api/login
 
 
   const createOrder = async (id: string, quantity: number) => {
-    console.log("flow-1")
-    if(!user) {
-      return <Navigate
-      to="/login"
-      state={{ from: location }} // Correct usage of state
-    />
-    }
-
-    console.log("flow2")
-
+    console.log("flow-1");
+  
     try {
       setErrorMessage(null); // Clear previous error message
+  
+      // Make request to create the order
       const response = await fetch("https://alchemy-beta-server-3.onrender.com/api/orders/create-order", {
         method: "POST",
         headers: {
@@ -99,16 +94,35 @@ export const SingleProduct = () => {
         }),
         credentials: "include",
       });
-
+  
       if (response.ok) {
         const orderData = await response.json();
         console.log(orderData);
-        // You can add additional success handling logic here
-
-        if(orderData){
-          await handleCheckout(orderData?.order.productId, orderData?.order.quantity)
+  
+        // Ensure the order ID is correctly extracted
+        const orderId = orderData.order._id;
+  
+        // Once the order is created, call the backend to initiate the payment session
+        const paymentResponse = await fetch("https://alchemy-beta-server-3.onrender.com/api/orders/create-checkout-session", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            orderId: orderId, // Pass the correct order ID
+            quantity: orderData.order.quantity,
+          }),
+          credentials: "include",
+        });
+  
+        if (paymentResponse.ok) {
+          const paymentData = await paymentResponse.json();
+          // Redirect to Stripe checkout page
+          window.location.href = paymentData.url; // Use the URL returned by Stripe
+        } else {
+          const errorData = await paymentResponse.json();
+          setErrorMessage(errorData.message || "Failed to initiate payment. Please try again.");
         }
-
       } else {
         const errorData = await response.json();
         setErrorMessage(errorData.message || "Something went wrong with your order. Please try again.");
@@ -118,6 +132,8 @@ export const SingleProduct = () => {
       console.log(e);
     }
   };
+  
+  
 
   const {
     data: product,

@@ -23,23 +23,15 @@ import Meditations from "@/section/MindHandling/Meditations";
 import SoundHandeling from "@/section/MindHandling/SoundHandeling";
 import GetOrganization from "@/section/MindHandling/GetOrganization";
 import RecoveryCounseling from "@/section/MindHandling/RecoveryCounseling";
+import PublicRoute from "@/guardRoute/PublicRoute";
+import WaterTrack from "@/section/Tracker/WaterTrack";
+import { Weight } from "lucide-react";
+import PhysicalGoals from "@/section/Goals/PhysicalGoals";
+import FinancialGoals from "@/section/Goals/FinacialGoals";
+import GoalPage from "@/pages/GoalPage";
 import AddCardInfo from "@/section/SidePage/AddCardInfo";
 import Confirm from "@/section/SidePage/Confirm";
-import Workout from "@/section/Workout/Workout";
-import Dance from "@/section/Workout/Dance";
-import Routiens from "@/section/Workout/Routiens";
-import Yoga from "@/section/Workout/Yoga";
-import Pilates from "@/section/Workout/Pilates";
-import OnlineProgram from "@/section/Workout/OnlineProgram";
-import UniqueWork from "@/section/Workout/UniqueWork";
-import Blog from "@/section/Blog/Blog";
 import BlogChallenge from "@/section/Blog/BlogChallenge";
-import PhysicalGoals from "@/section/Goals/PhysicalGoals";
-import GoalPage from "@/pages/GoalPage";
-import FinancialGoals from "@/section/Goals/FinacialGoals";
-import WaterTrack from "@/section/Tracker/WaterTrack";
-import Weight from "@/section/Tracker/Weight";
-import PublicRoute from "@/guardRoute/PublicRoute";
 import YourGoals from "@/section/Goals/YourGoals";
 import GoalDetailsPage from "@/pages/GoalDetailsPage";
 import CaloriesCouterPage from "@/pages/CaloriesCouterPage";
@@ -47,6 +39,16 @@ import BodyBuildingPage from "@/pages/BodyBuildingPage";
 import Fitness from "@/pages/Fitness";
 import Calorie from "@/section/Calorie/Calorie";
 import CalorieCountingPage from "@/pages/CalorieCountingPage";
+import Blog from "@/section/Blog/Blog";
+import Success from "@/pages/Success";
+import Error from "@/pages/Error";
+import Workout from "@/section/Workout/Workout";
+import Dance from "@/section/Workout/Dance";
+import Yoga from "@/section/Workout/Yoga";
+import Pilates from "@/section/Workout/Pilates";
+import OnlineProgram from "@/section/Workout/OnlineProgram";
+import UniqueWork from "@/section/Workout/UniqueWork";
+import Routines from "@/section/Workout/Routiens";
 
 const router = createBrowserRouter([
   {
@@ -124,7 +126,7 @@ const router = createBrowserRouter([
                     { path: "yoga", element: <Yoga /> },
                     { path: "pilates", element: <Pilates /> },
                     { path: "online-program", element: <OnlineProgram /> },
-                    { path: "routines", element: <Routiens /> },
+                    { path: "routines", element: <Routines /> },
                     { path: "unique-working", element: <UniqueWork /> },
                 ]
             },
@@ -142,6 +144,8 @@ const router = createBrowserRouter([
                     { path: "calorie-counting", element: <CalorieCountingPage /> },
                 ]
             },
+            { path: "success", element: <Success /> }, // Success route
+            { path: "error", element: <Error /> }, // Error route
         ]
     }
 ]);
