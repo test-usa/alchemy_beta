@@ -37,20 +37,25 @@ import PhysicalGoals from "@/section/Goals/PhysicalGoals";
 import GoalPage from "@/pages/GoalPage";
 import FinancialGoals from "@/section/Goals/FinacialGoals";
 import WaterTrack from "@/section/Tracker/WaterTrack";
-import { Weight } from "lucide-react";
+import Weight from "@/section/Tracker/Weight";
+import PublicRoute from "@/guardRoute/PublicRoute";
 import YourGoals from "@/section/Goals/YourGoals";
 import GoalDetailsPage from "@/pages/GoalDetailsPage";
-
+import CaloriesCouterPage from "@/pages/CaloriesCouterPage";
+import BodyBuildingPage from "@/pages/BodyBuildingPage";
+import Fitness from "@/pages/Fitness";
+import Calorie from "@/section/Calorie/Calorie";
+import CalorieCountingPage from "@/pages/CalorieCountingPage";
 
 const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <MainLayout />,
-        errorElement: <ErrorPage />,
-        children: [
+  {
+    path: "/",
+    element: <MainLayout />,
+    errorElement: <ErrorPage />,
+    children: [
             { path: "/", element: <HomePage /> },
             { path: "signup", element: <SignupPage /> },
-            { path: "login", element: <LoginPage /> },
+            { path: "login", element: <PublicRoute><LoginPage /></PublicRoute> },
             {
                 path: "nutrition",
                 element: <NutritionPage />,
@@ -67,14 +72,21 @@ const router = createBrowserRouter([
                 path: "tracker",
                 element: <TrackerPage />,
                 children: [
-                    { path: "water-tracker", element: <WaterTrack /> },
-                    { path: "weight", element: <Weight /> }
-                ]
-            },
-            { path: "articles-and-tips", element: <ArticlesAndTipsPage /> },
+                  { path: "water-tracker", element: <WaterTrack /> },
+                  { path: "weight", element: <Weight /> },
+                  { path: "calories-counter", element: <CaloriesCouterPage /> },
+                ],
+              },
+            {
+                path: "articles-and-tips",
+                element: <ArticlesAndTipsPage />,
+                children: [
+                  { path: "body-building", element: <BodyBuildingPage /> },
+                  { path: "fitness", element: <Fitness /> },
+                ],
+              },
             { path: "shop", element: <ShopPage /> },
             { path: "/shop-details/:id", element: <ShopDetailsPage /> },
-
             { path: "checkout", element: <CheckoutPage /> },
             {
                 path: "goal",
@@ -119,6 +131,13 @@ const router = createBrowserRouter([
                 element: <Blog />,
                 children: [
                     { path: "challenge", element: <BlogChallenge /> },
+                ]
+            },
+            {
+                path: "calorie",
+                element: <Calorie />,
+                children: [
+                    { path: "calorie-counting", element: <CalorieCountingPage /> },
                 ]
             },
         ]

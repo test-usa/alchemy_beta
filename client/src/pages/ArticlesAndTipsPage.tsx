@@ -1,177 +1,140 @@
+import NutritionNavItems from "@/shared/NutritionNavItems";
+import { Outlet, useLocation, useNavigate } from "react-router-dom";
+import { Mail, Menu, Phone, X } from "lucide-react"; // Added X icon
+import { useEffect, useState } from "react";
+import { FaRegFilePdf } from "react-icons/fa";
+import { SlDocs, SlEnvolopeLetter } from "react-icons/sl";
+import { CiLocationArrow1, CiPhone } from "react-icons/ci";
 import Breadcrumbs from "@/components/breadcrumbs";
-import image1 from "../assets/image1.jpg";
-import image from "../assets/image.png";
-import image2 from "../assets/image2.webp";
-import workoutImage from "../assets/workout.jpg";
-import { LiaHeadphonesAltSolid } from "react-icons/lia";
-import WorkoutCard from "@/section/ArticleAndTips/WorkoutCard";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@radix-ui/react-accordion";
-import { SlEnvolopeLetter, SlDocs } from "react-icons/sl";
-import { FaAngleRight, FaAngleDown, FaRegFilePdf } from "react-icons/fa6";
-import { useState } from "react";
-import { CiPhone, CiLocationArrow1 } from "react-icons/ci";
+import ArticleAndTipsNav from "@/section/ArticleAndTips/ArticleAndTipsNav";
 
 const ArticlesAndTipsPage = () => {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const [title, setTitle] = useState("");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const dummyData = [
-    {
-      image: image1,
-      title: "Transform Your Body with Our Personalized Programs",
-      description:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-    },
-    {
-      image: image2,
-      title: "Boost Your Performance and Achieve Your Goals",
-      description:
-        "We offer top-notch fitness services designed to help you reach your goals.",
-    },
-    {
-      image: image1,
-      title: "Unlock Your Potential with Our Fitness Experts",
-      description:
-        "Whether you’re new to fitness or an experienced athlete, our coaching will help you.",
-    },
-  ];
+  useEffect(() => {
+    navigate("/articles-and-tips/body-building", { replace: true });
+  }, [navigate]);
 
   return (
-    <div className="w-full">
-      {/* Hero Section */}
-      <div className="w-full lg:h-[440px] overflow-hidden">
-        <Breadcrumbs bg={workoutImage} title="Articles & Tips" />
-      </div>
-
-      {/* Main Content */}
-      <div className="flex flex-col lg:flex-row gap-6 justify-center mt-10 px-4 lg:px-0 ">
-        {/* Left Sidebar */}
-        <div className="w-full lg:w-[335px] space-y-6 mb-10">
-          {/* Categories */}
-          <div className="border p-5 rounded-md">
-            <h2 className="text-xl font-semibold text-[#6636EE] mb-4">
-              Category
-            </h2>
-            <Accordion type="single" collapsible className="space-y-2">
-              {[
-                "Body Building",
-                "Fitness",
-                "Nutrition",
-                "Meditation",
-                "Wellness & Recovery",
-                "Corporate Wellness",
-              ].map((category, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="w-full p-3 flex justify-between items-center border rounded bg-gray-100">
-                    <span className="font-medium">{category}</span>
-                    {isOpen ? <FaAngleDown /> : <FaAngleRight />}
-                  </AccordionTrigger>
-                  <AccordionContent className="p-3 text-sm text-gray-600">
-                    This is the content for {category}.
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
-          </div>
-
-          {/* Contact Information */}
-          <div className="border p-5 rounded-md">
-            <h2 className="text-xl font-semibold text-[#6636EE] mb-4">
-              Contact
-            </h2>
-            {[
-              {
-                icon: <SlEnvolopeLetter />,
-                label: "Email",
-                value: "info@totalu.com",
-              },
-              { icon: <CiPhone />, label: "Phone", value: "64388867" },
-              {
-                icon: <CiLocationArrow1 />,
-                label: "Location",
-                value: "Street Road",
-              },
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-[#EDE7FF] rounded-full flex items-center justify-center text-xl">
-                  {item.icon}
+    <div className="">
+      <Breadcrumbs
+        bg="https://static.wixstatic.com/media/0e0e1e_0c8aae9e3ac34ac999469617a8a54208~mv2.jpg/v1/fill/w_320,h_128,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/0e0e1e_0c8aae9e3ac34ac999469617a8a54208~mv2.jpg"
+        title="Article & Tips"
+      />
+      <div className="w-full flex justify-center">
+        <div className="container flex flex-col md:flex-row lg:flex-row px-4 mt-10">
+          {/* Sidebar */}
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 relative">
+            {/* Sidebar Toggle Button (Placed Before Sidebar) */}
+            <div className="md:hidden flex justify-start">
+              <button
+                className="p-1 bg-[#6636EE] text-white rounded-full"
+                onClick={() => setIsSidebarOpen(true)}
+              >
+                <div className="flex gap-1 justify-center items-center px-2">
+                  <Menu size={20} />
+                  <p className="text-md font-semibold">Services Menu</p>
                 </div>
-                <div>
-                  <p className="text-sm font-semibold">{item.label}</p>
-                  <p className="text-sm text-gray-700">{item.value}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+              </button>
+            </div>
 
-          {/* Brochures */}
-          <div className="border p-5 rounded-md">
-            <h2 className="text-xl font-semibold text-[#6636EE] mb-4">
-              Brochures
-            </h2>
-            {[
-              { icon: <FaRegFilePdf />, label: "Download.pdf" },
-              { icon: <SlDocs />, label: "Download.docx" },
-            ].map((item, index) => (
-              <div key={index} className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-gray-200 rounded-full flex items-center justify-center text-xl">
-                  {item.icon}
-                </div>
-                <p className="text-sm text-gray-700">{item.label}</p>
-              </div>
-            ))}
-          </div>
+            {/* Sidebar */}
+            <div
+              className={`fixed md:static top-0 left-0 h-full md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${
+                isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+              } md:translate-x-0 z-40`}
+            >
+              <button
+                className="md:hidden absolute top-4 right-4 text-gray-700"
+                onClick={() => setIsSidebarOpen(false)}
+              >
+                <X size={24} />
+              </button>
 
-          {/* help */}
-          <div className="w-[335px] h-[320px] rounded-[4px]  gap-[10px] relative  ">
-            {
-              <img
-                src={image}
-                alt="Additional Workout Image"
-                className="w-full h-auto object-cover"
-              />
-            }
+              <div className="border border-gray-200 rounded p-6 mt-12 md:mt-0">
+                <h2 className="text-xl font-bold mb-4 text-[#6636EE] border-b pb-2">
+                  Categories
+                </h2>
+                <ArticleAndTipsNav />
 
-            <div className="w-[335px] h-[141px] absolute bg-[#6636EEE5] z-0">
-              <div className="w-full h-full relative flex justify-center">
-                <div className="w-[58px] h-[58px] bg-white rounded-full absolute -mt-7 z-20 flex justify-center items-center">
-                  <LiaHeadphonesAltSolid size={25} className="relative z-10" />
+                {/* Contact Information */}
+                <div className="border p-5 rounded-md my-5 ">
+                  <h2 className="text-xl font-semibold text-[#6636EE]  mb-4">
+                    Contacts
+                  </h2>
+                  {[
+                    {
+                      icon: <SlEnvolopeLetter />,
+                      label: "Email",
+                      value: "info@totalu.com",
+                    },
+                    { icon: <CiPhone />, label: "Phone", value: "64388867" },
+                    {
+                      icon: <CiLocationArrow1 />,
+                      label: "Location",
+                      value: "Street Road",
+                    },
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3 mb-4">
+                      <div className="p-3 bg-[#EDE7FF] rounded-full flex items-center justify-center text-xl">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold">{item.label}</p>
+                        <p className="text-sm text-gray-700">{item.value}</p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <div className="w-[70px] h-[70px] rounded-full bg-[#6636EEE5] absolute -top-8 "></div>
-                <div className="w-[213px] h-[87px]">
-                  <div className="w-full h-full mt-8 flex justify-center">
-                    <h1 className="text-white absolute text-center">
-                      How can we help?
-                    </h1>
-                    <h1 className="text-center absolute mt-12 mx-3 text-white">
-                      info.gmail.com
-                    </h1>
-                    <h1 className="text-center absolute pt-6 text-white">
-                      +798725783
-                    </h1>
+
+                {/* Brochures */}
+                <div className="border p-5 rounded-md my-5 ">
+                  <h2 className="text-xl font-semibold text-[#6636EE] mb-4">
+                    Brochures
+                  </h2>
+                  {[
+                    { icon: <FaRegFilePdf />, label: "Download.pdf" },
+                    { icon: <SlDocs />, label: "Download.docx" },
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3 mb-4">
+                      <div className="p-3 bg-gray-200 rounded-full flex items-center justify-center text-xl">
+                        {item.icon}
+                      </div>
+                      <p className="text-sm text-gray-700">{item.label}</p>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="rounded my-5">
+                  <img
+                    className="w-full"
+                    src="https://img.freepik.com/free-photo/young-guy-aged-man-sitting-sofa_23-2148030251.jpg?t=st=1738925315~exp=1738928915~hmac=dc57c81d65b94f934dd739ec8680131abc5c14430a0cd79e527c173d57557cad&w=1380"
+                    alt="Help Image"
+                  />
+                  <div className="bg-[#6636EE] text-white p-2 text-center">
+                    <p className="text-xl mb-2">How Can We Help?</p>
+                    <p className="flex justify-center items-center gap-2 text-sm mb-1">
+                      {" "}
+                      <Mail size={14} />
+                      info@totalu.com
+                    </p>
+                    <p className="flex justify-center items-center gap-2 text-sm">
+                      <Phone size={14} />
+                      +123 905 6566
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
 
-        {/* Right Content */}
-        <div className="w-full lg:w-3/5 space-y-6">
-          {dummyData.map((data, index) => (
-            <WorkoutCard
-              key={index}
-              image={data.image}
-              title={data.title}
-              description={data.description}
-              additionalImage={""}
-            />
-          ))}
+            {/* Content */}
+            <div className="flex-1 pl-5">
+              <Outlet />
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -48,12 +48,12 @@ const GoalPage = () => {
         {/* Sidebar Toggle Button (Placed Before Sidebar) */}
         <div className="md:hidden flex justify-start">
           <button
-            className="p-1 bg-[#6636EE] text-white rounded-full"
+            className="p-1 bg-primary text-white rounded-full"
             onClick={() => setIsSidebarOpen(true)}
           >
             <div className="flex gap-1 justify-center items-center px-2">
             <Menu size={20} />
-            <p className="text-md font-semibold">Services Menu</p>
+            <p className="text-md font-semibold">Menu</p>
             </div>
           </button>
         </div>
@@ -62,7 +62,7 @@ const GoalPage = () => {
         <div
           className={`fixed md:static top-0 left-0 h-full md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${
             isSidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } md:translate-x-0 z-50 overflow-y-auto`}
+          } md:translate-x-0 z-40 overflow-y-auto`}
         >
           <button
             className="md:hidden absolute top-4 right-4 text-gray-700"

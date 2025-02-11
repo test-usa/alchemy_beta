@@ -63,7 +63,7 @@ const WaterTrack = () => {
   const toggleViewAll = () => setShowAll(!showAll);
   const [date, setDate] = React.useState<Date | undefined>(new Date());
   return (
-    <div className="w-full h-full">
+    <div className="sm:w-full md:mx-w-[953px] lg:w-[953px]">
       <div className="text-[32px] font-semibold mb-4">Water Track</div>
 
       {/* Section with WaterDrop and Calendar */}
@@ -78,9 +78,9 @@ const WaterTrack = () => {
           </div>
         </div>
 
-        <div className="w-full max-w-md mx-auto p-4 border rounded-md">
+        <div className="w-full max-w-md mx-auto  border rounded-md ">
           {/* Custom Header */}
-          <div className="flex justify-start items-center gap-4 text-lg font-semibold mb-2 px-6 text-[#6636EE]">
+          <div className="flex justify-start items-center gap-4 text-lg font-semibold mb-2 px-6 text-[#6636EE] ">
             <button className="text-gray-600 hover:text-black">‹</button>
             <span>
               {date?.toLocaleString("default", {
@@ -99,7 +99,7 @@ const WaterTrack = () => {
             // Remove the default header entirely using components prop
 
             tileClassName={({ date }) =>
-              `flex items-center justify-center p-4 w-full h-16 rounded-md transition-all ${
+              `flex items-center justify-center p-4 w-full h-16 rounded-md transition-all px-3 ${
                 date.toDateString() === new Date().toDateString()
                   ? "bg-indigo-600 text-white font-bold"
                   : "hover:bg-gray-200"
