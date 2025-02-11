@@ -5,7 +5,7 @@ interface IUserContext {
   setUser: React.Dispatch<React.SetStateAction<{ id: string; email: string } | null>>;
 }
 
-const AuthContext = createContext<IUserContext | null>(null);
+export const AuthContext = createContext<IUserContext | null>(null);
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -37,8 +37,13 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     fetchUser();
   }, []);
 
+const userInfo = { 
+  user, 
+  setUser
+}
+
   return (
-    <AuthContext.Provider value={{ user, setUser }}>
+    <AuthContext.Provider value={userInfo}>
       {children}
     </AuthContext.Provider>
   );

@@ -13,7 +13,7 @@ const CalorieCountingPage = () => {
     }, [navigate]);
 
     return (
-        <div className="container mx-auto flex flex-col sm:flex-row px-4  ">
+        <div className="container mx-auto flex flex-col sm:flex-row px-4 mt-20">
             {/* Sidebar Toggle Button */}
             <div className="md:hidden flex justify-start">
                 <button

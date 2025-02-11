@@ -16,7 +16,7 @@ const TrackerPage = () => {
   }, [navigate]);
 
   return (
-    <div className="container mx-auto  flex flex-col md:flex-row lg:flex-row px-4 mt-10">
+    <div className="container mx-auto  flex flex-col md:flex-row lg:flex-row px-4 mt-20">
       <div className="w-full flex justify-center">
         <div className="container flex flex-col md:flex-row lg:flex-row px-4 mt-10">
           {/* Sidebar */}

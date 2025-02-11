@@ -4,6 +4,7 @@ import Breadcrumbs from "@/components/breadcrumbs"
 import { Link, useNavigate } from "react-router-dom";
 import Steps from "../section/SIgnup/Steps";
 import { useAuth } from "@/auth/AuthContext";
+import toast from "react-hot-toast";
 
 const SignupPage = () => {
   const navigate = useNavigate();
@@ -46,12 +47,12 @@ const SignupPage = () => {
         const data = await response.json();
         setSuccessMessage(data.message);
         setErrorMessage(""); // Reset any previous errors
-        console.log("User registered successfully", data);
+        console.log("User registered", data);
         setUser({
           id: data?.id,
           email: data?.email
         })
-        navigate("/")
+        navigate("/signup/details")
       } else {
         // If response is not ok (e.g., 400 status), handle the error
         const errorData = await response.json();
@@ -65,13 +66,13 @@ const SignupPage = () => {
   };
 
   return (
-    <div>
+    <div className="mt-20">
       <Breadcrumbs
         bg="https://img.freepik.com/premium-photo/muscular-strong-guy-exercising-slim-man-doing-some-push-ups-gym-man-doing-pushups-black-white_293990-2679.jpg?w=1380"
         title="Sign up"
       />
       <div className="max-w-2xl my-20 mx-auto bg-white rounded-lg px-3">
-        <h2 className="text-2xl font-semibold text-center mb-6 text-[#6636EE]">Create an Account!</h2>
+        <h2 className="text-2xl lg:text-4xl font-semibold text-center mb-6 text-[#6636EE]">Create an Account!</h2>
 
         <form onSubmit={(e) => handle(e)}>
           <div className="mb-4">
@@ -141,9 +142,9 @@ const SignupPage = () => {
         </div>
       </div>
 
-      <div>
+      {/* <div>
         <Steps />
-      </div>
+      </div> */}
     </div>
   )
 }

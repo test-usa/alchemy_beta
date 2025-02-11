@@ -14,7 +14,7 @@ const BlogPage = () => {
     }, [navigate]);
 
     return (
-        <div className="container mx-auto flex gap-6 px-4">
+        <div className="container mx-auto flex gap-6 px-4 mt-20">
             {/* Sidebar - Responsive Width */}
             <div className="hidden md:flex flex-col flex-[0.25] min-w-[250px] max-w-[350px]">
                 <div className="border border-gray-200 rounded p-6">

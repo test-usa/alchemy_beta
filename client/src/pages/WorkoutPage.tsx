@@ -17,7 +17,7 @@ const WorkoutPage = () => {
   }, [navigate]);
 
   return (
-    <div className="h-full container mx-auto flex flex-col sm:flex-row px-4  ">
+    <div className="h-full container mx-auto flex flex-col sm:flex-row px-4  mt-20">
       {/* Sidebar Toggle Button */}
       <div className="md:hidden flex justify-start">
         <button

@@ -37,7 +37,7 @@ const GoalPage = () => {
   }, [location]);
 
   return (
-    <div>
+    <div className="mt-20">
       <Breadcrumbs
         bg="https://static.wixstatic.com/media/0e0e1e_0c8aae9e3ac34ac999469617a8a54208~mv2.jpg"
         title={title}

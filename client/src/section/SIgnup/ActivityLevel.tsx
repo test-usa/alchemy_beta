@@ -1,7 +1,7 @@
 import { StepperContext } from "@/providers/StepperProvider";
 import { useContext, useEffect } from "react";
 
-const YourGoal = () => {
+const ActivityLevel = () => {
     const { state4, setState4, userData, setUserData } = useContext(StepperContext)
 
   // const handleClick = (g: string) => {
@@ -101,4 +101,4 @@ const YourGoal = () => {
   );
 }
 
-export default YourGoal
+export default ActivityLevel

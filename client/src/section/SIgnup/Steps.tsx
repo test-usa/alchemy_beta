@@ -5,6 +5,8 @@ import YourGoal from "./YourGoal";
 import ActivityLevel from "./ActivityLevel";
 import Transformation from "./Transformation";
 
+
+
 const CHECKOUT_STEPS = [
     {
         Component: () => <Gender />,

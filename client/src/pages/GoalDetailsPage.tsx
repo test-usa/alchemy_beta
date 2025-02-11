@@ -84,7 +84,7 @@ const GoalDetailsPage = () => {
   const [habitDays2, setHabitDays2] = useState<string[]>([]);
 
   if (!goal) {
-    return <div>Goal not found</div>;
+    return <div className="mt-20">Goal not found</div>;
   }
 
   const toggleDay = (day: string) => {
@@ -102,7 +102,7 @@ const GoalDetailsPage = () => {
   const days = ["M", "T", "W", "T", "F", "S", "S"];
 
   return (
-    <div className="min-h-screen px-4 mb-4">
+    <div className="min-h-screen px-4 mb-4 mt-20">
       <div className="max-w-full mx-auto space-y-2">
         <h1 className="text-3xl font-bold">Your Goal Details</h1>
         <p>Ongoing</p>

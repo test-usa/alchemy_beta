@@ -27,7 +27,7 @@ const NutritionPage = () => {
   }, [location]);
 
   return (
-    <div>
+    <div className="mt-20">
       <Breadcrumbs
         bg="https://img.freepik.com/premium-photo/panorama-with-fresh-fruits-water-coconut-kiwi-melon-lemon-lychee-tangerine-peach-plum-lime-very-tasty-dessert-new-year-christmas-halloween_659987-2206.jpg?w=1380"
         title={title}

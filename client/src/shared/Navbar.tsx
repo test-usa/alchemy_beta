@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SearchIcon, User2, Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
-import Logo from "../assets/logo.png"
+import Logo from "../assets/logo.png";
+import AuthProvider, { AuthContext } from "@/auth/AuthContext";
 
 const navLinks = [
   {
@@ -37,21 +38,42 @@ const navLinks = [
     label: "Goal",
     href: "/goal/physical-goals",
   },
+  {
+    label: "Blog",
+    href: "/blog",
+  },
 ];
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { user, setUser } = useContext(AuthContext);
+
+  const handleLogOut = async () => {
+    try {
+      const res = await fetch(
+        "https://alchemy-beta-server-3.onrender.com/api/logout",
+        {
+          method: "POST",
+          credentials: "include",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+      if (res.ok) {
+        setUser(null);
+      }
+    } catch (error: any) {
+      console.log(error.message);
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-[#FAFAFA] shadow-md z-50">
       <div className="max-w-7xl mx-auto h-[88px] flex items-center justify-between px-4">
         {/* Left: Logo */}
         <Link to="/" className="flex items-center">
-          <img
-            src={Logo}
-            alt="TotalU Logo"
-            className="w-[110px] h-[85px]"
-          />
+          <img src={Logo} alt="TotalU Logo" className="w-[110px] h-[85px]" />
         </Link>
 
         {/* Mobile Menu Toggle (visible on small screens only) */}
@@ -98,7 +120,16 @@ const Navbar = () => {
           </Link>
 
           <Button size={"lg"} className="font-sans text-[16px]">
-            <Link to="/">Start TotalU</Link>
+          {user ? (
+                  <button
+                    className="px-5 py-3 rounded-lg shadow-md text-white"
+                    onClick={handleLogOut}
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link to="/login">Start TotalU</Link>
+                )}
           </Button>
         </div>
       </div>
@@ -138,7 +169,16 @@ const Navbar = () => {
               </Link>
 
               <Button size={"lg"} className="font-sans text-[16px]">
-                <Link to="/">Start TotalU</Link>
+                {user ? (
+                  <button
+                    className="px-5 py-3 rounded-lg shadow-md text-white"
+                    onClick={handleLogOut}
+                  >
+                    Logout
+                  </button>
+                ) : (
+                  <Link to="/login">Start TotalU</Link>
+                )}
               </Button>
             </div>
           </div>

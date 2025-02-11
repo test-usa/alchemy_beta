@@ -3,6 +3,7 @@ import HomePage from "@/pages/HomePage";
 import MainLayout from "@/layouts/MainLayout";
 import ErrorPage from "@/pages/ErrorPage";
 import SignupPage from "@/pages/SignupPage";
+import SignupDetails from "@/pages/SignupDetails";
 import LoginPage from "@/pages/LoginPage";
 import NutritionPage from "@/pages/NutritionPage";
 import MeditationPage from "@/pages/MeditationPage";
@@ -15,7 +16,7 @@ import KetoMealPlan from "@/section/nutrition/KetoMealPlan";
 import Macros from "@/section/nutrition/Macros";
 import IntermittentFasting from "@/section/nutrition/IntermittentFasting";
 import CheckoutPage from "@/pages/CheckoutPage";
-import { ShopDetailsPage } from "@/pages/ShopDetailsPage";
+import ShopDetailsPage from "@/pages/ShopDetailsPage";
 import Community from "@/pages/Community";
 import MindHandling from "@/section/MindHandling/MindHandling";
 import Meditations from "@/section/MindHandling/Meditations";
@@ -55,6 +56,7 @@ const router = createBrowserRouter([
     children: [
             { path: "/", element: <HomePage /> },
             { path: "signup", element: <SignupPage /> },
+            { path: "signup/details", element: <SignupDetails /> },
             { path: "login", element: <PublicRoute><LoginPage /></PublicRoute> },
             {
                 path: "nutrition",

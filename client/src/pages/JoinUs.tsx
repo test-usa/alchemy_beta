@@ -6,7 +6,7 @@ import PricingPlan from "@/section/JoinUs/PricingPlan";
 
 const JoinUs = () => {
   return (
-    <div>
+    <div className="mt-20">
       <PricingPlan />
 
     </div>
