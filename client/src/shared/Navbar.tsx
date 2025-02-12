@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { SearchIcon, User2, Menu, X } from "lucide-react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png";
-import AuthProvider, { AuthContext } from "@/auth/AuthContext";
+import AuthProvider, { AuthContext, useAuth } from "@/auth/AuthContext";
 
 const navLinks = [
   {
@@ -46,7 +46,7 @@ const navLinks = [
 
 const Navbar = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const { user, setUser } = useContext(AuthContext);
+  const { user, setUser } = useAuth();
 
   const handleLogOut = async () => {
     try {
