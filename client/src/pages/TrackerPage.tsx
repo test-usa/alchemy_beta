@@ -41,7 +41,7 @@ const TrackerPage = () => {
 
             {/* Sidebar */}
             <div
-              className={`fixed md:static top-0 left-0 h-full md:h-auto bg-white shadow-lg md:shadow-none w-72 md:w-auto transition-transform transform ${
+              className={`fixed  mt-20 md:static top-0 left-0 h-full md:h-auto bg-white shadow-lg md:shadow-none w-72 md:w-auto transition-transform transform ${
                 isSidebarOpen ? "translate-x-0" : "-translate-x-full"
               } md:translate-x-0 z-40`}
             >

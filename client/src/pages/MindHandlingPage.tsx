@@ -35,7 +35,7 @@ const MindHandlingPage = () => {
             <div className="sm:w-64 lg:w-1/4 flex flex-col gap-6 ">
                 {/* Sidebar */}
                 <div
-                    className={`fixed md:static top-0 left-0 h-full md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 z-40`}
+                    className={`fixed  mt-20 md:static top-0 left-0 h-full md:h-auto bg-white shadow-md md:shadow-none w-64 md:w-auto transition-transform transform ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} md:translate-x-0 z-40`}
                 >
                     <button
                         className="md:hidden absolute top-4 right-4 text-gray-700"
